@@ -68,11 +68,6 @@ function initializeApp() {
     initializeSmoothScroll();
   }
   
-  // Inicializar tema
-  if (typeof ThemeManager !== 'undefined' && ThemeManager.init) {
-    ThemeManager.init();
-  }
-  
   console.log('Aplicación inicializada correctamente');
 }
 
