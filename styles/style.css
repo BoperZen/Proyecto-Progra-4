@@ -1,0 +1,43 @@
+/**
+ * ========================================
+ * ARCHIVO PRINCIPAL DE ESTILOS
+ * ========================================
+ * 
+ * Este archivo importa todos los módulos CSS de manera organizada.
+ * Los módulos están en styles-base/ para mantener el código limpio
+ * y facilitar el mantenimiento.
+ * 
+ * ORDEN DE IMPORTACIÓN:
+ * 1. Variables y tokens de diseño
+ * 2. Estilos base y reset
+ * 3. Layout y estructura
+ * 4. Componentes reutilizables
+ * 5. Sistema de navegación
+ * 6. Utilidades y helpers
+ * 7. Temas y responsive
+ */
+
+/* ========================================
+   IMPORTACIÓN DE MÓDULOS
+   ======================================== */
+
+/* Variables CSS y tokens de diseño */
+@import url('styles-base/variables.css');
+
+/* Estilos base y reset */
+@import url('styles-base/base.css');
+
+/* Layout y estructura principal */
+@import url('styles-base/layout.css');
+
+/* Componentes reutilizables */
+@import url('styles-base/components.css');
+
+/* Sistema de navegación completo */
+@import url('styles-base/navbar.css');
+
+/* Utilidades y helpers */
+@import url('styles-base/utilities.css');
+
+/* Temas y responsive design */
+@import url('styles-base/themes.css');

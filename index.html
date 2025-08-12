@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantilla de Proyecto Web</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo/Brand -->
+      <div class="navbar-brand">
+        <a href="#" class="brand-link">
+          <span class="brand-icon">🚗</span>
+          <div class="brand-text">
+            <div class="brand-main">Why not?</div>
+            <div class="brand-sub">rent a car</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="navbar-menu" id="navbar-menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link active">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#flota" class="nav-link">Flota</a>
+          </li>
+          <li class="nav-item">
+            <a href="#servicios" class="nav-link">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tecnologia" class="nav-link">Tecnología</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cobertura" class="nav-link">Cobertura</a>
+          </li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="navbar-actions">
+          <button onclick="ThemeManager.toggle()" class="theme-toggle" title="Alternar tema">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button onclick="scrollToSection('flota')" class="nav-cta">Ver Flota</button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <!-- ENCABEZADO -->
+    <header id="inicio">
+      <h1>🚗 Servicios Profesionales de Alquiler</h1>
+      <p class="subtitle">Soluciones confiables para sus necesidades de transporte</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      
+      <!-- SECCIÓN 1: FLOTA VEHICULAR -->
+      <section id="flota" class="example-section">
+        <div class="section-content">
+          <h2>🏢 Nuestra Flota</h2>
+          <p>Amplia gama de vehículos para satisfacer todas sus necesidades de transporte empresarial y personal.</p>
+          
+          <div class="code-example">
+            <code>// Gestión integral de flota vehicular
+const flota = {
+  economicos: ["Toyota Corolla", "Nissan Sentra", "Honda Civic"],
+  ejecutivos: ["BMW Serie 3", "Mercedes C-Class", "Audi A4"],
+  familiares: ["Toyota Sienna", "Honda Pilot", "Chevrolet Suburban"],
+  disponibilidad: "24/7",
+  mantenimiento: "Preventivo y correctivo"
+};
+
+// Verificación de disponibilidad en tiempo real
+console.log("Vehículos disponibles:", flota.economicos.length + flota.ejecutivos.length);</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: SERVICIOS CORPORATIVOS -->
+      <section id="servicios" class="example-section">
+        <div class="section-content">
+          <h2>💼 Servicios Corporativos</h2>
+          <p>Soluciones especializadas para empresas que requieren servicios de transporte confiables y eficientes.</p>
+          
+          <div class="code-example">
+            <code>// Servicios empresariales especializados
+const serviciosCorporativos = {
+  contratos: {
+    duracion: ["Mensual", "Trimestral", "Anual"],
+    descuentos: "Hasta 25% por volumen",
+    facturacion: "Centralizada"
+  },
+  beneficios: [
+    "Conductor asignado",
+    "Vehículo de respaldo",
+    "Soporte 24/7",
+    "Gestión de combustible"
+  ],
+  sectores: ["Tecnología", "Consultoría", "Manufactura", "Salud"]
+};
+
+console.log("Beneficios corporativos:", serviciosCorporativos.beneficios);</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: TECNOLOGÍA Y SEGURIDAD -->
+      <section id="tecnologia" class="example-section">
+        <div class="section-content">
+          <h2>🔐 Tecnología y Seguridad</h2>
+          <p>Sistemas avanzados de monitoreo y seguridad para garantizar la protección de nuestros clientes.</p>
+          
+          <div class="code-example">
+            <code>// Sistema integrado de seguridad vehicular
+const sistemasSeguridad = {
+  gps: {
+    tracking: "Tiempo real",
+    geofencing: "Zonas seguras definidas",
+    alertas: "Automáticas"
+  },
+  vehiculo: {
+    seguros: "Cobertura total",
+    mantenimiento: "Cada 5,000 km",
+    inspeccion: "Pre y post servicio"
+  },
+  conductor: {
+    verificacion: "Antecedentes completos",
+    capacitacion: "Continua",
+    evaluacion: "Mensual"
+  }
+};
+
+console.log("Nivel de seguridad:", "Máximo");</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: COBERTURA Y SOPORTE -->
+      <section id="cobertura" class="example-section">
+        <div class="section-content">
+          <h2>🌐 Cobertura Nacional</h2>
+          <p>Red de servicios extendida en las principales ciudades del país con soporte especializado.</p>
+          
+          <div class="code-example">
+            <code>// Red nacional de servicios
+const coberturaNacional = {
+  ciudades: {
+    principales: ["Ciudad de México", "Guadalajara", "Monterrey"],
+    secundarias: ["Puebla", "Tijuana", "León", "Juárez"],
+    aeropuertos: 15,
+    sucursales: 42
+  },
+  soporte: {
+    telefono: "800-RENT-CAR",
+    chat: "En línea 24/7",
+    app: "iOS y Android",
+    tiempoRespuesta: "< 15 minutos"
+  },
+  horarios: {
+    operacion: "24 horas",
+    entrega: "Flexible",
+    recogida: "A domicilio disponible"
+  }
+};
+
+console.log("Ciudades con servicio:", coberturaNacional.ciudades.principales.length);</code>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>&copy; 2025 - Plantilla de Proyecto Web</p>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS MODULARIZADOS -->
+  <!-- Utilidades base -->
+  <script src="scripts/scripts-base/utilities.js"></script>
+  <!-- Servicios y almacenamiento -->
+  <script src="scripts/scripts-base/services.js"></script>
+  <!-- Navegación -->
+  <script src="scripts/scripts-base/navigation.js"></script>
+  <!-- Elementos interactivos -->
+  <script src="scripts/scripts-base/interactive-elements.js"></script>
+  <!-- Manejadores de eventos -->
+  <script src="scripts/scripts-base/event-handlers.js"></script>
+  <!-- Script principal -->
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

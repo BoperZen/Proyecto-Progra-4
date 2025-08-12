@@ -1,0 +1,208 @@
+/**
+ * ========================================
+ * TEMAS Y RESPONSIVE
+ * ========================================
+ * 
+ * Tema oscuro, media queries y adaptaciones
+ * para diferentes tamaños de pantalla.
+ */
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    padding-top: 70px;
+  }
+  
+  .container {
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm);
+    border-radius: var(--border-radius-base);
+  }
+  
+  /* Navbar Mobile */
+  .navbar-container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    gap: 0;
+    transform: translateY(-100vh);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+  }
+  
+  .navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-md);
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .navbar-actions {
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: var(--spacing-lg);
+  }
+  
+  .interactive-editor,
+  .form-generator {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: var(--font-size-xxl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .editor-controls {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-xs);
+  }
+  
+  .navbar-container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .brand-text {
+    display: none;
+  }
+  
+  .execute-btn {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .editor-controls {
+    flex-direction: column;
+  }
+  
+  .editor-controls .execute-btn {
+    margin: var(--spacing-xs) 0;
+  }
+}
+
+/* ========================================
+   TEMA OSCURO
+   ======================================== */
+
+.dark-theme {
+  --color-text-primary: #f1f5f9;   /* Blanco azulado suave */
+  --color-text-secondary: #94a3b8; /* Gris azulado claro */
+  --color-text-muted: #64748b;     /* Gris azulado medio */
+  
+  --color-bg-primary: #0f172a;     /* Azul marino muy oscuro */
+  --color-bg-secondary: #1e293b;   /* Azul gris oscuro */
+  --color-bg-tertiary: #334155;    /* Gris azulado medio oscuro */
+  
+  --color-border-light: #334155;   /* Gris azulado medio oscuro */
+  --color-border-medium: #475569;  /* Gris azulado medio */
+  --color-border-dark: #64748b;    /* Gris azulado claro */
+}
+
+.dark-theme .navbar {
+  background: rgba(15, 23, 42, 0.95);        /* Azul marino oscuro */
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.dark-theme .navbar-menu {
+  background: rgba(15, 23, 42, 0.98);        /* Azul marino oscuro */
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.dark-theme .theme-toggle {
+  background: rgba(30, 41, 59, 0.8);         /* Azul gris oscuro */
+}
+
+.dark-theme .theme-toggle:hover {
+  background: rgba(30, 58, 138, 0.3);        /* Azul profesional con transparencia */
+}
+
+.dark-theme .navbar-toggle {
+  background: rgba(30, 41, 59, 0.8);         /* Azul gris oscuro */
+}
+
+.dark-theme .navbar-toggle:hover {
+  background: rgba(30, 58, 138, 0.3);        /* Azul profesional con transparencia */
+}
+
+.dark-theme .theme-icon {
+  transform: rotate(180deg);
+}
+
+.dark-theme .code-errors {
+  background: #451a1a;                       /* Fondo rojo oscuro */
+  border-color: var(--color-danger);
+  color: #fca5a5;                           /* Texto rojo claro */
+}
+
+.dark-theme .form-control.success {
+  border-color: #059669;                    /* Verde esmeralda */
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.3);
+}
+
+.dark-theme .form-control.error {
+  border-color: #dc2626;                    /* Rojo confiable */
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
+}
+
+/* Formularios en tema oscuro */
+.dark-theme .form-group label {
+  color: #f1f5f9;                           /* Blanco azulado suave */
+}
+
+.dark-theme .form-group input[type="text"],
+.dark-theme .form-group select {
+  background: rgba(51, 65, 85, 0.3);        /* Gris azulado transparente */
+  border: 1px solid rgba(100, 116, 139, 0.4);
+  color: #f1f5f9;                           /* Blanco azulado suave */
+}
+
+.dark-theme .form-group input[type="text"]:focus,
+.dark-theme .form-group select:focus {
+  border-color: #1e3a8a;                    /* Azul profesional */
+  background: rgba(51, 65, 85, 0.5);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.dark-theme .sample-form {
+  background: rgba(51, 65, 85, 0.2);        /* Gris azulado muy transparente */
+}
