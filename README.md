@@ -1,74 +1,210 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
 
-<style>
-.header-container {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding:x 20px;
-  b: 15px;
-  coe;
-  margin: 20px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-.tech-badge {
-  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
-  padding: 8px 16px;
-  border-radius: 25px;
-  color: white;
-  margin: 5px;
-  display: inline-block;
-  font-weight: bold;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-.feature-card {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  padding: 25px;
-  border-radius: 12px;
-  color: white;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-  margin: 15px;
-}
-.code-block {
-  background: #1a1a1a;
-  color: #00ff41;
-  padding: 20px;
-  border-radius: 8px;
-  font-family: 'Courier New', monospace;
-  border-left: 4px solid #00ff41;
-}
-.architecture-diagram {
-  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-  padding: 30px;
-  border-radius: 12px;
-  color: white;
-  margin: 20px 0;
-}
-</style>
-
-<div class="header-container">
-  <h1>🚗💨 Why not rent a car?</h1>
-  <h3><em>Enterprise-Level Web Application Architecture</em></h3>
-  
-  <div style="margin: 25px 0;">
-    <a href="./index.html">
-      <img src="https://img.shields.io/badge/🚀%20DEMO-Live%20Application-ff6b6b?style=for-the-badge&labelColor=4ecdc4" />
-    </a>
-    <a href="https://github.com/BoperZen/Proyecto-Progra-4">
-      <img src="https://img.shields.io/badge/⭐%20REPOSITORY-Source%20Code-45b7d1?style=for-the-badge&labelColor=96ceb4" />
-    </a>
-    <a href=".">
-      <img src="https://img.shields.io/badge/💻%20CODEBASE-Inspect%20Architecture-f7dc6f?style=for-the-badge&labelColor=bb8fce" />
-    </a>
-  </div>
-
-  <div style="margin-top: 20px;">
-    <span class="tech-badge">✨ Production Ready</span>
-    <span class="tech-badge">👥 Full-Stack Architecture</span>
-    <span class="tech-badge">💪 Scalable Infrastructure</span>
-  </div>
+<div class="container-fluid bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-car me-3"></i>Why Not Rent a Car?
+                </h1>
+                <p class="lead mb-4">
+                    Aplicación web moderna para gestión de alquiler de vehículos desarrollada con tecnologías frontend estándar
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-light text-primary px-3 py-2">
+                        <i class="fab fa-html5 me-1"></i>HTML5
+                    </span>
+                    <span class="badge bg-light text-primary px-3 py-2">
+                        <i class="fab fa-css3-alt me-1"></i>CSS3
+                    </span>
+                    <span class="badge bg-light text-primary px-3 py-2">
+                        <i class="fab fa-js-square me-1"></i>JavaScript ES6+
+                    </span>
+                    <span class="badge bg-light text-primary px-3 py-2">
+                        <i class="fab fa-bootstrap me-1"></i>Bootstrap 5
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="d-grid gap-2">
+                    <a href="./index.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-external-link-alt me-2"></i>Ver Demo
+                    </a>
+                    <a href="https://github.com/BoperZen/Proyecto-Progra-4" class="btn btn-outline-light">
+                        <i class="fab fa-github me-2"></i>Código Fuente
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Acerca del Proyecto</h2>
+                <p class="text-muted">
+                    Desarrollamos una aplicación web responsive para la gestión de alquiler de vehículos, 
+                    implementando las mejores prácticas de desarrollo frontend y diseño centrado en el usuario.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                        <i class="fas fa-code fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Código Limpio</h5>
+                    <p class="card-text text-muted">
+                        Estructura modular con separación de responsabilidades y estándares de codificación.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="bg-success bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                        <i class="fas fa-mobile-alt fa-2x text-success"></i>
+                    </div>
+                    <h5 class="card-title">Diseño Responsive</h5>
+                    <p class="card-text text-muted">
+                        Adaptación perfecta a dispositivos móviles, tablets y escritorio.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <div class="bg-info bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
+                        <i class="fas fa-palette fa-2x text-info"></i>
+                    </div>
+                    <h5 class="card-title">Interfaz Moderna</h5>
+                    <p class="card-text text-muted">
+                        Diseño contemporáneo con sistema de temas y experiencia de usuario optimizada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <h3 class="fw-bold mb-3">Tecnologías Implementadas</h3>
+            <div class="list-group list-group-flush">
+                <div class="list-group-item d-flex align-items-center border-0 px-0">
+                    <i class="fab fa-html5 fa-lg text-danger me-3"></i>
+                    <div>
+                        <h6 class="mb-1">HTML5 Semántico</h6>
+                        <small class="text-muted">Estructura accesible y optimizada para SEO</small>
+                    </div>
+                </div>
+                <div class="list-group-item d-flex align-items-center border-0 px-0">
+                    <i class="fab fa-css3-alt fa-lg text-primary me-3"></i>
+                    <div>
+                        <h6 class="mb-1">CSS3 Modular</h6>
+                        <small class="text-muted">Arquitectura escalable con custom properties</small>
+                    </div>
+                </div>
+                <div class="list-group-item d-flex align-items-center border-0 px-0">
+                    <i class="fab fa-js-square fa-lg text-warning me-3"></i>
+                    <div>
+                        <h6 class="mb-1">JavaScript ES6+</h6>
+                        <small class="text-muted">Programación funcional y gestión del DOM</small>
+                    </div>
+                </div>
+                <div class="list-group-item d-flex align-items-center border-0 px-0">
+                    <i class="fab fa-bootstrap fa-lg text-info me-3"></i>
+                    <div>
+                        <h6 class="mb-1">Bootstrap 5</h6>
+                        <small class="text-muted">Framework CSS para diseño responsive</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="fw-bold mb-3">Características Principales</h3>
+            <ul class="list-unstyled">
+                <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Sistema de gestión de temas (claro/oscuro)
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Editor interactivo de código en tiempo real
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Almacenamiento local de preferencias
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Interfaz intuitiva y accesible
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Animaciones CSS optimizadas
+                </li>
+                <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Compatibilidad cross-browser
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-light rounded-3 p-4 mb-5">
+        <h3 class="fw-bold mb-3">Estructura del Proyecto</h3>
+        <div class="row">
+            <div class="col-lg-8">
+                <pre class="bg-dark text-light p-3 rounded"><code>proyecto-rental-car/
+├── index.html          # Página principal
+├── script.js           # Lógica de la aplicación
+├── style.css           # Estilos principales
+└── README.md           # Documentación</code></pre>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-muted mb-0">
+                    Arquitectura simple y efectiva que facilita el mantenimiento y la escalabilidad del proyecto.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h3 class="fw-bold mb-3">Equipo de Desarrollo</h3>
+        <p class="text-muted mb-4">
+            Proyecto desarrollado por dos estudiantes de Programación 4, aplicando conocimientos 
+            de desarrollo web frontend y principios de ingeniería de software.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://github.com/BoperZen/Proyecto-Progra-4" class="btn btn-outline-primary">
+                <i class="fab fa-github me-2"></i>Ver en GitHub
+            </a>
+            <a href="./index.html" class="btn btn-primary">
+                <i class="fas fa-play me-2"></i>Ejecutar Aplicación
+            </a>
+        </div>
+    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
 <br>
 
