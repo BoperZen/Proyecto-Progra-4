@@ -2,24 +2,10 @@
 
 <style>
 .header-container {
-  background: li</div>
-
-<br>
-
-> **🎯 Enterprise-grade web application implementing modern development methodologies**  
-> *Leveraging modular architecture patterns, responsive design principles, and advanced JavaScript frameworks*
-
-<div align="center">
-
-## 🗺️ Technical Documentation Navigation
-
-| [🏗️ **System Architecture**](#️-sistema-de-arquitectura-empresarial) | [🎨 **Design System**](#-design-system-specification) | [⚡ **Core Features**](#-core-feature-implementation) | [📱 **Responsive Framework**](#-responsive-design-framework) |
-|:---:|:---:|:---:|:---:|
-
-</div>35deg, #667eea 0%, #764ba2 100%);
-  padding: 40px 20px;
-  border-radius: 15px;
-  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding:x 20px;
+  b: 15px;
+  coe;
   margin: 20px 0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
@@ -86,8 +72,59 @@
 
 <br>
 
-> **🤔 ¿Qué pasaría si dos estudiantes decidieran crear algo épico?**  
-> *Spoiler: Este proyecto es la respuesta.*
+> **🎯 Enterprise-grade web application implementing modern development methodologies**  
+> *Leveraging modular architecture patterns, responsive design principles, and advanced JavaScript frameworks*
+
+<div align="center">
+
+## 🗺️ Technical Documentation Navigation
+
+| [🏗️ **System Architecture**](#️-sistema-de-arquitectura-empresarial) | [🎨 **Design System**](#-design-system-specification) | [⚡ **Core Features**](#-core-feature-implementation) | [📱 **Responsive Framework**](#-responsive-design-framework) |
+|:---:|:---:|:---:|:---:|
+
+</div>
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  border-left: 4px solid #00ff41;
+}
+.architecture-diagram {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  padding: 30px;
+  border-radius: 12px;
+  color: white;
+  margin: 20px 0;
+}
+</style>
+
+<div class="header-container">
+  <h1>🚗💨 Why not rent a car?</h1>
+  <h3><em>Enterprise-Level Web Application Architecture</em></h3>
+  
+  <div style="margin: 25px 0;">
+    <a href="./index.html">
+      <img src="https://img.shields.io/badge/🚀%20DEMO-Live%20Application-ff6b6b?style=for-the-badge&labelColor=4ecdc4" />
+    </a>
+    <a href="https://github.com/BoperZen/Proyecto-Progra-4">
+      <img src="https://img.shields.io/badge/⭐%20REPOSITORY-Source%20Code-45b7d1?style=for-the-badge&labelColor=96ceb4" />
+    </a>
+    <a href=".">
+      <img src="https://img.shields.io/badge/💻%20CODEBASE-Inspect%20Architecture-f7dc6f?style=for-the-badge&labelColor=bb8fce" />
+    </a>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <span class="tech-badge">✨ Production Ready</span>
+    <span class="tech-badge">👥 Full-Stack Architecture</span>
+    <span class="tech-badge">💪 Scalable Infrastructure</span>
+  </div>
+</div>
+
+</div>
+
+<br>
+
+
 
 <div align="center">
 
@@ -96,28 +133,12 @@
 | [🏗️ **Arquitectura**](#️-arquitectura-que-nos-enorgullece) | [🎨 **Diseño**](#-sistema-de-diseño-premium) | [⚡ **Features**](#-funcionalidades-que-implementamos) | [📱 **Responsive**](#-diseño-adaptativo) |
 |:---:|:---:|:---:|:---:|
 
-</div>
 
-## 🏗️ Arquitectura que nos enorgullece
 
-<div align="center">
 
-**🔥 De cero a héroe: La evolución de una idea**
 
-[![📁 Explorar Estructura](https://img.shields.io/badge/📁%20EXPLORAR-Estructura%20del%20Proyecto-9b59b6?style=for-the-badge)](.)
 
-</div>
 
-<details>
-<summary>🎪 <strong>¿Curioso por ver la magia detrás del código?</strong></summary>
-
-<br>
-
-<div align="center">
-
-**🎭 El show debe continuar... y aquí está nuestro elenco:**
-
-</div>
 
 ```bash
 🎬 proyecto-estrella/
