@@ -22,8 +22,8 @@ Una plataforma web para alquiler de autos. Diseño limpio, código funcional, si
 
 ## 💭 Nuestra inspiración
 
-> *"Hacer un proyecto decente"*  
-> - El equipo, siendo brutalmente honestos
+> *"Hacer un muy buen proyecto"*  
+> El equipo, siendo brutalmente honestos
 
 <br>
 
