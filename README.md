@@ -23,13 +23,9 @@ Una plataforma web para alquiler de autos. Diseño limpio, código funcional, si
 ## 💭 Nuestra inspiración
 
 > *"Hacer un muy buen proyecto"*  
-> El equipo, siendo brutalmente honestos
+> Creemos que la tecnología debe simplificar la vida, no complicarla. Cada línea de código importa
 
 <br>
 
 ---
-
-[![🚀 Ver Demo](https://img.shields.io/badge/🚀%20Ver%20Demo-brightgreen?style=for-the-badge)](./index.html)
-[![📂 Ver Código](https://img.shields.io/badge/📂%20Ver%20Código-blue?style=for-the-badge)](https://github.com/BoperZen/Proyecto-Progra-4)
-
 </div>
