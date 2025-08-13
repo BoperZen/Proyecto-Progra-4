@@ -32,8 +32,9 @@ footer {
   margin-top: 0;
   padding: var(--spacing-xl);
   background: var(--color-bg-secondary);
+  background-color: darkgrey;
   text-align: center;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   font-size: var(--font-size-sm);
 }
 
