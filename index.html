@@ -15,11 +15,7 @@
       <!-- Logo/Brand -->
       <div class="navbar-brand" href="index.html">
         <a href="#" class="brand-link">
-          <!--span class="brand-icon">🚗</span-->
-          <div class="brand-text">
-            <div class="brand-main">Why not</div>
-            <div class="brand-sub">rent a car</div>
-          </div>
+          <img src="img/logo-2.png" alt="error" class="brand-logo">
         </a>
       </div>
 
@@ -30,7 +26,19 @@
             <a href="#inicio" aria-current="page" class="nav-link active">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">vehiculos</a>
+            <a href="#" class="nav-link">Vehiculos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Historia</a>
           </li>
           <li class="nav-item">
             <a href="htmls/acerca.html" class="nav-link">Acerca</a>
@@ -49,36 +57,127 @@
 
   <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
-    <!-- ENCABEZADO -->
+    
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-background">
+        <img src="/img/img-car-1.jpg" alt="Vehículo de alquiler" class="hero-image">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Alquiler de autos en 
+          <span class="highlight-text">Costa Rica</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          <span class="highlight-text">Why not</span> Rent a Car es la empresa con las mejores tarifas para renta de autos en Costa Rica
+        </h2>
+        <p class="hero-description">
+          La compañía local de alquiler de carros más grande de Costa Rica con la mejor flota, desde 1990.
+        </p>
+      </div>
+    </section>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="main-content">
-      
-      <!-- SECCIÓN 1: FLOTA VEHICULAR -->
-      <section id="flota" class="example-section">
+
+      <!-- SECCIÓN 1: POR QUÉ NOSOTROS -->
+      <section id="porque-nosotros" class="example-section">
         <div class="section-content">
-          <h2>🏢 Nuestra Flota</h2>
-          <p>Amplia gama de vehículos para satisfacer todas sus necesidades de transporte empresarial y personal.</p>
+          <h2>¿Por qué rentar con nosotros?</h2>
+          
+          <!-- Carousel -->
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <div class="carousel-track" id="carousel-track">
+                
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                  <div class="slide-image">
+                    <img src="img/suv.png" alt="Flota moderna">
+                  </div>
+                  <div class="slide-content">
+                    <p>Vehículos nuevos y bien mantenidos<br>para tu seguridad y comodidad</p>
+                  </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                  <div class="slide-image">
+                    <img src="img/money.png" alt="Mejores precios">
+                  </div>
+                  <div class="slide-content">
+                    <p>Tarifas competitivas sin costos ocultos<br>Transparencia total</p>
+                  </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                  <div class="slide-image">
+                    <img src="img/24-hours-support.png" alt="Servicio 24/7">
+                  </div>
+                  <div class="slide-content">
+                    <p>Atención al cliente las 24 horas<br>para resolver cualquier eventualidad</p>
+                  </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                  <div class="slide-image">
+                    <img src="img/map.png" alt="Cobertura nacional">
+                  </div>
+                  <div class="slide-content">
+                    <p>Oficinas en todo Costa Rica<br>para tu conveniencia</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+              <button class="indicator active" onclick="goToSlide(0)"></button>
+              <button class="indicator" onclick="goToSlide(1)"></button>
+              <button class="indicator" onclick="goToSlide(2)"></button>
+              <button class="indicator" onclick="goToSlide(3)"></button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- SECCIÓN 2: SERVICIOS CORPORATIVOS -->
-      <section id="servicios" class="example-section">
+      <!-- SECCIÓN 2: UBICACIÓN -->
+      <section id="ubicacion" class="example-section">
         <div class="section-content">
-          <h2>💼 Servicios Corporativos</h2>
-          <p>Soluciones especializadas para empresas que requieren servicios de transporte confiables y eficientes.</p>
+          <h2>📍 Ubicación</h2>
+          <p>Encuentra nuestras oficinas y puntos de servicio en todo el país.</p>
         </div>
       </section>
 
-      <!-- SECCIÓN 3: TECNOLOGÍA Y SEGURIDAD -->
-      <section id="tecnologia" class="example-section">
+      <!-- SECCIÓN 3: RESERVAR-UNO -->
+      <section id="reservar-uno" class="example-section">
         <div class="section-content">
-          <h2>🔐 Tecnología y Seguridad</h2>
-          <p>Sistemas avanzados de monitoreo y seguridad para garantizar la protección de nuestros clientes.</p>
+          <h2></h2>
+          <p></p>
       </section>
 
-      <!-- SECCIÓN 4: COBERTURA Y SOPORTE -->
-      <section id="cobertura" class="example-section">
+      <!-- SECCIÓN 4: BLOG -->
+      <section id="blog" class="example-section">
+        <div class="section-content">
+          <h2>🌐 Cobertura Nacional</h2>
+          <p>Red de servicios extendida en las principales ciudades del país con soporte especializado.</p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 5: CONSEJOS -->
+      <section id="consejos" class="example-section">
+        <div class="section-content">
+          <h2>🌐 Cobertura Nacional</h2>
+          <p>Red de servicios extendida en las principales ciudades del país con soporte especializado.</p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 6: RESERVAR-DOS -->
+      <section id="reservar-dos" class="example-section">
         <div class="section-content">
           <h2>🌐 Cobertura Nacional</h2>
           <p>Red de servicios extendida en las principales ciudades del país con soporte especializado.</p>
@@ -104,6 +203,8 @@
   <script src="scripts/scripts-base/interactive-elements.js"></script>
   <!-- Manejadores de eventos -->
   <script src="scripts/scripts-base/event-handlers.js"></script>
+  <!-- Carousel -->
+  <script src="scripts/carousel.js"></script>
   <!-- Script principal -->
   <script src="scripts/script.js"></script>
 </body>
