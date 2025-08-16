@@ -4,73 +4,6 @@
     <meta charset="UTF-8">
     <title>Opciones de vehículos para rentar</title>
     <link rel="stylesheet" href="../styles/styles-base/vehiculos.css">
-    <style>
-        .vehiculos-header {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    padding: 0.5em 0;
-    margin-bottom: 2em;
-}
-.vehiculos-header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2em;
-}
-.vehiculos-logo {
-    height: 48px;
-    width: auto;
-    display: block;
-}
-.vehiculos-nav {
-    display: flex;
-    gap: 1.5em;
-}
-.vehiculos-nav-link {
-    color: #222;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    padding: 0.5em 2em;
-    border-radius: 12px;
-    transition: background 0.2s, color 0.2s;
-    background: transparent;
-    box-shadow: none;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 120px;
-    text-align: center;
-}
-.vehiculos-nav-link.active,
-.vehiculos-nav-link:hover {
-    background: #e8edfa;
-    color: #0a2c5d;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-/* Botón de tarjeta */
-.vehiculo-link {
-    display: inline-block;
-    text-align: center;
-    background: #232c67;
-    color: #fff;
-    padding: 0.45em 1.5em;
-    border-radius: 12px;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 500;
-    margin-top: 0.7em;
-    transition: background 0.2s;
-    box-shadow: none;
-}
-.vehiculo-link:hover {
-    background: #0a2c5d;
-}
-    </style>
 </head>
 <body>
     <!-- NAVBAR UNIFICADO -->
@@ -90,13 +23,13 @@
         <aside class="filtros" aria-label="Filtros de vehículos">
             <h2 class="filtros-titulo">FILTROS</h2>
             <form id="filtros-form">
-                <fieldset>
-                    <legend class="sr-only">Tipo de vehículo</legend>
-                    <label><input type="checkbox" name="tipo" value="Sedán"> Sedán</label>
-                    <label><input type="checkbox" name="tipo" value="SUV"> SUV</label>
-                    <label><input type="checkbox" name="tipo" value="Pickup"> Pickup</label>
-                    <label><input type="checkbox" name="tipo" value="Van"> Van</label>
-                    <label><input type="checkbox" name="tipo" value="Eléctrico"> Eléctricos</label>
+                <fieldset class="filtros-fieldset">
+                    <legend class="filtros-legend">Tipo de vehículo</legend>
+                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Sedán"> Sedán</label>
+                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="SUV"> SUV</label>
+                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Pickup"> Pickup</label>
+                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Van"> Van</label>
+                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico"> Eléctrico</label>
                 </fieldset>
                 <div class="filtro-pasajeros">
                     <label for="pasajeros">Pasajeros</label>
@@ -108,6 +41,7 @@
                         <option value="7">7</option>
                     </select>
                 </div>
+                <button type="button" id="limpiar-filtros" class="btn-limpiar">Limpiar filtros</button>
             </form>
         </aside>
         <section class="vehiculos-section">
@@ -115,73 +49,202 @@
                 <h1 class="vehiculos-title">Opciones de vehículos para rentar</h1>
                 <p class="vehiculos-desc">Alquiler de vehículos en Costa Rica.</p>
             </header>
-            <div class="vehiculos-grid">
-                <!-- Ejemplo de tarjeta de vehículo -->
-                <article class="vehiculo-card" data-tipo="Sedán" data-pasajeros="4">
-                    <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
-                    <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                    <p class="vehiculo-modelo">Toyota Agya o similar</p>
-                    <ul class="detalles">
-                        <li>Automático</li>
-                        <li>4 <span title="Pasajeros">👤</span></li>
-                        <li>2 <span title="Maletas">🧳</span></li>
-                        <li>4 <span title="Puertas">🚪</span></li>
-                    </ul>
-                    <a href="#" class="vehiculo-link">Ver detalle</a>
+            <div class="vehiculos-grid" id="vehiculos-grid">
+                <article class="vehiculo-card"
+                    data-img="../img/img-car-1.jpg"
+                    data-nombre="Vehículo mini"
+                    data-modelo="Toyota Agya o similar"
+                    data-transmision="Automático"
+                    data-pasajeros="4"
+                    data-maletas="2"
+                    data-puertas="4"
+                    data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
+                    <div class="vehiculo-img-container">
+                        <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                    </div>
+                    <div class="vehiculo-info">
+                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
+                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <ul class="detalles">
+                            <li><span class="detalle-icon">⚙️</span> Automático</li>
+                            <li><span class="detalle-icon">👤</span> 4</li>
+                            <li><span class="detalle-icon">🧳</span> 2</li>
+                            <li><span class="detalle-icon">🚪</span> 4</li>
+                        </ul>
+                        <a href="#" class="vehiculo-link">Ver detalle</a>
+                    </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="Sedán" data-pasajeros="4">
-                    <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
-                    <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                    <p class="vehiculo-modelo">Toyota Agya o similar</p>
-                    <ul class="detalles">
-                        <li>Manual</li>
-                        <li>4 <span title="Pasajeros">👤</span></li>
-                        <li>2 <span title="Maletas">🧳</span></li>
-                        <li>4 <span title="Puertas">🚪</span></li>
-                    </ul>
-                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                <article class="vehiculo-card"
+                    data-img="../img/img-car-1.jpg"
+                    data-nombre="Vehículo mini"
+                    data-modelo="Toyota Agya o similar"
+                    data-transmision="Manual"
+                    data-pasajeros="4"
+                    data-maletas="2"
+                    data-puertas="4"
+                    data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
+                    <div class="vehiculo-img-container">
+                        <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                    </div>
+                    <div class="vehiculo-info">
+                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
+                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <ul class="detalles">
+                            <li><span class="detalle-icon">⚙️</span> Manual</li>
+                            <li><span class="detalle-icon">👤</span> 4</li>
+                            <li><span class="detalle-icon">🧳</span> 2</li>
+                            <li><span class="detalle-icon">🚪</span> 4</li>
+                        </ul>
+                        <a href="#" class="vehiculo-link">Ver detalle</a>
+                    </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="SUV" data-pasajeros="4">
-                    <img src="../img/img-car-2.jpg" alt="Suzuki Swift" class="vehiculo-img">
-                    <h2 class="vehiculo-nombre">Vehículo económico</h2>
-                    <p class="vehiculo-modelo">Suzuki Swift o similar</p>
-                    <ul class="detalles">
-                        <li>Automático</li>
-                        <li>4 <span title="Pasajeros">👤</span></li>
-                        <li>2 <span title="Maletas">🧳</span></li>
-                        <li>4 <span title="Puertas">🚪</span></li>
-                    </ul>
-                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                <article class="vehiculo-card"
+                    data-img="../img/img-car-2.jpg"
+                    data-nombre="Vehículo económico"
+                    data-modelo="Suzuki Swift o similar"
+                    data-transmision="Automático"
+                    data-pasajeros="4"
+                    data-maletas="2"
+                    data-puertas="4"
+                    data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
+                    <div class="vehiculo-img-container">
+                        <img src="../img/img-car-2.jpg" alt="Suzuki Swift" class="vehiculo-img">
+                    </div>
+                    <div class="vehiculo-info">
+                        <h2 class="vehiculo-nombre">Vehículo económico</h2>
+                        <p class="vehiculo-modelo">Suzuki Swift o similar</p>
+                        <ul class="detalles">
+                            <li><span class="detalle-icon">⚙️</span> Automático</li>
+                            <li><span class="detalle-icon">👤</span> 4</li>
+                            <li><span class="detalle-icon">🧳</span> 2</li>
+                            <li><span class="detalle-icon">🚪</span> 4</li>
+                        </ul>
+                        <a href="#" class="vehiculo-link">Ver detalle</a>
+                    </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="Eléctrico" data-pasajeros="5">
-                    <img src="../img/img-car-3.jpg" alt="Toyota Bz4x" class="vehiculo-img">
-                    <h2 class="vehiculo-nombre">Estándar SUV Eléctrico</h2>
-                    <p class="vehiculo-modelo">Toyota Bz4x, Autonomía 400 Km</p>
-                    <ul class="detalles">
-                        <li>Automático</li>
-                        <li>5 <span title="Pasajeros">👤</span></li>
-                        <li>2 <span title="Maletas">🧳</span></li>
-                        <li>4 <span title="Puertas">🚪</span></li>
-                    </ul>
-                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                <article class="vehiculo-card"
+                    data-img="../img/img-car-3.jpg"
+                    data-nombre="Estándar SUV Eléctrico"
+                    data-modelo="Toyota Bz4x, Autonomía 400 Km"
+                    data-transmision="Automático"
+                    data-pasajeros="5"
+                    data-maletas="2"
+                    data-puertas="4"
+                    data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
+                    <div class="vehiculo-img-container">
+                        <img src="../img/img-car-3.jpg" alt="Toyota Bz4x" class="vehiculo-img">
+                    </div>
+                    <div class="vehiculo-info">
+                        <h2 class="vehiculo-nombre">Estándar SUV Eléctrico</h2>
+                        <p class="vehiculo-modelo">Toyota Bz4x, Autonomía 400 Km</p>
+                        <ul class="detalles">
+                            <li><span class="detalle-icon">⚙️</span> Automático</li>
+                            <li><span class="detalle-icon">👤</span> 5</li>
+                            <li><span class="detalle-icon">🧳</span> 2</li>
+                            <li><span class="detalle-icon">🚪</span> 4</li>
+                        </ul>
+                        <a href="#" class="vehiculo-link">Ver detalle</a>
+                    </div>
                 </article>
-                <!-- Agrega más tarjetas según tus vehículos -->
             </div>
         </section>
     </main>
+
+    <!-- Modal de detalle de vehículo -->
+    <div id="vehiculo-modal" class="vehiculo-modal">
+      <div class="vehiculo-modal-content">
+        <button class="vehiculo-modal-close" id="vehiculo-modal-close" aria-label="Cerrar">&times;</button>
+        <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-modal-img" id="modal-img">
+        <h2 class="vehiculo-modal-nombre" id="modal-nombre">Vehículo mini</h2>
+        <p class="vehiculo-modal-modelo" id="modal-modelo">Toyota Agya o similar</p>
+        <h4 class="vehiculo-modal-subtitulo">ESPECIFICACIONES</h4>
+        <ul class="vehiculo-modal-detalles">
+          <li><span class="detalle-icon">⚙️</span> <span id="modal-transmision">Automático</span></li>
+          <li><span class="detalle-icon">👤</span> <span id="modal-pasajeros">4</span></li>
+          <li><span class="detalle-icon">🧳</span> <span id="modal-maletas">2</span></li>
+          <li><span class="detalle-icon">🚪</span> <span id="modal-puertas">4</span></li>
+        </ul>
+        <h4 class="vehiculo-modal-subtitulo">TAMBIÉN INCLUYE</h4>
+        <ul class="vehiculo-modal-incluye">
+          <li><span class="detalle-icon">✔️</span> Bolsas de aire</li>
+          <li><span class="detalle-icon">✔️</span> Radio estéreo AM/FM</li>
+          <li><span class="detalle-icon">✔️</span> Aire acondicionado</li>
+        </ul>
+        <div class="vehiculo-modal-footer">
+          <button class="vehiculo-modal-btn" id="btn-reservar-modal">Reservar</button>
+        </div>
+      </div>
+    </div>
+
     <script src="../scripts/scripts-base/vehiculos.js"></script>
     <script>
-    // Filtro por cantidad de pasajeros
-    document.getElementById('pasajeros').addEventListener('change', function() {
-        const cantidad = this.value;
-        document.querySelectorAll('.vehiculo-card').forEach(card => {
-            if (!cantidad || card.getAttribute('data-pasajeros') === cantidad) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
+    // Filtro por cantidad de pasajeros y tipo
+    const filtrosForm = document.getElementById('filtros-form');
+    const checkboxes = filtrosForm.querySelectorAll('input[name="tipo"]');
+    const selectPasajeros = document.getElementById('pasajeros');
+    const limpiarBtn = document.getElementById('limpiar-filtros');
+    const vehiculos = document.querySelectorAll('.vehiculo-card');
+
+    function filtrarVehiculos() {
+        const tiposSeleccionados = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+        const pasajerosSeleccionado = selectPasajeros.value;
+        vehiculos.forEach(card => {
+            const tipo = card.getAttribute('data-tipo');
+            const pasajeros = card.getAttribute('data-pasajeros');
+            const tipoCoincide = tiposSeleccionados.length === 0 || tiposSeleccionados.includes(tipo);
+            const pasajerosCoincide = !pasajerosSeleccionado || pasajeros === pasajerosSeleccionado;
+            card.style.display = (tipoCoincide && pasajerosCoincide) ? '' : 'none';
+        });
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', filtrarVehiculos));
+    selectPasajeros.addEventListener('change', filtrarVehiculos);
+
+    limpiarBtn.addEventListener('click', function() {
+        checkboxes.forEach(cb => cb.checked = false);
+        selectPasajeros.value = '';
+        filtrarVehiculos();
+    });
+
+    // Modal dinámico para ver detalle
+    document.querySelectorAll('.vehiculo-link').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = btn.closest('.vehiculo-card');
+            document.getElementById('modal-img').src = card.dataset.img;
+            document.getElementById('modal-nombre').textContent = card.dataset.nombre;
+            document.getElementById('modal-modelo').textContent = card.dataset.modelo;
+            document.getElementById('modal-transmision').textContent = card.dataset.transmision;
+            document.getElementById('modal-pasajeros').textContent = card.dataset.pasajeros;
+            document.getElementById('modal-maletas').textContent = card.dataset.maletas;
+            document.getElementById('modal-puertas').textContent = card.dataset.puertas;
+
+            // Incluye dinámico
+            const incluyeArr = card.dataset.incluye.split(',');
+            const incluyeList = document.querySelector('.vehiculo-modal-incluye');
+            incluyeList.innerHTML = '';
+            incluyeArr.forEach(txt => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="detalle-icon">✔️</span> ${txt.trim()}`;
+                incluyeList.appendChild(li);
+            });
+
+            document.getElementById('vehiculo-modal').classList.add('active');
         });
     });
+
+    // Cerrar modal
+    document.getElementById('vehiculo-modal-close').onclick = function() {
+        document.getElementById('vehiculo-modal').classList.remove('active');
+    };
+    document.getElementById('vehiculo-modal').onclick = function(e) {
+        if (e.target === this) this.classList.remove('active');
+    };
+
+    // Redirigir a la página de reservas al hacer click en el botón "Reservar"
+    document.getElementById('btn-reservar-modal').onclick = function() {
+        window.location.href = "reservacion.html";
+    };
     </script>
 </body>
 </html>

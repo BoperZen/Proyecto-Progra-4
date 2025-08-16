@@ -1,9 +1,63 @@
-/* Reset básico */
+/* Reset y base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f9fafd;
+    background: #f6f8fb;
+    color: #232c67;
+}
+
+/* NAVBAR/HEADER UNIFICADO */
+.vehiculos-header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(35,44,103,0.06);
+    padding: 0.5em 0;
+    margin-bottom: 2em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.vehiculos-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+.vehiculos-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+.vehiculos-nav {
+    display: flex;
+    gap: 1.5em;
+}
+.vehiculos-nav-link {
+    color: #232c67;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 0.5em 2em;
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.vehiculos-nav-link.active,
+.vehiculos-nav-link:hover {
+    background: #e8edfa;
+    color: #0a2c5d;
+    box-shadow: 0 2px 8px rgba(35,44,103,0.08);
 }
 
 /* Estructura principal */
@@ -14,137 +68,323 @@ body {
     gap: 2em;
 }
 
-/* Filtros */
+/* FILTROS */
 .filtros {
-    background: #0a2c5d;
-    color: #fff;
-    border-radius: 12px;
-    padding: 2em 1.5em;
-    min-width: 220px;
-    max-width: 260px;
+    background: linear-gradient(135deg, #e8edfa 0%, #f9fafd 100%);
+    color: #232c67;
+    border-radius: 18px;
+    padding: 2em 1.5em 2em 1.5em;
+    min-width: 240px;
+    max-width: 270px;
     font-size: 1.1em;
     height: fit-content;
     box-sizing: border-box;
+    box-shadow: 0 4px 24px rgba(35,44,103,0.08);
+    margin-top: 0.5em;
 }
-
-.filtros h2 {
-    font-size: 1.2em;
-    margin-bottom: 1em;
+.filtros-titulo {
+    font-size: 1.3em;
+    margin-bottom: 1.2em;
     letter-spacing: 1px;
+    font-weight: bold;
+    color: #232c67;
 }
-
-.filtros label {
+.filtros-fieldset {
+    border: 2px solid #d1d8f0;
+    border-radius: 10px;
+    padding: 1em 1em 0.5em 1em;
+    margin-bottom: 1.5em;
+    background: #fff;
+}
+.filtros-legend {
+    font-size: 1em;
+    font-weight: 600;
+    color: #232c67;
+    margin-bottom: 0.7em;
+}
+.filtro-checkbox {
     display: flex;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
     gap: 0.5em;
     cursor: pointer;
-}
-
-.filtros select {
-    width: 100%;
-    margin-top: 1em;
-    padding: 0.5em;
-    border-radius: 6px;
-    border: none;
     font-size: 1em;
+    color: #232c67;
+    transition: color 0.2s;
 }
-
+.filtro-checkbox input[type="checkbox"] {
+    accent-color: #232c67;
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 0.5em;
+}
+.filtro-checkbox input[type="checkbox"]:focus {
+    outline: 2px solid #232c67;
+}
 .filtro-pasajeros {
-    margin-top: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
-
 .filtro-pasajeros label {
     margin-bottom: 0.5em;
+    display: block;
+    font-weight: 600;
+    color: #232c67;
+}
+.filtro-pasajeros select {
+    width: 100%;
+    margin-top: 0.3em;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 1.5px solid #d1d8f0;
+    font-size: 1em;
+    background: #f9fafd;
+    color: #232c67;
+    font-weight: 500;
+    outline: none;
+    transition: border 0.2s;
+}
+.filtro-pasajeros select:focus {
+    border: 1.5px solid #232c67;
+}
+.btn-limpiar {
+    width: 100%;
+    margin-top: 1.2em;
+    padding: 0.6em 0;
+    background: #fff;
+    color: #232c67;
+    border: 2px solid #232c67;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-limpiar:hover {
+    background: #232c67;
+    color: #fff;
 }
 
-/* Sección de vehículos */
+/* SECCIÓN DE VEHÍCULOS */
 .vehiculos-section {
     flex: 1;
 }
-
-.vehiculos-section h1 {
-    color: #0a2c5d;
+.vehiculos-title {
+    color: #232c67;
     font-size: 2em;
     margin-bottom: 0.2em;
+    font-weight: bold;
 }
-
-.vehiculos-section p {
+.vehiculos-desc {
     color: #3a3a3a;
     margin-bottom: 2em;
+    font-size: 1.1em;
 }
 
-/* Grid de tarjetas */
+/* GRID DE TARJETAS */
 .vehiculos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2em;
 }
 
-/* Tarjeta de vehículo */
+/* TARJETA DE VEHÍCULO */
 .vehiculo-card {
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    padding: 1.5em 1em 1em 1em;
-    text-align: left;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(35,44,103,0.10);
+    border: none;
+    padding: 1.5em 1em 1.2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.vehiculo-card:hover {
+    box-shadow: 0 8px 32px rgba(35,44,103,0.16);
+    transform: translateY(-2px) scale(1.01);
+}
+.vehiculo-img-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #f3f6fa;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+.vehiculo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.vehiculo-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: box-shadow 0.2s;
-    border: 1px solid #e6e6e6;
 }
-
-.vehiculo-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1em;
-    background: #f5f5f5;
-    object-fit: contain;
-    min-height: 120px;
-    max-height: 140px;
-}
-
-.vehiculo-card h3 {
+.vehiculo-nombre {
     font-size: 1.2em;
-    color: #0a2c5d;
+    color: #232c67;
+    font-weight: 700;
     margin: 0 0 0.2em 0;
 }
-
-.vehiculo-card p {
-    margin: 0 0 0.5em 0;
-    color: #444;
+.vehiculo-modelo {
+    color: #7a7a7a;
     font-size: 1em;
+    margin: 0 0 0.8em 0;
+}
+.detalles {
+    display: flex;
+    gap: 1.2em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #232c67;
+    list-style: none;
+    padding: 0;
+}
+.detalle-icon {
+    margin-right: 0.3em;
+    vertical-align: middle;
+    color: #232c67;
+}
+.vehiculo-link {
+    display: inline-block;
+    background: #232c67;
+    color: #fff;
+    padding: 0.6em 1.7em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(35,44,103,0.06);
+    text-align: center;
+}
+.vehiculo-link:hover {
+    background: #0a2c5d;
+    box-shadow: 0 2px 8px rgba(35,44,103,0.10);
 }
 
-.vehiculo-card .detalles {
+/* Modal de detalle de vehículo */
+.vehiculo-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(35,44,103,0.25);
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+.vehiculo-modal.active {
     display: flex;
-    gap: 1.5em;
-    font-size: 0.98em;
-    margin-bottom: 0.7em;
+}
+.vehiculo-modal-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(35,44,103,0.18);
+    padding: 2em 2em 1.5em 2em;
+    max-width: 350px;
+    width: 90vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: modalIn 0.2s;
+}
+@keyframes modalIn {
+    from { transform: translateY(40px) scale(0.98); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+.vehiculo-modal-close {
+    position: absolute;
+    top: 1em; right: 1em;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #232c67;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.vehiculo-modal-close:hover {
     color: #0a2c5d;
 }
-
-.vehiculo-card .detalles span {
-    display: flex;
-    align-items: center;
-    gap: 0.3em;
+.vehiculo-modal-img {
+    width: 80%;
+    max-width: 220px;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    object-fit: contain;
+    background: #f3f6fa;
 }
-
-.vehiculo-card a {
-    color: #7c3aed;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: auto;
+.vehiculo-modal-nombre {
+    font-size: 1.3em;
+    color: #232c67;
+    font-weight: 700;
+    margin: 0.5em 0 0.1em 0;
+    text-align: center;
+}
+.vehiculo-modal-modelo {
+    color: #7a7a7a;
     font-size: 1em;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+.vehiculo-modal-subtitulo {
+    color: #7b3fa0;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 1em 0 0.5em 0;
+    width: 100%;
+    text-align: left;
     letter-spacing: 0.5px;
 }
-
-.vehiculo-card a:hover {
-    text-decoration: underline;
+.vehiculo-modal-detalles,
+.vehiculo-modal-incluye {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.7em 0;
+    width: 100%;
 }
-
-/* Responsive */
+.vehiculo-modal-detalles li,
+.vehiculo-modal-incluye li {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 0.5em;
+    color: #232c67;
+    font-size: 1em;
+}
+.vehiculo-modal-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2em;
+}
+.vehiculo-modal-btn {
+    background: #fff;
+    color: #232c67;
+    border: 2px solid #232c67;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.6em 2em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.vehiculo-modal-btn:hover {
+    background: #232c67;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .vehiculo-modal-content {
+        padding: 1em 0.5em 1em 0.5em;
+        max-width: 98vw;
+    }
+}
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .vehiculos-main {
         flex-direction: column;
@@ -153,5 +393,33 @@ body {
     .filtros {
         max-width: 100%;
         margin-bottom: 1em;
+    }
+    .vehiculos-header-container {
+        flex-direction: column;
+        gap: 1em;
+        padding: 0 1em;
+    }
+    .vehiculos-grid {
+        grid-template-columns: 1fr;
+    }
+    .vehiculo-modal-content {
+        padding: 1.5em;
+    }
+    .vehiculo-modal-nombre {
+        font-size: 1.3em;
+    }
+    .vehiculo-modal-modelo {
+        font-size: 1em;
+    }
+    .vehiculo-modal-subtitulo {
+        font-size: 1.1em;
+    }
+    .vehiculo-modal-detalles,
+    .vehiculo-modal-incluye {
+        font-size: 0.9em;
+    }
+    .vehiculo-modal-btn {
+        padding: 0.6em 1.2em;
+        font-size: 0.9em;
     }
 }
