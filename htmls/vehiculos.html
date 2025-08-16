@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Opciones de vehículos para rentar</title>
+    <link rel="stylesheet" href="../styles/styles-base/vehiculos.css">
+    <style>
+        .vehiculos-header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    padding: 0.5em 0;
+    margin-bottom: 2em;
+}
+.vehiculos-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+.vehiculos-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+.vehiculos-nav {
+    display: flex;
+    gap: 1.5em;
+}
+.vehiculos-nav-link {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 0.5em 2em;
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    text-align: center;
+}
+.vehiculos-nav-link.active,
+.vehiculos-nav-link:hover {
+    background: #e8edfa;
+    color: #0a2c5d;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+/* Botón de tarjeta */
+.vehiculo-link {
+    display: inline-block;
+    text-align: center;
+    background: #232c67;
+    color: #fff;
+    padding: 0.45em 1.5em;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 0.7em;
+    transition: background 0.2s;
+    box-shadow: none;
+}
+.vehiculo-link:hover {
+    background: #0a2c5d;
+}
+    </style>
+</head>
+<body>
+    <!-- NAVBAR UNIFICADO -->
+    <header class="vehiculos-header">
+        <div class="vehiculos-header-container">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../img/logo-2.png" alt="Why Not Rent a Car" class="vehiculos-logo">
+            </a>
+            <nav class="vehiculos-nav">
+                <a href="../index.html" class="vehiculos-nav-link">Home</a>
+                <a href="vehiculos.html" class="vehiculos-nav-link active">Vehículos</a>
+                <a href="acerca.html" class="vehiculos-nav-link">Acerca</a>
+            </nav>
+        </div>
+    </header>
+    <main class="vehiculos-main">
+        <aside class="filtros" aria-label="Filtros de vehículos">
+            <h2 class="filtros-titulo">FILTROS</h2>
+            <form id="filtros-form">
+                <fieldset>
+                    <legend class="sr-only">Tipo de vehículo</legend>
+                    <label><input type="checkbox" name="tipo" value="Sedán"> Sedán</label>
+                    <label><input type="checkbox" name="tipo" value="SUV"> SUV</label>
+                    <label><input type="checkbox" name="tipo" value="Pickup"> Pickup</label>
+                    <label><input type="checkbox" name="tipo" value="Van"> Van</label>
+                    <label><input type="checkbox" name="tipo" value="Eléctrico"> Eléctricos</label>
+                </fieldset>
+                <div class="filtro-pasajeros">
+                    <label for="pasajeros">Pasajeros</label>
+                    <select id="pasajeros" name="pasajeros">
+                        <option value="">Cantidad</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+            </form>
+        </aside>
+        <section class="vehiculos-section">
+            <header>
+                <h1 class="vehiculos-title">Opciones de vehículos para rentar</h1>
+                <p class="vehiculos-desc">Alquiler de vehículos en Costa Rica.</p>
+            </header>
+            <div class="vehiculos-grid">
+                <!-- Ejemplo de tarjeta de vehículo -->
+                <article class="vehiculo-card" data-tipo="Sedán" data-pasajeros="4">
+                    <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                    <h2 class="vehiculo-nombre">Vehículo mini</h2>
+                    <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                    <ul class="detalles">
+                        <li>Automático</li>
+                        <li>4 <span title="Pasajeros">👤</span></li>
+                        <li>2 <span title="Maletas">🧳</span></li>
+                        <li>4 <span title="Puertas">🚪</span></li>
+                    </ul>
+                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                </article>
+                <article class="vehiculo-card" data-tipo="Sedán" data-pasajeros="4">
+                    <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                    <h2 class="vehiculo-nombre">Vehículo mini</h2>
+                    <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                    <ul class="detalles">
+                        <li>Manual</li>
+                        <li>4 <span title="Pasajeros">👤</span></li>
+                        <li>2 <span title="Maletas">🧳</span></li>
+                        <li>4 <span title="Puertas">🚪</span></li>
+                    </ul>
+                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                </article>
+                <article class="vehiculo-card" data-tipo="SUV" data-pasajeros="4">
+                    <img src="../img/img-car-2.jpg" alt="Suzuki Swift" class="vehiculo-img">
+                    <h2 class="vehiculo-nombre">Vehículo económico</h2>
+                    <p class="vehiculo-modelo">Suzuki Swift o similar</p>
+                    <ul class="detalles">
+                        <li>Automático</li>
+                        <li>4 <span title="Pasajeros">👤</span></li>
+                        <li>2 <span title="Maletas">🧳</span></li>
+                        <li>4 <span title="Puertas">🚪</span></li>
+                    </ul>
+                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                </article>
+                <article class="vehiculo-card" data-tipo="Eléctrico" data-pasajeros="5">
+                    <img src="../img/img-car-3.jpg" alt="Toyota Bz4x" class="vehiculo-img">
+                    <h2 class="vehiculo-nombre">Estándar SUV Eléctrico</h2>
+                    <p class="vehiculo-modelo">Toyota Bz4x, Autonomía 400 Km</p>
+                    <ul class="detalles">
+                        <li>Automático</li>
+                        <li>5 <span title="Pasajeros">👤</span></li>
+                        <li>2 <span title="Maletas">🧳</span></li>
+                        <li>4 <span title="Puertas">🚪</span></li>
+                    </ul>
+                    <a href="#" class="vehiculo-link">Ver detalle</a>
+                </article>
+                <!-- Agrega más tarjetas según tus vehículos -->
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/scripts-base/vehiculos.js"></script>
+    <script>
+    // Filtro por cantidad de pasajeros
+    document.getElementById('pasajeros').addEventListener('change', function() {
+        const cantidad = this.value;
+        document.querySelectorAll('.vehiculo-card').forEach(card => {
+            if (!cantidad || card.getAttribute('data-pasajeros') === cantidad) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

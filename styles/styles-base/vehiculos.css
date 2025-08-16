@@ -1,0 +1,157 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9fafd;
+}
+
+/* Estructura principal */
+.vehiculos-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2em auto;
+    gap: 2em;
+}
+
+/* Filtros */
+.filtros {
+    background: #0a2c5d;
+    color: #fff;
+    border-radius: 12px;
+    padding: 2em 1.5em;
+    min-width: 220px;
+    max-width: 260px;
+    font-size: 1.1em;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.filtros h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+.filtros label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 0.5em;
+    cursor: pointer;
+}
+
+.filtros select {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+}
+
+.filtro-pasajeros {
+    margin-top: 2em;
+}
+
+.filtro-pasajeros label {
+    margin-bottom: 0.5em;
+}
+
+/* Sección de vehículos */
+.vehiculos-section {
+    flex: 1;
+}
+
+.vehiculos-section h1 {
+    color: #0a2c5d;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+.vehiculos-section p {
+    color: #3a3a3a;
+    margin-bottom: 2em;
+}
+
+/* Grid de tarjetas */
+.vehiculos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2em;
+}
+
+/* Tarjeta de vehículo */
+.vehiculo-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5em 1em 1em 1em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+    border: 1px solid #e6e6e6;
+}
+
+.vehiculo-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    background: #f5f5f5;
+    object-fit: contain;
+    min-height: 120px;
+    max-height: 140px;
+}
+
+.vehiculo-card h3 {
+    font-size: 1.2em;
+    color: #0a2c5d;
+    margin: 0 0 0.2em 0;
+}
+
+.vehiculo-card p {
+    margin: 0 0 0.5em 0;
+    color: #444;
+    font-size: 1em;
+}
+
+.vehiculo-card .detalles {
+    display: flex;
+    gap: 1.5em;
+    font-size: 0.98em;
+    margin-bottom: 0.7em;
+    color: #0a2c5d;
+}
+
+.vehiculo-card .detalles span {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.vehiculo-card a {
+    color: #7c3aed;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: auto;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+}
+
+.vehiculo-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .vehiculos-main {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .filtros {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+}
