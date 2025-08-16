@@ -61,6 +61,7 @@ footer p {
   background: var(--color-bg-primary);
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 /*
 .example-section:nth-child(even) {
@@ -68,7 +69,6 @@ footer p {
 }*/
 
 #porque-nosotros {
-  text-align: center;
   background: var(--color-bg-secondary);
 }
 

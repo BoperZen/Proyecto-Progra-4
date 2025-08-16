@@ -719,10 +719,9 @@
   height: 14px;
   border-radius: 50%;
   border: none;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(184, 184, 184, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .indicator.active {
@@ -763,5 +762,167 @@
   .indicator {
     width: 12px;
     height: 12px;
+  }
+}
+
+/* ========================================
+   SECCIÓN RESERVA CTA
+   ======================================== */
+
+.reserva-cta-section {
+  position: relative;
+  height: 400px;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.reserva-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.reserva-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reserva-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.5) 0%, rgba(25, 118, 210, 0.4) 50%, rgba(21, 101, 192, 0.5) 100%);
+  z-index: 2;
+}
+
+.reserva-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 0 2rem;
+}
+
+.reserva-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reserva-btn {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.reserva-btn:hover {
+  background: linear-gradient(135deg, #43a047 0%, #5cb85c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.reserva-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive para sección reserva */
+@media (max-width: 768px) {
+  .reserva-cta-section {
+    height: 350px;
+    margin: 2rem 0;
+  }
+  
+  .reserva-content {
+    padding: 0 1rem;
+  }
+  
+  .reserva-title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .reserva-btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ========================================
+   SECCIÓN UBICACIONES Y DESTINOS
+   ======================================== */
+
+.ubicaciones-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.ubicaciones-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.ubicaciones-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.ubicaciones-description {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ubicaciones-description:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive para ubicaciones */
+@media (max-width: 768px) {
+  .ubicaciones-content {
+    padding: 0 1.5rem;
+  }
+  
+  .ubicaciones-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ubicaciones-description {
+    font-size: 0.95rem;
+    text-align: left;
   }
 }
