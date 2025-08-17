@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Opciones de vehículos para rentar</title>
     <link rel="stylesheet" href="../styles/styles-base/vehiculos.css">
+    <link rel="stylesheet" href="../styles/style.css" />
 </head>
+
 <body>
-    <!-- NAVBAR UNIFICADO -->
-    <header class="vehiculos-header">
-        <div class="vehiculos-header-container">
-            <a href="../index.html" class="navbar-brand">
-                <img src="../img/logo-2.png" alt="Why Not Rent a Car" class="vehiculos-logo">
-            </a>
-            <nav class="vehiculos-nav">
-                <a href="../index.html" class="vehiculos-nav-link">Home</a>
-                <a href="vehiculos.html" class="vehiculos-nav-link active">Vehículos</a>
-                <a href="acerca.html" class="vehiculos-nav-link">Acerca</a>
-            </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo/Brand -->
+            <div class="navbar-brand" href="index.html">
+                <a href="../index.html" class="brand-link">
+                    <img src="../img/logo-2.png" alt="error" class="brand-logo">
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="../index.html" aria-current="page" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="htmls/vehiculos.html" class="nav-link active">Vehículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../htmls/acerca.html" class="nav-link">Acerca</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
         </div>
-    </header>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
     <main class="vehiculos-main">
         <aside class="filtros" aria-label="Filtros de vehículos">
             <h2 class="filtros-titulo">FILTROS</h2>
@@ -29,7 +67,8 @@
                     <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="SUV"> SUV</label>
                     <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Pickup"> Pickup</label>
                     <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Van"> Van</label>
-                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico"> Eléctrico</label>
+                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico">
+                        Eléctrico</label>
                 </fieldset>
                 <div class="filtro-pasajeros">
                     <label for="pasajeros">Pasajeros</label>
@@ -50,15 +89,9 @@
                 <p class="vehiculos-desc">Alquiler de vehículos en Costa Rica.</p>
             </header>
             <div class="vehiculos-grid" id="vehiculos-grid">
-                <article class="vehiculo-card"
-                    data-tipo="Sedán"
-                    data-img="../img/img-car-1.jpg"
-                    data-nombre="Vehículo mini"
-                    data-modelo="Toyota Agya o similar"
-                    data-transmision="Automático"
-                    data-pasajeros="4"
-                    data-maletas="2"
-                    data-puertas="4"
+                <article class="vehiculo-card" data-tipo="Sedán" data-img="../img/img-car-1.jpg"
+                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Automático"
+                    data-pasajeros="4" data-maletas="2" data-puertas="4"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
                         <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
@@ -70,28 +103,45 @@
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Engranaje (Transmisión) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z" />
+                                    </svg>
                                 </span>
                                 Automático
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Persona (Pasajeros) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="7" r="4" />
+                                        <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Maleta (Maletas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="3" y="7" width="18" height="13" rx="2" />
+                                        <path d="M16 3v4M8 3v4" />
+                                    </svg>
                                 </span>
                                 2
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Puerta (Puertas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="16" cy="9" r="1"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="6" y="3" width="12" height="18" rx="2" />
+                                        <circle cx="16" cy="9" r="1" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
@@ -99,15 +149,9 @@
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card"
-                    data-tipo="Sedán"
-                    data-img="../img/img-car-1.jpg"
-                    data-nombre="Vehículo mini"
-                    data-modelo="Toyota Agya o similar"
-                    data-transmision="Manual"
-                    data-pasajeros="4"
-                    data-maletas="2"
-                    data-puertas="4"
+                <article class="vehiculo-card" data-tipo="Sedán" data-img="../img/img-car-1.jpg"
+                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Manual"
+                    data-pasajeros="4" data-maletas="2" data-puertas="4"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
                         <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
@@ -119,28 +163,45 @@
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Engranaje (Transmisión) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z" />
+                                    </svg>
                                 </span>
                                 Manual
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Persona (Pasajeros) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="7" r="4" />
+                                        <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Maleta (Maletas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="3" y="7" width="18" height="13" rx="2" />
+                                        <path d="M16 3v4M8 3v4" />
+                                    </svg>
                                 </span>
                                 2
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Puerta (Puertas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="16" cy="9" r="1"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="6" y="3" width="12" height="18" rx="2" />
+                                        <circle cx="16" cy="9" r="1" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
@@ -148,15 +209,9 @@
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card"
-                    data-tipo="SUV"
-                    data-img="../img/img-car-2.jpg"
-                    data-nombre="Vehículo económico"
-                    data-modelo="Suzuki Swift o similar"
-                    data-transmision="Automático"
-                    data-pasajeros="4"
-                    data-maletas="2"
-                    data-puertas="4"
+                <article class="vehiculo-card" data-tipo="SUV" data-img="../img/img-car-2.jpg"
+                    data-nombre="Vehículo económico" data-modelo="Suzuki Swift o similar" data-transmision="Automático"
+                    data-pasajeros="4" data-maletas="2" data-puertas="4"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
                         <img src="../img/img-car-2.jpg" alt="Suzuki Swift" class="vehiculo-img">
@@ -168,28 +223,45 @@
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Engranaje (Transmisión) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z" />
+                                    </svg>
                                 </span>
                                 Automático
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Persona (Pasajeros) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="7" r="4" />
+                                        <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Maleta (Maletas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="3" y="7" width="18" height="13" rx="2" />
+                                        <path d="M16 3v4M8 3v4" />
+                                    </svg>
                                 </span>
                                 2
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Puerta (Puertas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="16" cy="9" r="1"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="6" y="3" width="12" height="18" rx="2" />
+                                        <circle cx="16" cy="9" r="1" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
@@ -197,15 +269,9 @@
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card"
-                    data-tipo="Eléctrico"
-                    data-img="../img/img-car-3.jpg"
-                    data-nombre="Estándar SUV Eléctrico"
-                    data-modelo="Toyota Bz4x, Autonomía 400 Km"
-                    data-transmision="Automático"
-                    data-pasajeros="5"
-                    data-maletas="2"
-                    data-puertas="4"
+                <article class="vehiculo-card" data-tipo="Eléctrico" data-img="../img/img-car-3.jpg"
+                    data-nombre="Estándar SUV Eléctrico" data-modelo="Toyota Bz4x, Autonomía 400 Km"
+                    data-transmision="Automático" data-pasajeros="5" data-maletas="2" data-puertas="4"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
                         <img src="../img/img-car-3.jpg" alt="Toyota Bz4x" class="vehiculo-img">
@@ -217,28 +283,45 @@
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Engranaje (Transmisión) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z" />
+                                    </svg>
                                 </span>
                                 Automático
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Persona (Pasajeros) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="7" r="4" />
+                                        <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                                    </svg>
                                 </span>
                                 5
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Maleta (Maletas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="3" y="7" width="18" height="13" rx="2" />
+                                        <path d="M16 3v4M8 3v4" />
+                                    </svg>
                                 </span>
                                 2
                             </li>
                             <li>
                                 <span class="detalle-icon">
                                     <!-- Puerta (Puertas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="16" cy="9" r="1"/></svg>
+                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <rect x="6" y="3" width="12" height="18" rx="2" />
+                                        <circle cx="16" cy="9" r="1" />
+                                    </svg>
                                 </span>
                                 4
                             </li>
@@ -250,101 +333,107 @@
         </section>
     </main>
 
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 - Plantilla de Proyecto Web</p>
+    </footer>
+
     <!-- Modal de detalle de vehículo -->
     <div id="vehiculo-modal" class="vehiculo-modal">
-      <div class="vehiculo-modal-content">
-        <button class="vehiculo-modal-close" id="vehiculo-modal-close" aria-label="Cerrar">&times;</button>
-        <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-modal-img" id="modal-img">
-        <h2 class="vehiculo-modal-nombre" id="modal-nombre">Vehículo mini</h2>
-        <p class="vehiculo-modal-modelo" id="modal-modelo">Toyota Agya o similar</p>
-        <h4 class="vehiculo-modal-subtitulo">ESPECIFICACIONES</h4>
-        <ul class="vehiculo-modal-detalles">
-          <li><span class="detalle-icon">⚙️</span> <span id="modal-transmision">Automático</span></li>
-          <li><span class="detalle-icon">👤</span> <span id="modal-pasajeros">4</span></li>
-          <li><span class="detalle-icon">🧳</span> <span id="modal-maletas">2</span></li>
-          <li><span class="detalle-icon">🚪</span> <span id="modal-puertas">4</span></li>
-        </ul>
-        <h4 class="vehiculo-modal-subtitulo">TAMBIÉN INCLUYE</h4>
-        <ul class="vehiculo-modal-incluye">
-          <li><span class="detalle-icon">✔️</span> Bolsas de aire</li>
-          <li><span class="detalle-icon">✔️</span> Radio estéreo AM/FM</li>
-          <li><span class="detalle-icon">✔️</span> Aire acondicionado</li>
-        </ul>
-        <div class="vehiculo-modal-footer">
-          <button class="vehiculo-modal-btn" id="btn-reservar-modal">Reservar</button>
+        <div class="vehiculo-modal-content">
+            <button class="vehiculo-modal-close" id="vehiculo-modal-close" aria-label="Cerrar">&times;</button>
+            <img src="../img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-modal-img" id="modal-img">
+            <h2 class="vehiculo-modal-nombre" id="modal-nombre">Vehículo mini</h2>
+            <p class="vehiculo-modal-modelo" id="modal-modelo">Toyota Agya o similar</p>
+            <h4 class="vehiculo-modal-subtitulo">ESPECIFICACIONES</h4>
+            <ul class="vehiculo-modal-detalles">
+                <li><span class="detalle-icon">⚙️</span> <span id="modal-transmision">Automático</span></li>
+                <li><span class="detalle-icon">👤</span> <span id="modal-pasajeros">4</span></li>
+                <li><span class="detalle-icon">🧳</span> <span id="modal-maletas">2</span></li>
+                <li><span class="detalle-icon">🚪</span> <span id="modal-puertas">4</span></li>
+            </ul>
+            <h4 class="vehiculo-modal-subtitulo">TAMBIÉN INCLUYE</h4>
+            <ul class="vehiculo-modal-incluye">
+                <li><span class="detalle-icon">✔️</span> Bolsas de aire</li>
+                <li><span class="detalle-icon">✔️</span> Radio estéreo AM/FM</li>
+                <li><span class="detalle-icon">✔️</span> Aire acondicionado</li>
+            </ul>
+            <div class="vehiculo-modal-footer">
+                <button class="vehiculo-modal-btn" id="btn-reservar-modal">Reservar</button>
+            </div>
         </div>
-      </div>
     </div>
 
     <script src="../scripts/scripts-base/vehiculos.js"></script>
     <script>
-    // Filtro por cantidad de pasajeros y tipo
-    const filtrosForm = document.getElementById('filtros-form');
-    const checkboxes = filtrosForm.querySelectorAll('input[name="tipo"]');
-    const selectPasajeros = document.getElementById('pasajeros');
-    const limpiarBtn = document.getElementById('limpiar-filtros');
-    const vehiculos = document.querySelectorAll('.vehiculo-card');
+        // Filtro por cantidad de pasajeros y tipo
+        const filtrosForm = document.getElementById('filtros-form');
+        const checkboxes = filtrosForm.querySelectorAll('input[name="tipo"]');
+        const selectPasajeros = document.getElementById('pasajeros');
+        const limpiarBtn = document.getElementById('limpiar-filtros');
+        const vehiculos = document.querySelectorAll('.vehiculo-card');
 
-    function filtrarVehiculos() {
-        const tiposSeleccionados = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
-        const pasajerosSeleccionado = selectPasajeros.value;
-        vehiculos.forEach(card => {
-            const tipo = card.getAttribute('data-tipo');
-            const pasajeros = card.getAttribute('data-pasajeros');
-            const tipoCoincide = tiposSeleccionados.length === 0 || tiposSeleccionados.includes(tipo);
-            const pasajerosCoincide = !pasajerosSeleccionado || pasajeros === pasajerosSeleccionado;
-            card.style.display = (tipoCoincide && pasajerosCoincide) ? '' : 'none';
-        });
-    }
-
-    checkboxes.forEach(cb => cb.addEventListener('change', filtrarVehiculos));
-    selectPasajeros.addEventListener('change', filtrarVehiculos);
-
-    limpiarBtn.addEventListener('click', function() {
-        checkboxes.forEach(cb => cb.checked = false);
-        selectPasajeros.value = '';
-        filtrarVehiculos();
-    });
-
-    // Modal dinámico para ver detalle
-    document.querySelectorAll('.vehiculo-link').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const card = btn.closest('.vehiculo-card');
-            document.getElementById('modal-img').src = card.dataset.img;
-            document.getElementById('modal-nombre').textContent = card.dataset.nombre;
-            document.getElementById('modal-modelo').textContent = card.dataset.modelo;
-            document.getElementById('modal-transmision').textContent = card.dataset.transmision;
-            document.getElementById('modal-pasajeros').textContent = card.dataset.pasajeros;
-            document.getElementById('modal-maletas').textContent = card.dataset.maletas;
-            document.getElementById('modal-puertas').textContent = card.dataset.puertas;
-
-            // Incluye dinámico
-            const incluyeArr = card.dataset.incluye.split(',');
-            const incluyeList = document.querySelector('.vehiculo-modal-incluye');
-            incluyeList.innerHTML = '';
-            incluyeArr.forEach(txt => {
-                const li = document.createElement('li');
-                li.innerHTML = `<span class="detalle-icon">✔️</span> ${txt.trim()}`;
-                incluyeList.appendChild(li);
+        function filtrarVehiculos() {
+            const tiposSeleccionados = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+            const pasajerosSeleccionado = selectPasajeros.value;
+            vehiculos.forEach(card => {
+                const tipo = card.getAttribute('data-tipo');
+                const pasajeros = card.getAttribute('data-pasajeros');
+                const tipoCoincide = tiposSeleccionados.length === 0 || tiposSeleccionados.includes(tipo);
+                const pasajerosCoincide = !pasajerosSeleccionado || pasajeros === pasajerosSeleccionado;
+                card.style.display = (tipoCoincide && pasajerosCoincide) ? '' : 'none';
             });
+        }
 
-            document.getElementById('vehiculo-modal').classList.add('active');
+        checkboxes.forEach(cb => cb.addEventListener('change', filtrarVehiculos));
+        selectPasajeros.addEventListener('change', filtrarVehiculos);
+
+        limpiarBtn.addEventListener('click', function () {
+            checkboxes.forEach(cb => cb.checked = false);
+            selectPasajeros.value = '';
+            filtrarVehiculos();
         });
-    });
 
-    // Cerrar modal
-    document.getElementById('vehiculo-modal-close').onclick = function() {
-        document.getElementById('vehiculo-modal').classList.remove('active');
-    };
-    document.getElementById('vehiculo-modal').onclick = function(e) {
-        if (e.target === this) this.classList.remove('active');
-    };
+        // Modal dinámico para ver detalle
+        document.querySelectorAll('.vehiculo-link').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const card = btn.closest('.vehiculo-card');
+                document.getElementById('modal-img').src = card.dataset.img;
+                document.getElementById('modal-nombre').textContent = card.dataset.nombre;
+                document.getElementById('modal-modelo').textContent = card.dataset.modelo;
+                document.getElementById('modal-transmision').textContent = card.dataset.transmision;
+                document.getElementById('modal-pasajeros').textContent = card.dataset.pasajeros;
+                document.getElementById('modal-maletas').textContent = card.dataset.maletas;
+                document.getElementById('modal-puertas').textContent = card.dataset.puertas;
 
-    // Redirigir a la página de reservas al hacer click en el botón "Reservar"
-    document.getElementById('btn-reservar-modal').onclick = function() {
-        window.location.href = "reservacion.html";
-    };
+                // Incluye dinámico
+                const incluyeArr = card.dataset.incluye.split(',');
+                const incluyeList = document.querySelector('.vehiculo-modal-incluye');
+                incluyeList.innerHTML = '';
+                incluyeArr.forEach(txt => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<span class="detalle-icon">✔️</span> ${txt.trim()}`;
+                    incluyeList.appendChild(li);
+                });
+
+                document.getElementById('vehiculo-modal').classList.add('active');
+            });
+        });
+
+        // Cerrar modal
+        document.getElementById('vehiculo-modal-close').onclick = function () {
+            document.getElementById('vehiculo-modal').classList.remove('active');
+        };
+        document.getElementById('vehiculo-modal').onclick = function (e) {
+            if (e.target === this) this.classList.remove('active');
+        };
+
+        // Redirigir a la página de reservas al hacer click en el botón "Reservar"
+        document.getElementById('btn-reservar-modal').onclick = function () {
+            window.location.href = "reservacion.html";
+        };
     </script>
 </body>
+
 </html>
