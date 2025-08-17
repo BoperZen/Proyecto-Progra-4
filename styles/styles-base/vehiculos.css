@@ -7,59 +7,6 @@ body {
     color: #232c67;
 }
 
-/* NAVBAR/HEADER UNIFICADO */
-.vehiculos-header {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(35,44,103,0.06);
-    padding: 0.5em 0;
-    margin-bottom: 2em;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-.vehiculos-header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2em;
-}
-.vehiculos-logo {
-    height: 48px;
-    width: auto;
-    display: block;
-}
-.vehiculos-nav {
-    display: flex;
-    gap: 1.5em;
-}
-.vehiculos-nav-link {
-    color: #232c67;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    padding: 0.5em 2em;
-    border-radius: 12px;
-    transition: background 0.2s, color 0.2s;
-    background: transparent;
-    box-shadow: none;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 120px;
-    text-align: center;
-    letter-spacing: 0.5px;
-}
-.vehiculos-nav-link.active,
-.vehiculos-nav-link:hover {
-    background: #e8edfa;
-    color: #0a2c5d;
-    box-shadow: 0 2px 8px rgba(35,44,103,0.08);
-}
-
 /* Estructura principal */
 .vehiculos-main {
     display: flex;

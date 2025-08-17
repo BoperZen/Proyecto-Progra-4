@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plantilla de Proyecto Web</title>
   <link rel="stylesheet" href="styles/style.css" />
+  
+  <!-- Vue.js CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -15,7 +18,7 @@
       <!-- Logo/Brand -->
       <div class="navbar-brand" href="index.html">
         <a href="#" class="brand-link">
-          <img src="img/logo-2.png" alt="error" class="brand-logo">
+          <img src="assets/img/logo-2.png" alt="Logo" class="brand-logo">
         </a>
       </div>
 
@@ -33,9 +36,6 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Reservas</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Blog</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Historia</a>
@@ -56,12 +56,12 @@
   </nav>
 
   <!-- CONTENEDOR PRINCIPAL -->
-  <div class="container">
+  <div class="container" id="app">
     
     <!-- HERO SECTION -->
     <section id="inicio" class="hero-section">
       <div class="hero-background">
-        <img src="/img/img-car-1.jpg" alt="Vehículo de alquiler" class="hero-image">
+        <img src="assets/img/img-car-1.jpg" alt="Vehículo de alquiler" class="hero-image">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
@@ -90,7 +90,7 @@
           <div class="benefits-row">
             <div class="benefit-item">
               <div class="benefit-image">
-                <img src="img/suv.png" alt="Flota moderna">
+                <img src="assets/img/suv.png" alt="Flota moderna">
               </div>
               <div class="benefit-text">
                 <p>Vehículos nuevos y bien mantenidos<br>para tu seguridad y comodidad</p>
@@ -99,7 +99,7 @@
             
             <div class="benefit-item">
               <div class="benefit-image">
-                <img src="img/money.png" alt="Mejores precios">
+                                <img src="assets/img/money.png" alt="Precios competitivos">
               </div>
               <div class="benefit-text">
                 <p>Tarifas competitivas sin costos ocultos<br>Transparencia total</p>
@@ -108,7 +108,7 @@
             
             <div class="benefit-item">
               <div class="benefit-image">
-                <img src="img/24-hours-support.png" alt="Servicio 24/7">
+                                <img src="assets/img/24-hours-support.png" alt="Soporte 24/7">
               </div>
               <div class="benefit-text">
                 <p>Atención al cliente las 24 horas<br>para resolver cualquier eventualidad</p>
@@ -117,7 +117,7 @@
             
             <div class="benefit-item">
               <div class="benefit-image">
-                <img src="img/map.png" alt="Cobertura nacional">
+                <img src="assets/img/map.png" alt="Cobertura nacional">
               </div>
               <div class="benefit-text">
                 <p>Oficinas en todo Costa Rica<br>para tu conveniencia</p>
@@ -149,7 +149,7 @@
       <!-- SECCIÓN 3: RESERVAR-UNO -->
       <section id="reservar-uno" class="reserva-cta-section">
         <div class="reserva-background">
-          <img src="img/img-car-4.JPG" alt="Reserva tu vehículo" class="reserva-bg-image">
+          <img src="assets/img/img-car-4.JPG" alt="Reserva tu vehículo" class="reserva-bg-image">
           <div class="reserva-overlay"></div>
         </div>
         <div class="reserva-content">
@@ -161,11 +161,74 @@
         </div>
       </section>
 
-      <!-- SECCIÓN 4: BLOG -->
-      <section id="blog" class="example-section">
-        <div class="section-content">
-          <h2>Blog Carousel</h2>
-          <p>aqui va el blog que va a ser un carousel</p>
+      <!-- SECCIÓN 4: DESTINOS -->
+      <section id="destinos" class="destinos-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Destinos Recomendados</h2>
+            <p class="section-subtitle">Explora los lugares más hermosos que Costa Rica tiene para ofrecer</p>
+          </div>
+
+          <!-- Destinos Carousel -->
+          <div class="destinos-carousel-container" v-if="destinos.length > 0">
+            <!-- Carousel Navigation -->
+            <button class="carousel-btn carousel-btn-prev" @click="prevSlide" :disabled="currentIndex === 0">
+              <span class="arrow-left">‹</span>
+            </button>
+            
+            <div class="carousel-wrapper" @click="toggleAutoSlide">
+              <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+                <div class="carousel-slide" v-for="(destino, index) in destinos" :key="destino.title">
+                  <div class="destinos-content">
+                    <div class="destinos-text">
+                      <h3 class="destinos-title">{{ destino.title }}</h3>
+                      <p class="destinos-description" v-html="formatDescription(destino.desc)"></p>
+                      <a :href="destino.url" target="_blank" class="destinos-link">
+                        Leer más <span class="arrow">→</span>
+                      </a>
+                    </div>
+                    <div class="destinos-image">
+                      <img 
+                        :src="destino.img" 
+                        :alt="destino.title" 
+                        class="destinos-img"
+                        @error="handleImageError"
+                        @load="handleImageLoad"
+                        loading="lazy"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button class="carousel-btn carousel-btn-next" @click="nextSlide" :disabled="currentIndex === destinos.length - 1">
+              <span class="arrow-right">›</span>
+            </button>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+              <button 
+                v-for="(destino, index) in destinos" 
+                :key="index"
+                class="indicator"
+                :class="{ active: index === currentIndex }"
+                @click="goToSlide(index)"
+              ></button>
+            </div>
+          </div>
+
+          <!-- Loading State -->
+          <div v-if="loading" class="loading-state">
+            <div class="spinner"></div>
+            <p>Cargando destinos...</p>
+          </div>
+
+          <!-- Error State -->
+          <div v-if="error" class="error-state">
+            <p>Error al cargar los destinos: {{ errorMessage }}</p>
+            <p>Revisa la consola para más detalles.</p>
+          </div>
         </div>
       </section>
 
@@ -192,6 +255,133 @@
       <p>&copy; 2025 - Plantilla de Proyecto Web</p>
     </footer>
   </div>
+
+  <!-- Vue.js App -->
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          destinos: [],
+          loading: true,
+          error: false,
+          errorMessage: '',
+          currentIndex: 0,
+          autoSlideInterval: null,
+          isAutoSlideActive: true
+        }
+      },
+      async mounted() {
+        await this.fetchDestinos();
+        this.startAutoSlide();
+      },
+      beforeUnmount() {
+        this.stopAutoSlide();
+      },
+      methods: {
+        async fetchDestinos() {
+          try {
+            this.loading = true;
+            this.error = false;
+            
+            console.log('Iniciando carga de destinos...');
+            const response = await fetch('https://boperzen.github.io/Blogs-JSON/blogs.json');
+            
+            if (!response.ok) {
+              throw new Error(`Error HTTP: ${response.status}`);
+            }
+            
+            this.destinos = await response.json();
+            console.log('Destinos cargados exitosamente:', this.destinos.length, 'elementos');
+            console.log('Primera imagen URL:', this.destinos[0]?.img);
+            console.log('¿La imagen está disponible?', this.destinos[0]?.img ? 'Sí' : 'No');
+            
+            // Precargar la primera imagen
+            if (this.destinos[0]?.img) {
+              const img = new Image();
+              img.onload = () => console.log('Primera imagen precargada exitosamente');
+              img.onerror = () => console.error('Error al precargar primera imagen');
+              img.src = this.destinos[0].img;
+            }
+            
+          } catch (error) {
+            console.error('Error detallado al cargar destinos:', error);
+            console.error('Tipo de error:', error.name);
+            console.error('Mensaje de error:', error.message);
+            this.error = true;
+            this.errorMessage = error.message || 'Error desconocido';
+          } finally {
+            this.loading = false;
+          }
+        },
+        nextSlide() {
+          if (this.currentIndex < this.destinos.length - 1) {
+            this.currentIndex++;
+          } else {
+            this.currentIndex = 0; // Loop to first slide
+          }
+          this.resetAutoSlide();
+        },
+        prevSlide() {
+          if (this.currentIndex > 0) {
+            this.currentIndex--;
+          } else {
+            this.currentIndex = this.destinos.length - 1; // Loop to last slide
+          }
+          this.resetAutoSlide();
+        },
+        goToSlide(index) {
+          this.currentIndex = index;
+          this.resetAutoSlide();
+        },
+        startAutoSlide() {
+          if (this.isAutoSlideActive) {
+            this.autoSlideInterval = setInterval(() => {
+              this.nextSlide();
+            }, 5000); // Change slide every 5 seconds
+          }
+        },
+        stopAutoSlide() {
+          if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+          }
+        },
+        toggleAutoSlide() {
+          this.isAutoSlideActive = !this.isAutoSlideActive;
+          if (this.isAutoSlideActive) {
+            console.log('Auto-slide activado');
+            this.startAutoSlide();
+          } else {
+            console.log('Auto-slide pausado');
+            this.stopAutoSlide();
+          }
+        },
+        resetAutoSlide() {
+          if (this.isAutoSlideActive) {
+            this.stopAutoSlide();
+            this.startAutoSlide();
+          }
+        },
+        handleImageError(event) {
+          console.log('Error cargando imagen, usando placeholder');
+          // Usar directamente un placeholder local
+          event.target.src = 'assets/img/img-car-1.jpg';
+        },
+        handleImageLoad(event) {
+          console.log('Imagen cargada exitosamente:', event.target.src);
+          event.target.classList.add('loaded');
+          event.target.classList.remove('error');
+        },
+        formatDescription(description) {
+          if (!description) return '';
+          // Reemplazar cada punto seguido de espacio por punto + <br>
+          return description.replace(/\.\s/g, '.<br>');
+        }
+      }
+    }).mount('#app');
+  </script>
 
   <!-- SCRIPTS MODULARIZADOS -->
   <!-- Utilidades base -->

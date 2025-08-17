@@ -21,8 +21,14 @@
    IMPORTACIÓN DE MÓDULOS
    ======================================== */
 
+/* Reset CSS y normalización */
+@import url('styles-base/reset.css');
+
 /* Variables CSS y tokens de diseño */
 @import url('styles-base/variables.css');
+
+/* Tipografía y fuentes */
+@import url('styles-base/typography.css');
 
 /* Estilos base y reset */
 @import url('styles-base/base.css');
@@ -30,11 +36,14 @@
 /* Layout y estructura principal */
 @import url('styles-base/layout.css');
 
-/* Componentes reutilizables */
-@import url('styles-base/components.css');
-
 /* Sistema de navegación completo */
 @import url('styles-base/navbar.css');
 
+/* Componentes reutilizables */
+@import url('styles-base/components.css');
+
 /* Utilidades y helpers */
 @import url('styles-base/utilities.css');
+
+/* Temas y responsive */
+@import url('styles-base/themes.css');

@@ -57,7 +57,7 @@ footer p {
 
 /* Secciones generales */
 .example-section {
-  padding: var(--spacing-lg) var(--spacing-xl);
+  padding: var(--spacing-xl) var(--spacing-xl);
   background: var(--color-bg-primary);
   position: relative;
   overflow: hidden;
