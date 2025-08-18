@@ -400,9 +400,18 @@
   <!-- Script principal -->
   <script src="scripts/script.js"></script>
   
+  <!-- Configuración de variables de entorno -->
+  <script src="scripts/config.js"></script>
+  
   <!-- Google Maps API -->
   <script src="scripts/APIGoogle.js"></script>
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAab6lvIDAWfRKN7hFCvFJSvzs_aA1bsZM&callback=initMap"></script>
+  <!-- Google Maps script se carga dinámicamente desde config.js -->
+  <script>
+    // Cargar Google Maps API con la configuración segura
+    document.addEventListener('DOMContentLoaded', function() {
+      loadGoogleMapsScript();
+    });
+  </script>
 </body>
 
 </html>
