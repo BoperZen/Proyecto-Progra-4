@@ -2,10 +2,10 @@ let map;                     // Mapa de Google Maps
 let directionsService;       // Servicio de direcciones para calcular rutas
 let directionsRenderer;      // Objeto que dibuja la ruta en el mapa
 
-// Coordenadas de la oficina principal de Why Not Rent a Car (ubicación fija)
-const oficinaCoords = {
-  lat: 10.01685,             // Latitud de la oficina (San Rafael de Alajuela - cambiar luego)
-  lng: -84.208939            // Longitud de la oficina
+// Coordenadas del restaurante (ubicación fija)
+const restauranteCoords = {
+  lat: 10.01685,             // Latitud del restaurante (San Rafael de Alajuela)
+  lng: -84.208939            // Longitud del restaurante
 };
 
 // Función principal que inicializa el mapa
@@ -16,18 +16,18 @@ async function initMap() {
   // Importar el marcador avanzado de la librería Marker
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // Crear el mapa centrado en las coordenadas de la oficina
+  // Crear el mapa centrado en las coordenadas del restaurante
   map = new Map(document.getElementById("map"), {
-    center: oficinaCoords,         // Centro del mapa
+    center: restauranteCoords,     // Centro del mapa
     zoom: 15,                      // Nivel de zoom
     mapId: "DEMO_MAP_ID",          // ID del mapa (puede ser personalizado desde Google Cloud)
   });
 
-  // Colocar marcador en la ubicación de la oficina
+  // Colocar marcador en la ubicación del restaurante
   new AdvancedMarkerElement({
     map: map,
-    position: oficinaCoords,
-    title: "Why Not Rent a Car - Oficina Principal",    // Texto que aparece al pasar el mouse
+    position: restauranteCoords,
+    title: "Restaurante",          // Texto que aparece al pasar el mouse
   });
 
   // Inicializar los servicios de direcciones
@@ -56,11 +56,11 @@ async function initMap() {
         // Centra el mapa en la ubicación del usuario
         map.setCenter(userLocation);
 
-        // Llama función para calcular la distancia entre usuario y oficina
+        // Llama función para calcular la distancia entre usuario y restaurante
         calcularDistancia(userLocation);
 
-        // Traza la ruta desde el usuario hasta la oficina
-        trazarRuta(userLocation, oficinaCoords);
+        // Traza la ruta desde el usuario hasta el restaurante
+        trazarRuta(userLocation, restauranteCoords);
       },
       () => {
         // Si no se pudo obtener la ubicación del usuario, muestra un mensaje
@@ -73,7 +73,7 @@ async function initMap() {
   }
 }
 
-// Función que calcula la distancia entre el usuario y la oficina
+// Función que calcula la distancia entre el usuario y el restaurante
 function calcularDistancia(origen) {
   // Crear el servicio de matriz de distancia (DistanceMatrixService)
   const servicio = new google.maps.DistanceMatrixService();
@@ -82,7 +82,7 @@ function calcularDistancia(origen) {
   servicio.getDistanceMatrix(
     {
       origins: [origen],                  // Punto de partida (usuario)
-      destinations: [oficinaCoords],      // Punto de llegada (oficina)
+      destinations: [restauranteCoords],  // Punto de llegada (restaurante)
       travelMode: google.maps.TravelMode.DRIVING, // Modo de viaje: conducir
     },
     (response, status) => {
@@ -94,11 +94,11 @@ function calcularDistancia(origen) {
 
         // Mostrar los datos en el elemento HTML con id="distancia"
         document.getElementById("distancia").innerText =
-          `📍 Distancia a nuestra oficina: ${distancia} - Tiempo estimado: ${duracion}`;
+          `Distancia: ${distancia}, Duración: ${duracion}`;
       } else {
         // Si hubo un error, mostrar mensaje
         document.getElementById("distancia").innerText =
-          "📍 No se pudo calcular la distancia a nuestra oficina.";
+          "No se pudo calcular distancia.";
       }
     }
   );
@@ -109,7 +109,7 @@ function trazarRuta(origen, destino) {
   // Configuración de la solicitud de ruta
   const request = {
     origin: origen,                     // Punto de partida (usuario)
-    destination: destino,              // Punto de llegada (oficina)
+    destination: destino,              // Punto de llegada (restaurante)
     travelMode: google.maps.TravelMode.DRIVING, // Modo de viaje
   };
 
@@ -120,7 +120,7 @@ function trazarRuta(origen, destino) {
       directionsRenderer.setDirections(result);
     } else {
       // Si hubo un error al calcular la ruta, mostrar mensaje
-      alert("No se pudo trazar la ruta hasta nuestra oficina.");
+      alert("No se pudo trazar la ruta.");
     }
   });
 }
