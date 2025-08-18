@@ -318,11 +318,117 @@
         </div>
       </section>
 
-      <!-- SECCIÓN 6: RESERVAR-DOS -->
-      <section id="reservar-dos" class="example-section">
-        <div class="section-content">
-          <h2>Reservar dos</h2>
-          <p>aqui poner reservar-dos</p>
+      <!-- SECCIÓN 6: RESERVACIONES -->
+      <section id="reservaciones" class="ubicaciones-section">
+        <div class="ubicaciones-content">
+          <h2 class="ubicaciones-title">Reservaciones</h2>
+          <p class="ubicaciones-description">
+            Complete el formulario a continuación para realizar su reservación. <br>Nuestro equipo le contactará para confirmar los detalles y finalizar su reserva.
+          </p>
+          
+          <!-- Formulario de Reservaciones -->
+          <div class="reservaciones-form-container">
+            <form class="reservaciones-form" id="reservaciones-form">
+              
+              <!-- Ubicación de recogida -->
+              <div class="form-group">
+                <label for="ubicacion-recogida">¿Dónde es su siguiente viaje?</label>
+                <input type="text" id="ubicacion-recogida" name="ubicacion-recogida" placeholder="Recoger" required>
+              </div>
+
+              <!-- Checkbox regreso -->
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="regreso-misma-ubicacion" name="regreso-misma-ubicacion" checked>
+                  <span class="checkmark"></span>
+                  ¿Regresa a la misma ubicación?
+                </label>
+              </div>
+
+              <!-- Fechas -->
+              <div class="form-row">
+                <div class="form-group half-width">
+                  <label for="fecha-inicio">¿Cuándo es su siguiente viaje?</label>
+                  <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+                </div>
+                <div class="form-group half-width">
+                  <label for="fecha-fin">&nbsp;</label>
+                  <input type="date" id="fecha-fin" name="fecha-fin" required>
+                </div>
+              </div>
+
+              <!-- Horas -->
+              <div class="form-row">
+                <div class="form-group half-width">
+                  <label for="hora-recogida">Hora a recoger</label>
+                  <select id="hora-recogida" name="hora-recogida" required>
+                    <option value="">Seleccionar hora</option>
+                    <option value="06:00">06:00 AM</option>
+                    <option value="07:00">07:00 AM</option>
+                    <option value="08:00">08:00 AM</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                    <option value="18:00">06:00 PM</option>
+                  </select>
+                </div>
+                <div class="form-group half-width">
+                  <label for="hora-entrega">Hora a entregar</label>
+                  <select id="hora-entrega" name="hora-entrega" required>
+                    <option value="">Seleccionar hora</option>
+                    <option value="06:00">06:00 AM</option>
+                    <option value="07:00">07:00 AM</option>
+                    <option value="08:00">08:00 AM</option>
+                    <option value="09:00" selected>09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                    <option value="18:00">06:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Residencia -->
+              <div class="form-group radio-group">
+                <label class="radio-group-title">¿Reside en Costa Rica?</label>
+                <div class="radio-options">
+                  <label class="radio-label">
+                    <input type="radio" name="reside-costa-rica" value="si" checked>
+                    <span class="radio-mark"></span>
+                    Sí
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="reside-costa-rica" value="no">
+                    <span class="radio-mark"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+
+              <!-- Cupón de descuento -->
+              <div class="form-group">
+                <label for="cupon-descuento">Cupón de descuento</label>
+                <input type="text" id="cupon-descuento" name="cupon-descuento" placeholder="Código promocional">
+              </div>
+
+              <!-- Botón buscar -->
+              <div class="form-submit">
+                <button type="submit" class="reserva-btn form-btn">Buscar</button>
+              </div>
+
+            </form>
+          </div>
         </div>
       </section>
 

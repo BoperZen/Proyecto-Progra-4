@@ -977,7 +977,7 @@
   font-size: 1rem;
   color: #6c757d;
   line-height: 1.6;
-  text-align: justify;
+  text-align: center;
   margin-bottom: 1.5rem;
   max-width: 1000px;
   margin-left: auto;
@@ -1493,5 +1493,220 @@
   
   .consejo-contenido p {
     font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   FORMULARIO DE RESERVACIONES
+   ======================================== */
+
+.reservaciones-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: var(--spacing-xl);
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding: 1.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reservaciones-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 0.1rem;
+  text-align: left;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+  height: 32px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.half-width {
+  margin: 0;
+  text-align: left;
+}
+
+/* Checkbox personalizado - estilo imagen */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.2rem 0;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #007bff;
+}
+
+/* Radio buttons - estilo imagen */
+.radio-group {
+  gap: 0.2rem;
+  margin: 0.2rem 0;
+  text-align: left;
+}
+
+.radio-group-title {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.radio-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+.radio-label input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: #dc3545;
+}
+
+/* Botón del formulario - estilo imagen */
+.form-submit {
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+.form-btn {
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  text-transform: none;
+  letter-spacing: 0.5px;
+  min-width: 180px;
+}
+
+.form-btn:hover {
+  background: linear-gradient(135deg, #43a047 0%, #5cb85c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.form-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Ajustes especiales para campos de fecha */
+.form-group input[type="date"] {
+  color: #666;
+  height: 32px;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* Select dropdown styling */
+.form-group select {
+  color: #666;
+  cursor: pointer;
+  height: 32px;
+}
+
+.form-group select option {
+  color: #333;
+}
+
+/* Placeholder styling */
+.form-group input::placeholder {
+  color: #999;
+  font-style: normal;
+}
+
+/* Responsive para formulario */
+@media (max-width: 768px) {
+  .reservaciones-form-container {
+    padding: 1rem;
+    margin: var(--spacing-lg) var(--spacing-md) 0;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  
+  .radio-options {
+    gap: 0.8rem;
   }
 }
