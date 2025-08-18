@@ -1,0 +1,76 @@
+/**
+ * ========================================
+ * VARIABLES CSS Y TOKENS DE DISEÑO
+ * ========================================
+ * 
+ * Todas las variables CSS centralizadas para mantener
+ * consistencia en el diseño y facilitar la personalización.
+ */
+
+:root {
+  /* Colores principales - OPCIÓN 2: Sofisticación Neutral Premium */
+  --color-primary: #374151;        /* Gris carbón premium */
+  --color-secondary: #6b7280;      /* Gris medio elegante */
+  --color-success: #065f46;        /* Verde bosque corporativo */
+  --color-warning: #92400e;        /* Marrón ámbar premium */
+  --color-danger: #991b1b;         /* Rojo corporativo oscuro */
+  
+  /* Colores de texto */
+  --color-text-primary: #111827;   /* Negro carbón suave */
+  --color-text-secondary: #374151; /* Gris carbón medio */
+  --color-text-muted: #6b7280;     /* Gris medio */
+  
+  /* Colores de fondo */
+  --color-bg-primary: #ffffff;     /* Blanco nieve */
+  --color-bg-secondary: #f9fafb;   /* Gris perla muy claro */
+  --color-bg-tertiary: #f3f4f6;    /* Gris perla claro */
+  
+  /* Colores de borde */
+  --color-border-light: #e5e7eb;   /* Gris perla claro */
+  --color-border-medium: #6b7280;  /* Gris medio */
+  --color-border-dark: #374151;    /* Gris carbón medio */
+  
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Tipografía */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  --font-size-title: 32px;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.25;
+  --line-height-base: 1.4;
+  --line-height-relaxed: 1.6;
+  
+  /* Bordes y sombras */
+  --border-radius-sm: 4px;
+  --border-radius-base: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-full: 50%;
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
+  
+  /* Transiciones */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
