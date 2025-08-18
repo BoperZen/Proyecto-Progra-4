@@ -1497,66 +1497,87 @@
 }
 
 /* ========================================
+   SCROLL SUAVE PARA NAVEGACIÓN
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación suave personalizada para enlaces internos */
+a[href^="#"] {
+  transition: all 0.3s ease;
+}
+
+/* ========================================
    FORMULARIO DE RESERVACIONES
    ======================================== */
 
 .reservaciones-form-container {
-  max-width: 400px;
+  width: 80%;
+  max-width: 600px;
   margin: 0 auto;
   margin-top: var(--spacing-xl);
   background: #f8f8f8;
   border-radius: 6px;
-  padding: 1.2rem;
+  padding: 1.5rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .reservaciones-form {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.8rem;
   text-align: left;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  margin-bottom: 0.3rem;
+  gap: 0.2rem;
+  margin-bottom: 0.4rem;
   text-align: left;
 }
 
 .form-group label {
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: #333;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.3rem;
   text-align: left;
 }
 
 .form-group input,
 .form-group select {
-  padding: 0.4rem 0.6rem;
+  padding: 1rem 1.2rem;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
   background: #ffffff;
   transition: border-color 0.2s ease;
-  height: 32px;
+  height: 50px;
   box-sizing: border-box;
   text-align: left;
+  color: #333;
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #757c85;
+  color: #000;
+}
+
+/* Input con contenido siempre negro */
+.form-group input:not(:placeholder-shown) {
+  color: #000;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.6rem;
-  margin-bottom: 0.3rem;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
   text-align: left;
 }
 
@@ -1569,8 +1590,8 @@
 .checkbox-group {
   flex-direction: row;
   align-items: center;
-  gap: 0.4rem;
-  margin: 0.2rem 0;
+  gap: 0.6rem;
+  margin: 0.4rem 0;
   justify-content: flex-start;
   text-align: left;
 }
@@ -1578,39 +1599,41 @@
 .checkbox-label {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.6rem;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #333;
   margin: 0;
   text-align: left;
+  line-height: 1.5;
 }
 
 .checkbox-label input[type="checkbox"] {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   margin: 0;
   accent-color: #007bff;
+  flex-shrink: 0;
 }
 
 /* Radio buttons - estilo imagen */
 .radio-group {
-  gap: 0.2rem;
-  margin: 0.2rem 0;
+  gap: 0.4rem;
+  margin: 0.4rem 0;
   text-align: left;
 }
 
 .radio-group-title {
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: #333;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   text-align: left;
 }
 
 .radio-options {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: flex-start;
   text-align: left;
 }
@@ -1618,24 +1641,24 @@
 .radio-label {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #333;
   margin: 0;
   text-align: left;
 }
 
 .radio-label input[type="radio"] {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   margin: 0;
   accent-color: #dc3545;
 }
 
 /* Botón del formulario - estilo imagen */
 .form-submit {
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
   text-align: center;
 }
 
@@ -1652,7 +1675,7 @@
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
   text-transform: none;
   letter-spacing: 0.5px;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .form-btn:hover {
@@ -1668,8 +1691,8 @@
 
 /* Ajustes especiales para campos de fecha */
 .form-group input[type="date"] {
-  color: #666;
-  height: 32px;
+  color: #333;
+  height: 50px;
 }
 
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
@@ -1679,19 +1702,34 @@
 
 /* Select dropdown styling */
 .form-group select {
-  color: #666;
+  color: #333;
   cursor: pointer;
-  height: 32px;
+  height: 50px;
 }
 
 .form-group select option {
   color: #333;
+  background: #ffffff;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group select:invalid {
+  color: #999;
+}
+
+.form-group select:focus {
+  color: #000;
 }
 
 /* Placeholder styling */
 .form-group input::placeholder {
   color: #999;
   font-style: normal;
+}
+
+.form-group input:focus::placeholder {
+  color: #ccc;
 }
 
 /* Responsive para formulario */

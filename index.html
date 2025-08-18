@@ -75,7 +75,7 @@
         <p class="hero-description">
           La compañía local de alquiler de carros más grande de Costa Rica con la mejor flota, desde 1990.
         </p>
-        <button class="reserva-btn" style="margin-top: 1.5rem;">Reservar ahora</button>
+        <a href="#reservaciones" class="reserva-btn" style="margin-top: 1.5rem; text-decoration: none; display: inline-block;">Reservar ahora</a>
       </div>
     </section>
 
@@ -230,7 +230,7 @@
             Reservar un vehículo con nosotros<br>
             es tan sencillo como un clic
           </h2>
-          <button class="reserva-btn">Reservar ahora</button>
+          <a href="#reservaciones" class="reserva-btn" style="text-decoration: none; display: inline-block;">Reservar ahora</a>
         </div>
       </section>
 
@@ -345,6 +345,23 @@
                 </label>
               </div>
 
+              <!-- Residencia -->
+              <div class="form-group radio-group">
+                <label class="radio-group-title">¿Reside en Costa Rica?</label>
+                <div class="radio-options">
+                  <label class="radio-label">
+                    <input type="radio" name="reside-costa-rica" value="si" checked>
+                    <span class="radio-mark"></span>
+                    Sí
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="reside-costa-rica" value="no">
+                    <span class="radio-mark"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+
               <!-- Fechas -->
               <div class="form-row">
                 <div class="form-group half-width">
@@ -362,7 +379,7 @@
                 <div class="form-group half-width">
                   <label for="hora-recogida">Hora a recoger</label>
                   <select id="hora-recogida" name="hora-recogida" required>
-                    <option value="">Seleccionar hora</option>
+                    <option value="" disabled selected>Seleccionar hora</option>
                     <option value="06:00">06:00 AM</option>
                     <option value="07:00">07:00 AM</option>
                     <option value="08:00">08:00 AM</option>
@@ -381,11 +398,11 @@
                 <div class="form-group half-width">
                   <label for="hora-entrega">Hora a entregar</label>
                   <select id="hora-entrega" name="hora-entrega" required>
-                    <option value="">Seleccionar hora</option>
+                    <option value="" disabled selected>Seleccionar hora</option>
                     <option value="06:00">06:00 AM</option>
                     <option value="07:00">07:00 AM</option>
                     <option value="08:00">08:00 AM</option>
-                    <option value="09:00" selected>09:00 AM</option>
+                    <option value="09:00">09:00 AM</option>
                     <option value="10:00">10:00 AM</option>
                     <option value="11:00">11:00 AM</option>
                     <option value="12:00">12:00 PM</option>
@@ -397,29 +414,6 @@
                     <option value="18:00">06:00 PM</option>
                   </select>
                 </div>
-              </div>
-
-              <!-- Residencia -->
-              <div class="form-group radio-group">
-                <label class="radio-group-title">¿Reside en Costa Rica?</label>
-                <div class="radio-options">
-                  <label class="radio-label">
-                    <input type="radio" name="reside-costa-rica" value="si" checked>
-                    <span class="radio-mark"></span>
-                    Sí
-                  </label>
-                  <label class="radio-label">
-                    <input type="radio" name="reside-costa-rica" value="no">
-                    <span class="radio-mark"></span>
-                    No
-                  </label>
-                </div>
-              </div>
-
-              <!-- Cupón de descuento -->
-              <div class="form-group">
-                <label for="cupon-descuento">Cupón de descuento</label>
-                <input type="text" id="cupon-descuento" name="cupon-descuento" placeholder="Código promocional">
               </div>
 
               <!-- Botón buscar -->
@@ -588,6 +582,9 @@
   
   <!-- Google Maps API -->
   <script src="scripts/APIGoogle.js"></script>
+  <!-- Scripts -->
+  <script src="scripts/smooth-scroll.js"></script>
+
   <!-- Google Maps script se carga dinámicamente desde config.js -->
   <script>
     // Cargar Google Maps API con la configuración segura
