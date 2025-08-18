@@ -668,25 +668,3 @@ function handleFormSubmit() {
   resultDiv.textContent = result;
   resultDiv.classList.remove('hidden');
 }
-
-/**
- * Función para alternar la visibilidad de los consejos
- */
-function toggleConsejo(element) {
-  const isActive = element.classList.contains('active');
-  
-  // Cerrar todos los otros consejos abiertos
-  const allConsejos = document.querySelectorAll('.consejo-item');
-  allConsejos.forEach(item => {
-    if (item !== element) {
-      item.classList.remove('active');
-    }
-  });
-  
-  // Alternar el consejo actual
-  if (isActive) {
-    element.classList.remove('active');
-  } else {
-    element.classList.add('active');
-  }
-}

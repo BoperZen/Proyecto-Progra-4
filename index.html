@@ -75,6 +75,7 @@
         <p class="hero-description">
           La compañía local de alquiler de carros más grande de Costa Rica con la mejor flota, desde 1990.
         </p>
+        <button class="reserva-btn" style="margin-top: 1.5rem;">Reservar ahora</button>
       </div>
     </section>
 
@@ -236,108 +237,80 @@
       <!-- SECCIÓN 5: CONSEJOS -->
       <section id="consejos" class="ubicaciones-section">
         <div class="ubicaciones-content">
-          <h2 class="ubicaciones-title">Consejos para tu alquiler perfecto</h2>
-          <p class="ubicaciones-description">
-            Maximiza tu experiencia de alquiler con estos consejos esenciales. Desde la documentación necesaria hasta 
-            las mejores prácticas de conducción, te guiamos para que tu viaje sea seguro, cómodo y sin sorpresas.
-          </p>
+          <h2 class="ubicaciones-title">Consejos para alquilar un vehículo en Costa Rica</h2>
           
-          <!-- Consejos Desplegables -->
-          <div class="consejos-grid">
+          <!-- Consejos Lista Simple -->
+          <div class="consejos-lista">
             
-            <!-- Consejo 1: Documentación -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">📋</div>
-                <h3 class="consejo-titulo">Documentación esencial</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Para alquilar un vehículo necesitarás: licencia de conducir vigente (válida hasta 3 meses), pasaporte en buen estado, y tarjeta de crédito a tu nombre. Asegúrate de que todos los documentos sean legibles y estén actualizados.</p>
+            <!-- Consejo 1 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Documentación indispensable para rentar</h3>
+                <p>Asegúrese de contar con licencia de conducir válida con al menos 1 año de antigüedad, cédula de identidad o pasaporte vigente, y tarjeta de crédito internacional a su nombre. La edad mínima requerida es de 21 años para vehículos estándar y 25 años para vehículos de lujo o SUVs.</p>
               </div>
             </div>
 
-            <!-- Consejo 2: Seguro -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">🛡️</div>
-                <h3 class="consejo-titulo">Seguro y protección</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Costa Rica requiere seguro obligatorio de responsabilidad civil. Considera también el seguro de colisión y robo. Verifica qué cubre tu tarjeta de crédito antes de contratar coberturas adicionales.</p>
+            <!-- Consejo 2 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Elección del vehículo ideal</h3>
+                <p>Considere el tipo de terreno que visitará y el número de pasajeros. Para playas y ciudad, un sedán es perfecto. Para montañas, volcanes y caminos rurales, opte por un SUV o 4x4. Nuestros vehículos cuentan con aire acondicionado, GPS y seguro completo incluido.</p>
               </div>
             </div>
 
-            <!-- Consejo 3: Inspección -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">🔍</div>
-                <h3 class="consejo-titulo">Inspección detallada</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Antes de partir, inspecciona minuciosamente el vehículo. Documenta con fotos cualquier daño, verifica luces, frenos, aire acondicionado y nivel de combustible. Esta precaución te protegerá de cargos injustos.</p>
+            <!-- Consejo 3 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Cobertura de seguro y protección</h3>
+                <p>Todos nuestros vehículos incluyen seguro obligatorio contra terceros. Recomendamos la cobertura completa que incluye robo, colisión y daños por fenómenos naturales. Revise si su tarjeta de crédito ofrece cobertura adicional para evitar duplicar pagos.</p>
               </div>
             </div>
 
-            <!-- Consejo 4: Carreteras -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">🛣️</div>
-                <h3 class="consejo-titulo">Condiciones de carretera</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Las carreteras varían desde autopistas excelentes hasta caminos rurales desafiantes. Para aventuras remotas o época lluviosa, considera un 4x4. Respeta siempre los límites de velocidad y conduce con precaución.</p>
+            <!-- Consejo 4 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Rutas recomendadas en Costa Rica</h3>
+                <p>Planifique su ruta considerando las distancias y condiciones climáticas. La Ruta de los Volcanes, el Circuito de Playas del Pacífico y la Aventura Caribeña son nuestras opciones más populares. Cada ruta está diseñada para maximizar su experiencia turística.</p>
               </div>
             </div>
 
-            <!-- Consejo 5: Combustible -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">⛽</div>
-                <h3 class="consejo-titulo">Política de combustible</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Funciona con política "lleno a lleno": recibe el vehículo con tanque completo y devuélvelo igual. Localiza gasolineras cerca de tu destino final para evitar cargos extra por combustible.</p>
+            <!-- Consejo 5 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Política de combustible y kilometraje</h3>
+                <p>Entregamos todos los vehículos con tanque lleno y esperamos la devolución en las mismas condiciones. El kilometraje es ilimitado dentro del territorio nacional. Para viajes a Nicaragua o Panamá, consulte nuestras tarifas especiales y permisos requeridos.</p>
               </div>
             </div>
 
-            <!-- Consejo 6: Emergencias -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">🚨</div>
-                <h3 class="consejo-titulo">Preparación para emergencias</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Mantén siempre a mano: 911 para emergencias, *911 desde celular, y el número 24/7 de asistencia de la empresa. Descarga GPS offline y mantén tu teléfono cargado durante todo el viaje.</p>
+            <!-- Consejo 6 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Inspección previa y documentación</h3>
+                <p>Revise completamente el vehículo antes de partir. Documente con fotos cualquier rayón, abolladura o daño existente. Verifique que funcionen luces, frenos, dirección y sistemas de seguridad. Esta verificación le protege de responsabilidades adicionales.</p>
               </div>
             </div>
 
-            <!-- Consejo 7: Planificación -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">🗺️</div>
-                <h3 class="consejo-titulo">Planifica tu ruta</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Estudia tu ruta con anticipación, especialmente para destinos remotos. Considera distancias, tiempo de viaje y condiciones climáticas. Ten siempre un plan alternativo en caso de desvíos o cierres de carretera.</p>
+            <!-- Consejo 7 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Contactos de emergencia y asistencia</h3>
+                <p>Mantenga siempre disponible nuestro número de asistencia 24/7: 2233-4567. Para emergencias médicas marque 911, para tránsito 2222-9330. Incluimos servicio de grúa y mecánico de emergencia sin costo adicional en todo el país.</p>
               </div>
             </div>
 
-            <!-- Consejo 8: Reserva inteligente -->
-            <div class="consejo-item" onclick="toggleConsejo(this)">
-              <div class="consejo-header">
-                <div class="consejo-icon">💡</div>
-                <h3 class="consejo-titulo">Reserva inteligente</h3>
-                <div class="consejo-toggle">+</div>
-              </div>
-              <div class="consejo-content">
-                <p>Reserva con tiempo para mejores tarifas y disponibilidad. Lee las políticas de cancelación, verifica incluye kilometraje ilimitado, y confirma la ubicación de recogida y entrega del vehículo.</p>
+            <!-- Consejo 8 -->
+            <div class="consejo-simple">
+              <div class="consejo-bullet"></div>
+              <div class="consejo-contenido">
+                <h3>Reservas anticipadas y tarifas especiales</h3>
+                <p>Reserve con 15 días de anticipación y obtenga hasta 20% de descuento. Clientes frecuentes reciben beneficios adicionales como upgrade gratuito y servicios premium. Las reservas incluyen cancelación gratuita hasta 48 horas antes del retiro.</p>
               </div>
             </div>
 
