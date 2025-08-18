@@ -1,23 +1,15 @@
-# Environment Variables & API Keys
-# Add .env to .gitignore to keep API keys secure
-.env
-.env.local
-.env.development
-.env.production
-
-# Configuration files with real API keys
+# Archivos de configuración con API keys
 scripts/config.js
+.env
 
-# Node modules (if using npm)
-node_modules/
-
-# IDE files
-.vscode/
-.idea/
-
-# OS generated files
+# Archivos de sistema
 .DS_Store
 Thumbs.db
 
-# Log files
+# Logs
 *.log
+npm-debug.log*
+
+# Archivos temporales
+*.tmp
+*.temp
