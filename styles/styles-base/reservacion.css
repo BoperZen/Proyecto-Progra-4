@@ -1,0 +1,259 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f6f8fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #15396a;
+}
+
+/* Encabezado */
+.reservacion-header-bg {
+    background: #15396a;
+    width: 100vw;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.reservacion-header-img {
+    height: 120px;
+    margin-left: 2em;
+}
+.reservacion-header-title {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-left: 2em;
+    z-index: 2;
+    letter-spacing: 1px;
+}
+
+/* Sección principal */
+.reservacion-main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+.reservacion-buscar {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(21,57,106,0.10);
+    padding: 2.5em 2em 2em 2em;
+    margin-top: 2em;
+}
+
+.reservacion-section-title {
+    color: #15396a;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.reservacion-icon {
+    background: #ffe600;
+    color: #15396a;
+    border-radius: 50%;
+    padding: 0.3em 0.5em;
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservacion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 1.5em;
+}
+
+.reservacion-label {
+    font-weight: 700;
+    color: #15396a;
+    margin-bottom: 0.3em;
+    margin-right: 0.7em;
+    min-width: 120px;
+}
+
+.reservacion-input {
+    padding: 0.7em 1em;
+    border-radius: 10px;
+    border: 1.5px solid #e8edfa;
+    font-size: 1em;
+    background: #f9fafd;
+    color: #232c67;
+    font-weight: 500;
+    outline: none;
+    transition: border 0.2s;
+    margin-bottom: 0.5em;
+    min-width: 220px;
+}
+.reservacion-input:focus {
+    border: 1.5px solid #232c67;
+}
+
+.reservacion-btn {
+    background: #6c3fa0;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 0.8em 0;
+    border: none;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.reservacion-btn:hover {
+    background: #232c67;
+    color: #ffe600;
+}
+
+.reservacion-ayuda {
+    text-align: right;
+    font-size: 0.97em;
+    color: #15396a;
+}
+.reservacion-link {
+    color: #6c3fa0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.reservacion-link:hover {
+    color: #232c67;
+}
+
+.reservacion-fieldset {
+    border: 1.5px solid #e8edfa;
+    border-radius: 14px;
+    background: #f9fafd;
+    padding: 1.5em 1em 1.5em 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+.reservacion-fieldset-row {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.reservacion-legend {
+    font-weight: 700;
+    color: #232c67;
+    font-size: 1.1em;
+    margin-bottom: 0.7em;
+}
+
+/* NAVBAR ESTILOS */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(35,44,103,0.06);
+    padding: 0.5em 0;
+    margin-bottom: 2em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+.brand-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+.navbar-menu {
+    display: flex;
+}
+.navbar-nav {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    color: #232c67;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 0.5em 2em;
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.nav-link.active, .nav-link:hover {
+    background: #e8edfa;
+    color: #232c67;
+    box-shadow: 0 2px 8px rgba(35,44,103,0.08);
+}
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.toggle-line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #232c67;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+@media (max-width: 900px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 1em;
+        padding: 0 1em;
+    }
+    .navbar-nav {
+        gap: 1em;
+    }
+    .reservacion-header-title {
+        font-size: 1.5em;
+        margin-left: 1em;
+    }
+    .reservacion-header-img {
+        height: 70px;
+        margin-left: 0.5em;
+    }
+    .reservacion-main {
+        padding: 0 0.2em;
+    }
+    .reservacion-buscar {
+        padding: 1.2em 0.7em 1em 0.7em;
+    }
+    .reservacion-section-title {
+        font-size: 1.2em;
+    }
+    .reservacion-fieldset-row {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .reservacion-input {
+        min-width: 0;
+        width: 100%;
+    }
+}
