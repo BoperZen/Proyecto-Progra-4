@@ -1,9 +1,12 @@
-# Environment Variables
+# Environment Variables & API Keys
 # Add .env to .gitignore to keep API keys secure
 .env
 .env.local
 .env.development
 .env.production
+
+# Configuration files with real API keys
+scripts/config.js
 
 # Node modules (if using npm)
 node_modules/

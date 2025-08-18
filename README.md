@@ -27,9 +27,10 @@ Una plataforma web para alquiler de autos. Diseño limpio, código funcional, si
 Este proyecto utiliza Google Maps API de forma segura. Para configurarlo:
 
 1. **Configurar API Key:**
+   - Copia `scripts/config.example.js` como `scripts/config.js`
    - Abre el archivo `scripts/config.js`
    - Reemplaza `YOUR_GOOGLE_MAPS_API_KEY_HERE` con tu API key real
-   - Guarda el archivo
+   - Guarda el archivo (este archivo no se subirá al repositorio)
 
 2. **Obtener API Key:**
    - Ve a [Google Cloud Console](https://console.cloud.google.com/)

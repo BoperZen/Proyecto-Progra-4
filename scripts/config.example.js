@@ -1,7 +1,8 @@
 // Configuración simple para Google Maps API
 // INSTRUCCIONES:
-// 1. Reemplaza 'YOUR_GOOGLE_MAPS_API_KEY_HERE' con tu API key real
-// 2. Antes de subir al repositorio, asegúrate de no incluir tu key real
+// 1. Copia este archivo como 'config.js'
+// 2. Reemplaza 'YOUR_GOOGLE_MAPS_API_KEY_HERE' with your actual API key
+// 3. Nunca subas config.js al repositorio con tu API key real
 
 const CONFIG = {
     GOOGLE_MAPS_API_KEY: 'YOUR_GOOGLE_MAPS_API_KEY_HERE' // <- Reemplaza esto con tu API key
