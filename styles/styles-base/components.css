@@ -1417,3 +1417,162 @@
     margin-top: var(--spacing-xl);
   }
 }
+
+/* ========================================
+   CONSEJOS DESPLEGABLES - DISEÑO MODERNO
+   ======================================== */
+
+.consejos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: var(--spacing-xl);
+}
+
+.consejo-item {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.consejo-item:hover {
+  transform: translateY(-2px);
+}
+
+.consejo-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.consejo-item:hover .consejo-header {
+  border-bottom-color: rgba(76, 175, 80, 0.3);
+}
+
+.consejo-item.active .consejo-header {
+  border-bottom-color: rgba(76, 175, 80, 0.6);
+  padding-bottom: 1rem;
+}
+
+.consejo-icon {
+  font-size: 1.8rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.consejo-item:hover .consejo-icon {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+  transform: scale(1.05);
+}
+
+.consejo-item.active .consejo-icon {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.15));
+}
+
+.consejo-titulo {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.consejo-item:hover .consejo-titulo {
+  color: #4CAF50;
+}
+
+.consejo-toggle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #4CAF50;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.consejo-item:hover .consejo-toggle {
+  background: rgba(76, 175, 80, 0.2);
+  transform: rotate(90deg);
+}
+
+.consejo-item.active .consejo-toggle {
+  background: rgba(76, 175, 80, 0.3);
+  transform: rotate(45deg);
+}
+
+.consejo-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+}
+
+.consejo-item.active .consejo-content {
+  max-height: 200px;
+  padding: 1rem 0 1.5rem 0;
+}
+
+.consejo-content p {
+  margin: 0;
+  padding-left: 66px;
+  color: #5a6c7d;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Responsive para consejos */
+@media (max-width: 768px) {
+  .consejos-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .consejo-header {
+    padding: 1.2rem 0;
+    gap: 0.8rem;
+  }
+  
+  .consejo-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .consejo-titulo {
+    font-size: 1rem;
+  }
+  
+  .consejo-toggle {
+    width: 25px;
+    height: 25px;
+    font-size: 1.3rem;
+  }
+  
+  .consejo-content p {
+    padding-left: 48px;
+    font-size: 0.9rem;
+  }
+}
