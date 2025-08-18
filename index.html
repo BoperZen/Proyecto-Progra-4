@@ -140,33 +140,19 @@
             También si busca vehículos de alquiler para hacer diligencias, movilizarse más cómodamente o cubrir sus necesidades mientras su vehículo está en 
             el taller, tenemos excelentes tarifas preferenciales y un robusto programa de cliente frecuente con beneficios exclusivos.
           </p>
-          <h2>------------------------------</h2>
-          <h2>------- api map aqui -------</h2>
-          <h2>------------------------------</h2>
+          
+          <!-- Mapa de Google -->
+          <div class="mapa-container">
+            <div id="map" class="google-map"></div>
+          </div>
         </div>
       </section>
 
-      <!-- SECCIÓN 3: RESERVAR-UNO -->
-      <section id="reservar-uno" class="reserva-cta-section">
-        <div class="reserva-background">
-          <img src="assets/img/img-car-4.JPG" alt="Reserva tu vehículo" class="reserva-bg-image">
-          <div class="reserva-overlay"></div>
-        </div>
-        <div class="reserva-content">
-          <h2 class="reserva-title">
-            Reservar un vehículo con nosotros<br>
-            es tan sencillo como un clic
-          </h2>
-          <button class="reserva-btn">Reservar ahora</button>
-        </div>
-      </section>
-
-      <!-- SECCIÓN 4: DESTINOS -->
+      <!-- SECCIÓN 3: DESTINOS -->
       <section id="destinos" class="destinos-section">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Destinos Recomendados</h2>
-            <p class="section-subtitle">Explora los lugares más hermosos que Costa Rica tiene para ofrecer</p>
           </div>
 
           <!-- Destinos Carousel -->
@@ -229,6 +215,21 @@
             <p>Error al cargar los destinos: {{ errorMessage }}</p>
             <p>Revisa la consola para más detalles.</p>
           </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: RESERVAR-UNO -->
+      <section id="reservar-uno" class="reserva-cta-section">
+        <div class="reserva-background">
+          <img src="assets/img/img-car-4.JPG" alt="Reserva tu vehículo" class="reserva-bg-image">
+          <div class="reserva-overlay"></div>
+        </div>
+        <div class="reserva-content">
+          <h2 class="reserva-title">
+            Reservar un vehículo con nosotros<br>
+            es tan sencillo como un clic
+          </h2>
+          <button class="reserva-btn">Reservar ahora</button>
         </div>
       </section>
 
@@ -398,6 +399,10 @@
   <script src="scripts/carousel.js"></script>
   <!-- Script principal -->
   <script src="scripts/script.js"></script>
+  
+  <!-- Google Maps API -->
+  <script src="scripts/APIGoogle.js"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAab6lvIDAWfRKN7hFCvFJSvzs_aA1bsZM&callback=initMap"></script>
 </body>
 
 </html>
