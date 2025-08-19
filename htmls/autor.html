@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantilla de Proyecto Web</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo/Brand -->
+      <div class="navbar-brand">
+        <a href="../index.html" class="brand-link">
+          <img src="../assets/img/logo-2.png" alt="Why not rent a car" class="brand-logo">
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="navbar-menu" id="navbar-menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../htmls/vehiculos.html" class="nav-link">Vehículos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Reservas</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a href="../htmls/acerca.html" aria-current="page" class="nav-link">Acerca</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content" id="acerca-main">
+      <section class="about-story">
+        <div class="story-container">
+          <div class="story-content">
+            <h2>Una mirada a nuestra historia</h2>
+
+            <p>En 2024, nuestro equipo de desarrollo estableció este proyecto inicialmente conocido como "RentaCar
+              Plus", inspirado por la necesidad de crear una plataforma más eficiente para conectar empresas locales de
+              alquiler de vehículos con sus clientes. Esta visión nos llevó a la creación de una plataforma que llegó a
+              ser un hub líder en soluciones de movilidad, empoderando a las empresas locales para encontrar, conectar y
+              servir a sus clientes de manera fluida.</p>
+
+            <p>Hoy en día, nuestro proyecto continúa este legado como una solución integral en el sector de alquiler
+              vehicular. La plataforma, ahora integrada en el ecosistema digital moderno, sirve a cientos de usuarios
+              potenciales a nivel regional, ofreciendo acceso a decenas de opciones de vehículos con una sola cuenta.
+            </p>
+
+            <p>Nuestro equipo desarrolló esta tecnología y sistema durante el semestre de Programación 4 con el objetivo
+              de fortalecer el desarrollo de soluciones web y potenciar el ecosistema de movilidad local. Más
+              información está disponible en nuestra documentación técnica.</p>
+          </div>
+        </div>
+
+        <div class="story-image">
+          <img src="../assets/img/img-placeholder.webp" alt="Nuestro equipo de desarrollo" class="team-image">
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Información de la empresa -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>WHY NOT RENT</h3>
+                            <p>Aeropuerto Juan Santamaría<br>
+                               Alajuela, Costa Rica<br><br>
+                               <strong>Teléfono:</strong> +506 2437 8888<br>
+                               <strong>Email:</strong> info@whynotrent.cr<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces útiles -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-links">
+                            <h4>Enlaces Útiles</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#inicio">Inicio</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#porque-nosotros">Por qué nosotros</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#vehiculos">Vehículos</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#consejos">Consejos</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#reservaciones">Reservaciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Nuestros servicios -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-links">
+                            <h4>Nuestros Servicios</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Renta de Autos</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Renta de SUVs</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Seguros Vehiculares</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">GPS y Extras</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Asistencia 24/7</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Why Not Rent</span></strong>. Todos los Derechos Reservados
+            </div>
+            <div class="credits">
+                Diseñado por <a href="htmls/autor.html">Joshep & Johan</a>
+            </div>
+        </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS MODULARIZADOS -->
+  <!-- Utilidades base -->
+  <script src="../scripts/scripts-base/utilities.js"></script>
+  <!-- Servicios y almacenamiento -->
+  <script src="../scripts/scripts-base/services.js"></script>
+  <!-- Navegación -->
+  <script src="../scripts/scripts-base/navigation.js"></script>
+  <!-- Elementos interactivos -->
+  <script src="../scripts/scripts-base/interactive-elements.js"></script>
+  <!-- Manejadores de eventos -->
+  <script src="../scripts/scripts-base/event-handlers.js"></script>
+  <!-- Script principal -->
+  <script src="../scripts/script.js"></script>
+</body>
+
+</html>

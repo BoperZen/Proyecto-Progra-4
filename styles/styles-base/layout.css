@@ -16,6 +16,11 @@
   background: var(--color-bg-primary);
 }
 
+/* Container dentro del footer debe ser transparente */
+#footer .container {
+  background: transparent !important;
+}
+
 /* Header */
 /*header {
   text-align: center;
@@ -27,7 +32,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }*/
 
-/* Footer */
+/* Footer
 footer {
   margin-top: 0;
   padding: var(--spacing-xl);
@@ -53,6 +58,199 @@ footer p {
   letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin: 0;
+}*/
+
+#footer {
+  background: linear-gradient(135deg, #374151 0%, #4b5563 50%, #6b7280 100%) !important;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .footer-top,
+#footer .container,
+#footer .container-fluid,
+#footer .row,
+#footer .col,
+#footer [class*="col-"],
+#footer .copyright,
+#footer .credits {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#footer .footer-top {
+  background: transparent !important;
+  border-top: none;
+  border-bottom: none;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+#footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background: transparent;
+}
+
+#footer .footer-top .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 900px;
+}
+
+#footer .footer-top .col-lg-4 {
+  padding: 0 20px;
+  margin-bottom: 30px;
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+#footer .footer-top h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul li:last-child {
+  border-bottom: none;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Poppins", sans-serif;
+}
+
+#footer .credits a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#footer .credits a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive para footer */
+@media (max-width: 768px) {
+  #footer .footer-top .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 /* Secciones generales */
@@ -139,4 +337,34 @@ header h1 {
 header .subtitle {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el área de copyright del footer */
+#footer .copyright,
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#footer .copyright {
+  padding-top: 30px !important;
+}
+
+#footer .credits {
+  padding-top: 5px !important;
+  font-size: 13px;
+  color: #fff;
+}
+
+#footer .credits a {
+  color: #5fcf80;
+  transition: 0.3s;
+}
+
+#footer .credits a:hover {
+  color: #47c56b;
 }
