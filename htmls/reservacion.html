@@ -3,159 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar o cancelar una reserva</title>
-    <link rel="stylesheet" href="../styles/styles-base/reservacion.css">
+    <title>Consultar o cancelar una reserva</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/styles-base/reservacion.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- NAVBAR -->
+    <!-- NAVBAR (no modificar) -->
     <nav class="navbar">
-    <div class="navbar-container">
-        <!-- Logo/Brand -->
-        <div class="navbar-brand">
-            <a href="../index.html" class="brand-link">
-                <img src="../assets/img/logo-2.png" alt="Logo" class="brand-logo">
-            </a>
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html" class="brand-link">
+                    <img src="../assets/img/logo-2.png" alt="Logo" class="brand-logo">
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="../index.html#inicio" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="vehiculos.html" class="nav-link">Vehículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reservacion.html" class="nav-link active">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="historia.html" class="nav-link">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="acerca.html" class="nav-link">Acerca</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
         </div>
+    </nav>
 
-        <!-- Navigation Links -->
-        <div class="navbar-menu" id="navbar-menu">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="vehiculos.html" class="nav-link">Vehículos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contacto.html" class="nav-link">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a href="reservacion.html" class="nav-link active">Reservas</a>
-                </li>
-                <li class="nav-item">
-                    <a href="historia.html" class="nav-link">Historia</a>
-                </li>
-                <li class="nav-item">
-                    <a href="acerca.html" class="nav-link">Acerca</a>
-                </li>
-            </ul>
+    <!-- HERO COLORIDO SIN BOTÓN Y CENTRADO -->
+    <section class="reserva-hero-bg">
+        <div class="reserva-hero-content hero-centered">
+            <div class="reserva-hero-text">
+                <h1 class="reserva-hero-title">La mejor opción para alquiler de autos en Costa Rica</h1>
+                <p class="reserva-hero-desc">
+                    Why Not Rent te ofrece una amplia flota vehicular, tarifas de alquiler bajas y una experiencia agradable y sin complicaciones.<br>
+                    ¡Aventúrate a los destinos más populares de Costa Rica y el mundo!
+                </p>
+            </div>
+            <div class="reserva-hero-imgs">
+                <img src="../assets/img/img-car-1.jpg" alt="Auto en playa" class="hero-img hero-img-left">
+                <img src="../assets/img/img-DRAKEBAY.jpeg" alt="Auto en Drake Bay" class="hero-img hero-img-right">
+            </div>
         </div>
+    </section>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="navbar-toggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
-            <span class="toggle-line"></span>
-            <span class="toggle-line"></span>
-            <span class="toggle-line"></span>
-        </button>
-    </div>
-</nav>
-
-    <!-- Encabezado con imagen y título -->
-    <header class="reservacion-header">
-        <div class="reservacion-header-bg">
-            <img src="../assets/img/logo-2.png" alt="Reservar" class="reservacion-header-img">
-            <h1 class="reservacion-header-title">Modificar o cancelar una reserva</h1>
+    <!-- BLOQUE DE RESERVACIÓN -->
+    <section id="bloque-reservacion" class="reserva-section-reserva">
+        <div class="reserva-section-title">
+            <span class="reserva-section-icon">
+                <i class="fas fa-search"></i>
+            </span>
+            <span>Consultar o cancelar una reserva</span>
         </div>
-    </header>
-
-    <!-- Sección principal para buscar y gestionar reservas -->
-    <main class="reservacion-main">
-        <section class="reservacion-buscar">
-            <h2 class="reservacion-section-title">
-                <span class="reservacion-icon">&#128269;</span>
-                <span id="titulo-reservas">Reservas existentes</span>
-            </h2>
-            <form class="reservacion-form" autocomplete="off">
-                <label for="idioma" class="reservacion-label" id="label-idioma">Idioma</label>
-                <select id="idioma" class="reservacion-input">
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
-                </select>
-
-                <fieldset class="reservacion-fieldset">
-                    <legend class="reservacion-legend" id="legend-conductor">Nombre del conductor</legend>
-                    <div class="reservacion-fieldset-row">
-                        <div>
-                            <label for="nombre" class="reservacion-label" id="label-nombre">Nombre</label>
-                            <input type="text" id="nombre" class="reservacion-input" placeholder="Ingrese su nombre" required>
-                        </div>
-                        <div>
-                            <label for="apellidos" class="reservacion-label" id="label-apellidos">Apellidos</label>
-                            <input type="text" id="apellidos" class="reservacion-input" placeholder="Ingrese sus apellidos" required>
-                        </div>
-                        <div>
-                            <label for="numero-reserva" class="reservacion-label" id="label-numero">Número de reserva</label>
-                            <input type="text" id="numero-reserva" class="reservacion-input" placeholder="Ingrese su número de reserva" required>
-                        </div>
-                    </div>
-                </fieldset>
-                
-                <button type="submit" class="reservacion-btn" id="btn-buscar">Buscar</button>
-            </form>
-
-            <!-- Agrega este div después del formulario en reservacion.html -->
-            <div id="resultado-busqueda" class="reservacion-resultado"></div>
-        </section>
-    </main>
+        <form class="reserva-form-block" autocomplete="off">
+            <div class="reserva-form-row-block">
+                <div class="reserva-form-group-block">
+                    <label for="codigo" class="reserva-label-block">Código de Reserva</label>
+                    <input type="text" id="codigo" name="codigo" class="reserva-input-block" placeholder="Ej: ABC12345" required>
+                </div>
+                <div class="reserva-form-group-block">
+                    <label for="email" class="reserva-label-block">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="reserva-input-block" placeholder="tu@email.com" required>
+                </div>
+                <div class="reserva-form-group-block reserva-btn-group-block">
+                    <button type="submit" class="reserva-btn-block">Buscar Reserva</button>
+                </div>
+            </div>
+        </form>
+        <div class="reserva-resultado-block" id="reservacion-resultado"></div>
+    </section>
 
     <script>
-        // Traducciones
-        const traducciones = {
-            es: {
-                titulo: "Reservas existentes",
-                idioma: "Idioma",
-                legend: "Nombre del conductor",
-                nombre: "Nombre",
-                apellidos: "Apellidos",
-                numero: "Número de reserva",
-                placeholderNombre: "Ingrese su nombre",
-                placeholderApellidos: "Ingrese sus apellidos",
-                placeholderNumero: "Ingrese su número de reserva",
-                buscar: "Buscar"
-            },
-            en: {
-                titulo: "Existing reservations",
-                idioma: "Language",
-                legend: "Driver's name",
-                nombre: "First name",
-                apellidos: "Last name",
-                numero: "Reservation number",
-                placeholderNombre: "Enter your first name",
-                placeholderApellidos: "Enter your last name",
-                placeholderNumero: "Enter your reservation number",
-                buscar: "Search"
-            }
-        };
-
-        const idiomaSelect = document.getElementById('idioma');
-        idiomaSelect.addEventListener('change', function() {
-            const lang = idiomaSelect.value;
-            document.getElementById('titulo-reservas').textContent = traducciones[lang].titulo;
-            document.getElementById('label-idioma').textContent = traducciones[lang].idioma;
-            document.getElementById('legend-conductor').textContent = traducciones[lang].legend;
-            document.getElementById('label-nombre').textContent = traducciones[lang].nombre;
-            document.getElementById('nombre').placeholder = traducciones[lang].placeholderNombre;
-            document.getElementById('label-apellidos').textContent = traducciones[lang].apellidos;
-            document.getElementById('apellidos').placeholder = traducciones[lang].placeholderApellidos;
-            document.getElementById('label-numero').textContent = traducciones[lang].numero;
-            document.getElementById('numero-reserva').placeholder = traducciones[lang].placeholderNumero;
-            document.getElementById('btn-buscar').textContent = traducciones[lang].buscar;
-        });
-
-        document.querySelector('.reservacion-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nombre = document.getElementById('nombre').value.trim();
-            const apellidos = document.getElementById('apellidos').value.trim();
-            const numero = document.getElementById('numero-reserva').value.trim();
-            const lang = idiomaSelect.value;
-            let mensaje = '';
-            if (lang === 'es') {
-                mensaje = `Buscando reserva para ${nombre} ${apellidos} con número ${numero}...`;
-            } else {
-                mensaje = `Searching reservation for ${nombre} ${apellidos} with number ${numero}...`;
-            }
-            document.getElementById('resultado-busqueda').textContent = mensaje;
-        });
+    document.querySelector('.reserva-form-block').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const codigo = document.getElementById('codigo').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const resultado = document.getElementById('reservacion-resultado');
+        if (codigo && email) {
+            resultado.textContent = "Reserva encontrada: " + codigo + " (" + email + ")";
+            resultado.style.background = "#d4f7d4";
+            resultado.style.color = "#153a75";
+        } else {
+            resultado.textContent = "Por favor, completa ambos campos para buscar tu reserva.";
+            resultado.style.background = "#ffe6e6";
+            resultado.style.color = "#c0392b";
+        }
+    });
     </script>
 </body>
 </html>
