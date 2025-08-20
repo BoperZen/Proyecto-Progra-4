@@ -27,19 +27,16 @@
                         <a href="../index.html" aria-current="page" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="htmls/vehiculos.html" class="nav-link active">Vehículos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contacto</a>
+                        <a href="vehiculos.html" class="nav-link active">Vehículos</a>
                     </li>
                     <li class="nav-item">
                         <a href="reservacion.html" class="nav-link">Reservas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Historia</a>
+                        <a href="historia.html" class="nav-link">Historia</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../htmls/acerca.html" class="nav-link">Acerca</a>
+                        <a href="acerca.html" class="nav-link">Acerca</a>
                     </li>
                 </ul>
             </div>
@@ -75,6 +72,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="7">7</option>
+                        <option value="12">12</option>
                     </select>
                 </div>
                 <button type="button" id="limpiar-filtros" class="btn-limpiar">Limpiar filtros</button>
@@ -86,16 +84,16 @@
                 <p class="vehiculos-desc">Alquiler de vehículos en Costa Rica.</p>
             </header>
             <div class="vehiculos-grid" id="vehiculos-grid">
-                <article class="vehiculo-card" data-tipo="Sedán" data-img="../assets/img/img-DRAKEBAY"
-                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Automático"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
+                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-PRADO.jpeg"
+                    data-nombre="Vehículo Grande" data-modelo="Toyota Prado o similar" data-transmision="Automático"
+                    data-pasajeros="7" data-maletas="4" data-puertas="5"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-DRAKEBAY" alt="Toyota Agya" class="vehiculo-img">
+                        <img src="../assets/img/img-car-PRADO.jpeg" alt="Toyota Prado" class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <h2 class="vehiculo-nombre">Vehículo Grande</h2>
+                        <p class="vehiculo-modelo">Toyota Prado o similar</p>
                         <ul class="detalles">
                             <li>
                                 <span class="detalle-icon">
@@ -118,7 +116,7 @@
                                         <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
                                     </svg>
                                 </span>
-                                4
+                                7
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -129,7 +127,7 @@
                                         <path d="M16 3v4M8 3v4" />
                                     </svg>
                                 </span>
-                                2
+                                4
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -140,142 +138,22 @@
                                         <circle cx="16" cy="9" r="1" />
                                     </svg>
                                 </span>
-                                4
+                                5
                             </li>
                         </ul>
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-DRAKEBAY.jpeg"
-                    data-nombre="Vehículo SUV" data-modelo="Toyota RAV4 o similar" data-transmision="Manual"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
+                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-KIA ROJO.jpeg"
+                    data-nombre="Vehículo SUV" data-modelo="Kia Sportage o similar" data-transmision="Automático"
+                    data-pasajeros="5" data-maletas="4" data-puertas="5"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-DRAKEBAY.jpeg" alt="Toyota RAV4" class="vehiculo-img">
+                        <img src="../assets/img/img-car-KIA ROJO.jpeg" alt="Kia Sportage" class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
                         <h2 class="vehiculo-nombre">Vehículo SUV</h2>
-                        <p class="vehiculo-modelo">Toyota RAV4 o similar</p>
-                        <ul class="detalles">
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Engranaje (Transmisión) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="3" />
-                                        <path
-                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z" />
-                                    </svg>
-                                </span>
-                                Manual
-                            </li>
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Persona (Pasajeros) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="7" r="4" />
-                                        <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
-                                    </svg>
-                                </span>
-                                4
-                            </li>
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Maleta (Maletas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <rect x="3" y="7" width="18" height="13" rx="2" />
-                                        <path d="M16 3v4M8 3v4" />
-                                    </svg>
-                                </span>
-                                2
-                            </li>
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Puerta (Puertas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <rect x="6" y="3" width="12" height="18" rx="2" />
-                                        <circle cx="16" cy="9" r="1" />
-                                    </svg>
-                                </span>
-                                4
-                            </li>
-                        </ul>
-                        <a href="#" class="vehiculo-link">Ver detalle</a>
-                    </div>
-                </article>
-                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-2.jpg"
-                    data-nombre="Vehículo económico" data-modelo="Suzuki Swift o similar" data-transmision="Automático"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
-                    data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
-                    <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-2.jpg" alt="Suzuki Swift" class="vehiculo-img">
-                    </div>
-                    <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Vehículo económico</h2>
-                        <p class="vehiculo-modelo">Suzuki Swift o similar</p>
-                        <ul class="detalles">
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Engranaje (Transmisión) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="3" />
-                                        <path
-                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .66.39 1.25 1 1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 8c.66 0 1.25.39 1.51 1H21a2 2 0 1 1 0 4h-.09c-.26 0-.51.1-.7.29z" />
-                                    </svg>
-                                </span>
-                                Automático
-                            </li>
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Persona (Pasajeros) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="7" r="4" />
-                                        <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
-                                    </svg>
-                                </span>
-                                4
-                            </li>
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Maleta (Maletas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <rect x="3" y="7" width="18" height="13" rx="2" />
-                                        <path d="M16 3v4M8 3v4" />
-                                    </svg>
-                                </span>
-                                2
-                            </li>
-                            <li>
-                                <span class="detalle-icon">
-                                    <!-- Puerta (Puertas) -->
-                                    <svg width="18" height="18" fill="none" stroke="#232323" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <rect x="6" y="3" width="12" height="18" rx="2" />
-                                        <circle cx="16" cy="9" r="1" />
-                                    </svg>
-                                </span>
-                                4
-                            </li>
-                        </ul>
-                        <a href="#" class="vehiculo-link">Ver detalle</a>
-                    </div>
-                </article>
-                <article class="vehiculo-card" data-tipo="Eléctrico" data-img="../assets/img/img-car-3.jpg"
-                    data-nombre="Estándar SUV Eléctrico" data-modelo="Toyota Bz4x, Autonomía 400 Km"
-                    data-transmision="Automático" data-pasajeros="5" data-maletas="2" data-puertas="4"
-                    data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
-                    <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-3.jpg" alt="Toyota Bz4x" class="vehiculo-img">
-                    </div>
-                    <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Estándar SUV Eléctrico</h2>
-                        <p class="vehiculo-modelo">Toyota Bz4x, Autonomía 400 Km</p>
+                        <p class="vehiculo-modelo">Kia Sportage o similar</p>
                         <ul class="detalles">
                             <li>
                                 <span class="detalle-icon">
@@ -309,7 +187,7 @@
                                         <path d="M16 3v4M8 3v4" />
                                     </svg>
                                 </span>
-                                2
+                                4
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -320,22 +198,22 @@
                                         <circle cx="16" cy="9" r="1" />
                                     </svg>
                                 </span>
-                                4
+                                5
                             </li>
                         </ul>
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="Sedán" data-img="../assets/img/img-car-1.jpg"
-                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Automático"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
+                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-CRETA.jpeg"
+                    data-nombre="Vehículo SUV" data-modelo="Hyundai Creta o similar" data-transmision="Automático"
+                    data-pasajeros="5" data-maletas="3" data-puertas="4"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                        <img src="../assets/img/img-car-CRETA.jpeg" alt="Hyundai Creta" class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <h2 class="vehiculo-nombre">Vehículo SUV</h2>
+                        <p class="vehiculo-modelo">Hyundai Creta o similar</p>
                         <ul class="detalles">
                             <li>
                                 <span class="detalle-icon">
@@ -358,7 +236,7 @@
                                         <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
                                     </svg>
                                 </span>
-                                4
+                                5
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -369,7 +247,7 @@
                                         <path d="M16 3v4M8 3v4" />
                                     </svg>
                                 </span>
-                                2
+                                3
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -386,16 +264,16 @@
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="Sedán" data-img="../assets/img/img-car-1.jpg"
-                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Automático"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
+                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-LANDCRUISER.jpeg"
+                    data-nombre="Vehículo Grande" data-modelo="Toyota Land Cruiser, Autonomía 800 Km"
+                    data-transmision="Automático" data-pasajeros="7" data-maletas="4" data-puertas="5"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                        <img src="../assets/img/img-car-LANDCRUISER.jpeg" alt="Toyota Land Cruiser" class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <h2 class="vehiculo-nombre">Vehículo Grande</h2>
+                        <p class="vehiculo-modelo">Toyota Land Cruiser o similar</p>
                         <ul class="detalles">
                             <li>
                                 <span class="detalle-icon">
@@ -418,7 +296,7 @@
                                         <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
                                     </svg>
                                 </span>
-                                4
+                                7
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -429,7 +307,7 @@
                                         <path d="M16 3v4M8 3v4" />
                                     </svg>
                                 </span>
-                                2
+                                4
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -440,22 +318,22 @@
                                         <circle cx="16" cy="9" r="1" />
                                     </svg>
                                 </span>
-                                4
+                                5
                             </li>
                         </ul>
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="Sedán" data-img="../assets/img/img-car-1.jpg"
-                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Automático"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
+                <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-5.jpeg"
+                    data-nombre="Vehículo SUV" data-modelo="Mitsubishi ASX o similar" data-transmision="Automático"
+                    data-pasajeros="5" data-maletas="3" data-puertas="4"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                        <img src="../assets/img/img-car-5.jpeg" alt="Mitsubishi ASX" class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <h2 class="vehiculo-nombre">Vehículo SUV</h2>
+                        <p class="vehiculo-modelo">Mitsubishi ASX o similar</p>
                         <ul class="detalles">
                             <li>
                                 <span class="detalle-icon">
@@ -478,7 +356,7 @@
                                         <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
                                     </svg>
                                 </span>
-                                4
+                                5
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -489,7 +367,7 @@
                                         <path d="M16 3v4M8 3v4" />
                                     </svg>
                                 </span>
-                                2
+                                3
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -506,16 +384,16 @@
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                <article class="vehiculo-card" data-tipo="Sedán" data-img="../assets/img/img-car-1.jpg"
-                    data-nombre="Vehículo mini" data-modelo="Toyota Agya o similar" data-transmision="Automático"
-                    data-pasajeros="4" data-maletas="2" data-puertas="4"
+                <article class="vehiculo-card" data-tipo="Van" data-img="../assets/img/img-car-MICRO.jpeg"
+                    data-nombre="Van Grande" data-modelo="Hyundai Starex o similar"
+                    data-transmision="Automático" data-pasajeros="12" data-maletas="4" data-puertas="5"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-img">
+                        <img src="../assets/img/img-car-MICRO.jpeg" alt="Hyundai Starex" class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
-                        <h2 class="vehiculo-nombre">Vehículo mini</h2>
-                        <p class="vehiculo-modelo">Toyota Agya o similar</p>
+                        <h2 class="vehiculo-nombre">Van Grande</h2>
+                        <p class="vehiculo-modelo">Hyundai Starex o similar</p>
                         <ul class="detalles">
                             <li>
                                 <span class="detalle-icon">
@@ -538,7 +416,7 @@
                                         <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
                                     </svg>
                                 </span>
-                                4
+                                12
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -549,7 +427,7 @@
                                         <path d="M16 3v4M8 3v4" />
                                     </svg>
                                 </span>
-                                2
+                                4
                             </li>
                             <li>
                                 <span class="detalle-icon">
@@ -560,13 +438,12 @@
                                         <circle cx="16" cy="9" r="1" />
                                     </svg>
                                 </span>
-                                4
+                                5
                             </li>
                         </ul>
                         <a href="#" class="vehiculo-link">Ver detalle</a>
                     </div>
                 </article>
-                
             </div>
         </section>
     </main>

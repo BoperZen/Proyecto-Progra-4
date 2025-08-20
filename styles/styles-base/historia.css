@@ -60,7 +60,7 @@ body {
     gap: 0.5em;
 }
 .historia-title-icon {
-    color: #ffe600;
+    color: #218c1e;
     font-size: 1.1em;
 }
 .historia-desc {
@@ -97,7 +97,7 @@ body {
     height: 180px;
     object-fit: cover;
     border-radius: 12px;
-    border: 4px solid #ffe600;
+    border: 4px solid #218c1e;
     background: #fff;
     box-shadow: 0 2px 8px rgba(35,44,103,0.10);
 }
@@ -153,8 +153,8 @@ body {
     justify-content: center;
 }
 .timeline-year {
-    background: #ffe600;
-    color: #153a75;
+    background: #218c1e;
+    color: #fff;
     font-weight: 800;
     font-size: 1.3em;
     min-width: 140px;
@@ -220,86 +220,6 @@ body {
     line-height: 1.6;
 }
 
-/* NAVBAR: igual que en vehiculos.css */
-.navbar {
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(35,44,103,0.06);
-    padding: 0.5em 0;
-    margin-bottom: 2em;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-.navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2em;
-}
-.brand-logo {
-    height: 48px;
-    width: auto;
-    display: block;
-}
-.navbar-menu {
-    display: flex;
-}
-.navbar-nav {
-    display: flex;
-    gap: 2em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.nav-link {
-    color: #232c67;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    padding: 0.5em 2em;
-    border-radius: 12px;
-    transition: background 0.2s, color 0.2s;
-    background: transparent;
-    box-shadow: none;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 120px;
-    text-align: center;
-    letter-spacing: 0.5px;
-}
-.nav-link.active, .nav-link:hover {
-    background: #e8edfa;
-    color: #232c67;
-    box-shadow: 0 2px 8px rgba(35,44,103,0.08);
-}
-.navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.toggle-line {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: #232c67;
-    margin: 5px 0;
-    border-radius: 2px;
-}
-@media (max-width: 900px) {
-    .navbar-container {
-        flex-direction: column;
-        gap: 1em;
-        padding: 0 1em;
-    }
-    .navbar-nav {
-        gap: 1em;
-    }
-}
 
 /* Responsive */
 @media (max-width: 1100px) {

@@ -145,6 +145,13 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  min-width: 120px;
+  width: 140px !important;
+  text-align: center;
+  box-sizing: border-box;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  /* Fuerza el mismo padding para todos los tabs */
 }
 
 .nav-link::before {
@@ -172,6 +179,12 @@
   color: var(--color-primary);
   background: linear-gradient(135deg, rgba(33, 17, 175, 0.08), rgba(59, 130, 246, 0.08));
   box-shadow: 0 2px 8px rgba(57, 52, 129, 0.15);
+  min-width: 120px;
+  width: 140px !important;
+  box-sizing: border-box;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  /* Fuerza el mismo ancho y padding en el tab activo */
 }
 
 /* ========================================
