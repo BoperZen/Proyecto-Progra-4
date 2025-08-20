@@ -154,7 +154,7 @@
    PÁGINA ACERCA DE
    ======================================== */
 #acerca-main {
-  margin: 50px;
+  margin: 0 50px 50px;
 }
 
 .about-story {
@@ -165,8 +165,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: flex-start;
 }
 
 .story-content {
