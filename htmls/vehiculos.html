@@ -7,6 +7,7 @@
     <title>Opciones de vehículos para rentar</title>
     <link rel="stylesheet" href="../styles/styles-base/vehiculos.css">
     <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,6 +31,9 @@
                         <a href="vehiculos.html" class="nav-link active">Vehículos</a>
                     </li>
                     <li class="nav-item">
+                        <a href="#Contacto" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="reservacion.html" class="nav-link">Reservas</a>
                     </li>
                     <li class="nav-item">
@@ -51,38 +55,45 @@
     </nav>
 
     <!-- CONTENEDOR PRINCIPAL -->
+    <div class="vehiculo-ad-container">
+        <div class="vehiculo-ad">
+            <h1 class="vehiculo-ad-title">¡Nuevo auto disponible para tu próxima aventura!</h1>
+            <p class="vehiculo-ad-desc"><Strong>Toyota Prado</Strong> confort, espacio y tecnología en nuestro nuevo modelo.</p>
+            <div class="vehiculo-ad-media-wrapper">
+                <iframe width="600" height="400" src="https://www.youtube.com/embed/KErbPaC4uRw" title="YouTube video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
     <main class="vehiculos-main">
-        <aside class="filtros" aria-label="Filtros de vehículos">
-            <h2 class="filtros-titulo">FILTROS</h2>
-            <form id="filtros-form">
-                <fieldset class="filtros-fieldset">
-                    <legend class="filtros-legend">Tipo de vehículo</legend>
-                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Sedán"> Sedán</label>
-                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="SUV"> SUV</label>
-                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Pickup"> Pickup</label>
-                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Van"> Van</label>
-                    <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico">
-                        Eléctrico</label>
-                </fieldset>
-                <div class="filtro-pasajeros">
-                    <label for="pasajeros">Pasajeros</label>
-                    <select id="pasajeros" name="pasajeros">
-                        <option value="">Cantidad</option>
-                        <option value="2">2</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="7">7</option>
-                        <option value="12">12</option>
-                    </select>
-                </div>
-                <button type="button" id="limpiar-filtros" class="btn-limpiar">Limpiar filtros</button>
-            </form>
-        </aside>
         <section class="vehiculos-section">
-            <header>
-                <h1 class="vehiculos-title">Opciones de vehículos para rentar</h1>
+            <header class="vehiculos-header">
+                <h1 class="vehiculos-title">Nuestras opciones de vehículos para rentar</h1>
                 <p class="vehiculos-desc">Alquiler de vehículos en Costa Rica.</p>
             </header>
+            <aside class="filtros" aria-label="Filtros de vehículos">
+                <h2 class="filtros-titulo">FILTROS</h2>
+                <form id="filtros-form" style="display: flex; align-items: flex-start; gap: 2em;">
+                    <fieldset class="filtros-fieldset" style="margin-bottom: 0;">
+                        <legend class="filtros-legend">Tipo de vehículo</legend>
+                        <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="SUV"> SUV</label>
+                        <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Van"> Van</label>
+                        <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico"> Manual</label>
+                    </fieldset>
+                    <div class="filtro-pasajeros" style="margin-top: 0;">
+                        <label for="pasajeros">Pasajeros</label>
+                        <select id="pasajeros" name="pasajeros">
+                            <option value="">Cantidad</option>
+                            <option value="5">5</option>
+                            <option value="7">7</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                </form>
+            </aside>
             <div class="vehiculos-grid" id="vehiculos-grid">
                 <article class="vehiculo-card" data-tipo="SUV" data-img="../assets/img/img-car-PRADO.jpeg"
                     data-nombre="Vehículo Grande" data-modelo="Toyota Prado o similar" data-transmision="Automático"
@@ -269,7 +280,8 @@
                     data-transmision="Automático" data-pasajeros="7" data-maletas="4" data-puertas="5"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
-                        <img src="../assets/img/img-car-LANDCRUISER.jpeg" alt="Toyota Land Cruiser" class="vehiculo-img">
+                        <img src="../assets/img/img-car-LANDCRUISER.jpeg" alt="Toyota Land Cruiser"
+                            class="vehiculo-img">
                     </div>
                     <div class="vehiculo-info">
                         <h2 class="vehiculo-nombre">Vehículo Grande</h2>
@@ -385,8 +397,8 @@
                     </div>
                 </article>
                 <article class="vehiculo-card" data-tipo="Van" data-img="../assets/img/img-car-MICRO.jpeg"
-                    data-nombre="Van Grande" data-modelo="Hyundai Starex o similar"
-                    data-transmision="Automático" data-pasajeros="12" data-maletas="4" data-puertas="5"
+                    data-nombre="Van Grande" data-modelo="Hyundai Starex o similar" data-transmision="Automático"
+                    data-pasajeros="12" data-maletas="4" data-puertas="5"
                     data-incluye="Bolsas de aire,Radio estéreo AM/FM,Aire acondicionado">
                     <div class="vehiculo-img-container">
                         <img src="../assets/img/img-car-MICRO.jpeg" alt="Hyundai Starex" class="vehiculo-img">
@@ -449,8 +461,57 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer>
-        <p>&copy; 2025 - Plantilla de Proyecto Web</p>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row" style="gap: 40px;">
+                    <!-- Información de la empresa -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3 id="Contacto">WHY NOT RENT</h3>
+                            <p>Centro de Alajuela<br>
+                                Alajuela, Costa Rica<br><br>
+                            <h4 style="margin-bottom: -10px;">Contáctenos</h4>
+                            <strong>Teléfono:</strong> +506 6247-4657<br>
+                            <strong>Email:</strong> why.not.rent.car@gmail.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="https://www.instagram.com/why_not_rent_car?igsh=MzVrNWFtcGRjazg3"
+                                    class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                                <a href="https://wa.me/50662474657" class="whatsapp" target="_blank"><i
+                                        class="bx bxl-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces útiles -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-links">
+                            <h4>Enlaces Útiles</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Inicio</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Por qué nosotros</a>
+                                </li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../htmls/vehiculos.html">Vehículos</a>
+                                </li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Consejos</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Reservaciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Why Not Rent</span></strong>. Todos los Derechos Reservados
+            </div>
+            <div class="credits">
+                Diseñado por <a href="../htmls/autor.html">Joseph & Johan</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Modal de detalle de vehículo -->

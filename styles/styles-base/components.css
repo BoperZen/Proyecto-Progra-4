@@ -163,16 +163,15 @@
 }
 
 .estudiantes-content {
-  max-width: 650px;
+  min-width: 650px;
   margin: 0 auto;
   text-align: left;
 }
 
 .estudiantes-info {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
+  gap: 150px;
 }
 
 .story-estudiantes h2 {
@@ -293,6 +292,10 @@
   text-align: left;
 }
 
+#acerca-content {
+  margin: 0 50px 0 50px;
+}
+
 .story-content h2 {
   font-size: 32px;
   font-weight: var(--font-weight-bold);
@@ -340,6 +343,11 @@
   border-radius: var(--border-radius-lg);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: all var(--transition-base);
+}
+
+#acerca-image {
+  height: 350px;
+  width: 350px;
 }
 
 .team-image:hover {

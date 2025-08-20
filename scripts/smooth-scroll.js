@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetSection) {
                 // Calcular posición con offset para mostrar el título completo
-                const offsetTop = targetSection.offsetTop - 100; // 80px de margen superior
+                const offsetTop = targetSection.offsetTop - 150;
                 
                 window.scrollTo({
                     top: offsetTop,

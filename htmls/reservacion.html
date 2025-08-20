@@ -7,6 +7,7 @@
     <title>Consultar o cancelar una reserva</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/styles-base/reservacion.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                         <a href="../htmls/vehiculos.html" class="nav-link">Vehículos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contacto.html" class="nav-link">Contacto</a>
+                        <a href="#Contacto" class="nav-link">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a href="../htmls/reservacion.html" class="nav-link active">Reservas</a>
@@ -98,6 +99,60 @@
         </form>
         <div class="reserva-resultado-block" id="reservacion-resultado"></div>
     </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row" style="gap: 40px;">
+                    <!-- Información de la empresa -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3 id="Contacto">WHY NOT RENT</h3>
+                            <p>Centro de Alajuela<br>
+                                Alajuela, Costa Rica<br><br>
+                            <h4 style="margin-bottom: -10px;">Contáctenos</h4>
+                            <strong>Teléfono:</strong> +506 6247-4657<br>
+                            <strong>Email:</strong> why.not.rent.car@gmail.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="https://www.instagram.com/why_not_rent_car?igsh=MzVrNWFtcGRjazg3"
+                                    class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                                <a href="https://wa.me/50662474657" class="whatsapp" target="_blank"><i
+                                        class="bx bxl-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces útiles -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-links">
+                            <h4>Enlaces Útiles</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Inicio</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Por qué nosotros</a>
+                                </li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../htmls/vehiculos.html">Vehículos</a>
+                                </li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Consejos</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Reservaciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Why Not Rent</span></strong>. Todos los Derechos Reservados
+            </div>
+            <div class="credits">
+                Diseñado por <a href="../htmls/autor.html">Joseph & Johan</a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.querySelector('.reserva-form-block').addEventListener('submit', function (e) {
