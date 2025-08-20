@@ -145,12 +145,11 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  width: 100px !important;
-  text-align: center;
+  width: 100%;              /* Ocupa todo el ancho disponible */
   box-sizing: border-box;
   padding-left: var(--spacing-md);
   padding-right: var(--spacing-md);
-  /* Fuerza el mismo padding para todos los tabs */
+  text-align: left;         /* Alinea el texto a la izquierda */
 }
 
 .nav-link::before {
@@ -178,11 +177,21 @@
   color: var(--color-primary);
   background: linear-gradient(135deg, rgba(33, 17, 175, 0.08), rgba(59, 130, 246, 0.08));
   box-shadow: 0 2px 8px rgba(57, 52, 129, 0.15);
-  width: 100px !important;
+  width: 100% !important;
   box-sizing: border-box;
   padding-left: var(--spacing-md);
   padding-right: var(--spacing-md);
-  /* Fuerza el mismo ancho y padding en el tab activo */
+}
+
+/* Responsive: sobrescribe el ancho fijo en móvil */
+@media (max-width: 768px) {
+  .nav-link,
+  .nav-link.active {
+    width: 100%;
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: left;
+  }
 }
 
 /* ========================================

@@ -27,10 +27,12 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.vehiculo-ad{
+
+.vehiculo-ad {
     max-width: 800px;
     text-align: center;
 }
+
 .vehiculo-ad-title {
     color: #232c67;
     text-align: center;
@@ -40,6 +42,7 @@ body {
     margin-bottom: 0.2em;
     font-weight: bold;
 }
+
 .vehiculo-ad-desc {
     color: #3a3a3a;
     margin-bottom: 1.2em;
@@ -55,7 +58,7 @@ body {
     margin: 0 auto;
     border-radius: 16px;
     background: #f3f6fa;
-    box-shadow: 0 4px 24px rgba(35,44,103,0.10);
+    box-shadow: 0 4px 24px rgba(35, 44, 103, 0.10);
     overflow: hidden;
 }
 
@@ -79,6 +82,7 @@ body {
     height: fit-content;
     box-sizing: border-box;
 }
+
 .filtros-titulo {
     padding-left: 20px;
     font-size: 1.3em;
@@ -87,19 +91,21 @@ body {
     font-weight: bold;
     color: #232c67;
 }
+
 .filtros-fieldset {
     border: 2px solid #d1d8f0;
     border-radius: 10px;
-        padding: 1em;
+    padding: 1em;
     margin-bottom: 1.5em;
     background: #fff;
-        display: flex;
-        flex-direction: row;
-        gap: 2em;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }
+
 .filtros-legend {
     width: 150px;
     font-size: 1em;
@@ -107,36 +113,42 @@ body {
     color: #232c67;
     margin-bottom: 0.7em;
 }
+
 .filtro-checkbox {
     display: flex;
     align-items: center;
-        margin-bottom: 0;
-        white-space: nowrap;
+    margin-bottom: 0;
+    white-space: nowrap;
     gap: 0.5em;
     cursor: pointer;
     font-size: 1em;
     color: #232c67;
     transition: color 0.2s;
 }
+
 .filtro-checkbox input[type="checkbox"] {
     accent-color: #232c67;
     width: 1.1em;
     height: 1.1em;
     margin-right: 0.5em;
 }
+
 .filtro-checkbox input[type="checkbox"]:focus {
     outline: 2px solid #232c67;
 }
+
 .filtro-pasajeros {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
+
 .filtro-pasajeros label {
     margin-bottom: 0.5em;
     display: block;
     font-weight: 600;
     color: #232c67;
 }
+
 .filtro-pasajeros select {
     width: 100%;
     margin-top: 8px;
@@ -150,9 +162,11 @@ body {
     outline: none;
     transition: border 0.2s;
 }
+
 .filtro-pasajeros select:focus {
     border: 1.5px solid #232c67;
 }
+
 #pasajeros {
     height: 50px;
     text-align: center;
@@ -172,6 +186,7 @@ body {
     border: none;
     transition: background 0.2s, color 0.2s;
 }
+
 .btn-limpiar:hover {
     background: green;
     color: #fff;
@@ -182,10 +197,12 @@ body {
     flex: 1;
     margin-bottom: 50px;
 }
+
 .vehiculos-header {
     margin-top: 50px;
     padding: 2em 1.5em 0 1.5em;
 }
+
 .vehiculos-title {
     text-shadow: none;
     color: #232c67;
@@ -193,6 +210,7 @@ body {
     margin-bottom: 0.2em;
     font-weight: bold;
 }
+
 .vehiculos-desc {
     color: #3a3a3a;
     margin-bottom: 2em;
@@ -216,10 +234,12 @@ body {
     align-items: stretch;
     transition: box-shadow 0.2s, transform 0.2s;
 }
+
 .vehiculo-card:hover {
-    box-shadow: 0 8px 32px rgba(35,44,103,0.16);
+    box-shadow: 0 8px 32px rgba(35, 44, 103, 0.16);
     transform: translateY(-2px) scale(1.01);
 }
+
 .vehiculo-img-container {
     width: 100%;
     aspect-ratio: 16/9;
@@ -228,29 +248,34 @@ body {
     overflow: hidden;
     margin-bottom: 1em;
 }
+
 .vehiculo-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .vehiculo-info {
     padding: 1.5em 1em 1.2em 1em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .vehiculo-nombre {
     font-size: 1.2em;
     color: #232c67;
     font-weight: 700;
     margin: 0 0 0.2em 0;
 }
+
 .vehiculo-modelo {
     color: #7a7a7a;
     font-size: 1em;
     margin: 0 0 0.8em 0;
 }
+
 .detalles {
     display: flex;
     gap: 1.2em;
@@ -260,6 +285,7 @@ body {
     list-style: none;
     padding: 0;
 }
+
 .detalle-icon {
     margin-right: 0.3em;
     vertical-align: middle;
@@ -278,9 +304,10 @@ body {
     font-size: 1em;
     letter-spacing: 0.5px;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(35,44,103,0.06);
+    box-shadow: 0 2px 8px rgba(35, 44, 103, 0.06);
     text-align: center;
 }
+
 .vehiculo-link:hover,
 .vehiculo-link:focus {
     background: green;
@@ -294,53 +321,74 @@ body {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(35,44,103,0.25);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(35, 44, 103, 0.25);
     justify-content: center;
     align-items: center;
     transition: background 0.2s;
 }
+
 .vehiculo-modal.active {
     display: flex;
 }
+
 .vehiculo-modal-content {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(35,44,103,0.18);
-    padding: 2em 2em 1.5em 2em;
-    max-width: 350px;
-    width: 90vw;
-    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: modalIn 0.2s;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2em;
+    box-shadow: 0 4px 32px rgba(35, 44, 103, 0.18);
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    gap: 2em;
 }
+
 @keyframes modalIn {
-    from { transform: translateY(40px) scale(0.98); opacity: 0; }
-    to { transform: none; opacity: 1; }
+    from {
+        transform: translateY(40px) scale(0.98);
+        opacity: 0;
+    }
+
+    to {
+        transform: none;
+        opacity: 1;
+    }
 }
+
 .vehiculo-modal-close {
     position: absolute;
-    top: 1em; right: 1em;
+    top: 1em;
+    right: 1em;
     background: none;
     border: none;
     font-size: 2em;
     color: #232c67;
     cursor: pointer;
-    transition: color 0.2s;
 }
+
 .vehiculo-modal-close:hover {
     color: #0a2c5d;
 }
+
 .vehiculo-modal-img {
-    width: 80%;
-    max-width: 220px;
-    margin-bottom: 1em;
+    width: 260px;
+    height: auto;
     border-radius: 10px;
-    object-fit: contain;
-    background: #f3f6fa;
+    object-fit: cover;
+    flex-shrink: 0;
 }
+
+.vehiculo-modal-info {
+    flex: 1;
+}
+
 .vehiculo-modal-nombre {
     font-size: 1.3em;
     color: #232c67;
@@ -348,12 +396,14 @@ body {
     margin: 0.5em 0 0.1em 0;
     text-align: center;
 }
+
 .vehiculo-modal-modelo {
     color: #7a7a7a;
     font-size: 1em;
     margin: 0 0 1em 0;
     text-align: center;
 }
+
 .vehiculo-modal-subtitulo {
     color: #7b3fa0;
     font-size: 1em;
@@ -363,6 +413,7 @@ body {
     text-align: left;
     letter-spacing: 0.5px;
 }
+
 .vehiculo-modal-detalles,
 .vehiculo-modal-incluye {
     list-style: none;
@@ -370,6 +421,7 @@ body {
     margin: 0 0 0.7em 0;
     width: 100%;
 }
+
 .vehiculo-modal-detalles li,
 .vehiculo-modal-incluye li {
     display: flex;
@@ -379,118 +431,227 @@ body {
     color: #232c67;
     font-size: 1em;
 }
+
 .vehiculo-modal-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1.2em;
+    margin-top: 2em;
 }
-.vehiculo-modal-btn {
-    background: #fff;
-    color: #232c67;
-    border: 2px solid #232c67;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1em;
-    padding: 0.6em 2em;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-}
-.vehiculo-modal-btn:hover {
-    background: #232c67;
-    color: #fff;
-}
+
 @media (max-width: 600px) {
     .vehiculo-modal-content {
         padding: 1em 0.5em 1em 0.5em;
         max-width: 98vw;
     }
 }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .vehiculos-main {
         flex-direction: column;
         gap: 1em;
     }
+
     .filtros {
         max-width: 100%;
         margin-bottom: 1em;
     }
+
     .vehiculos-header-container {
         flex-direction: column;
         gap: 1em;
         padding: 0 1em;
     }
+
     .vehiculos-grid {
         grid-template-columns: 1fr;
     }
+
     .vehiculo-modal-content {
         padding: 1.5em;
     }
+
     .vehiculo-modal-nombre {
         font-size: 1.3em;
     }
+
     .vehiculo-modal-modelo {
         font-size: 1em;
     }
+
     .vehiculo-modal-subtitulo {
         font-size: 1.1em;
     }
+
     .vehiculo-modal-detalles,
     .vehiculo-modal-incluye {
         font-size: 0.9em;
     }
+
     .vehiculo-modal-btn {
         padding: 0.6em 1.2em;
         font-size: 0.9em;
     }
 }
 
+@media (max-width: 900px) {
+
+    html,
+    body {
+        width: 100%;
+        margin-top: 60px;
+        min-width: 100%;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box;
+        background: #f6f8fb;
+    }
+
+    .vehiculos-main {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        align-items: center !important;
+    }
+
+    .vehiculo-ad,
+    .vehiculo-ad-media-wrapper,
+    .vehiculos-section,
+    .vehiculos-header,
+    .vehiculos-grid,
+    .vehiculo-modal-content {
+        max-width: 100vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .vehiculo-modal-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.2em !important;
+        text-align: center !important;
+        padding: 1.5em !important;
+    }
+
+    .vehiculo-modal-img {
+        margin-bottom: 1em !important;
+        margin-right: 0 !important;
+        display: block;
+    }
+
+    .vehiculo-modal-info {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .filtros {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 1.5em 3em 1.5em !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        border-radius: 0 !important;
+    }
+
+    .filtros-fieldset {
+        flex-direction: column !important;
+        gap: 1em !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 1em 0.5em !important;
+    }
+
+    .filtros-titulo{
+        padding: 0;
+    }
+
+    .vehiculos-header{
+        padding: 0 1.5em 0 1.5em !important;
+        text-align: center !important;
+    }
+}
+
+
 /* NUEVA SECCIÓN: LISTA DE VEHÍCULOS */
 
 .vehiculo-header {
-  background: #f6f8fb;
-  font-weight: bold;
-  color: #232c67;
+    background: #f6f8fb;
+    font-weight: bold;
+    color: #232c67;
 }
+
 .vehiculo-row:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
+
 .vehiculo-list-img {
-  width: 80px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #f3f6fa;
+    width: 80px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #f3f6fa;
 }
 
 .detalle-icon svg {
-  stroke: #232c67;
-  vertical-align: middle;
+    stroke: #232c67;
+    vertical-align: middle;
 }
+
 @media (max-width: 900px) {
-  .vehiculo-row, .vehiculo-header {
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
-    font-size: 0.95em;
-    padding: 0.7em 0.5em;
-  }
-  .vehiculo-list-img {
-    width: 60px;
-    height: 36px;
-  }
+
+    .vehiculo-row,
+    .vehiculo-header {
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 0.95em;
+        padding: 0.7em 0.5em;
+    }
+
+    .vehiculo-list-img {
+        width: 60px;
+        height: 36px;
+    }
 }
+
 @media (max-width: 600px) {
-  .vehiculo-row, .vehiculo-header {
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    grid-auto-flow: row;
-    font-size: 0.9em;
-    padding: 0.5em 0.2em;
-  }
-  .vehiculo-list-img {
-    width: 40px;
-    height: 24px;
-  }
-  .vehiculo-row > div:nth-child(n+5) {
-    display: none;
-  }
+
+    .vehiculo-row,
+    .vehiculo-header {
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-auto-flow: row;
+        font-size: 0.9em;
+        padding: 0.5em 0.2em;
+    }
+
+    .vehiculo-list-img {
+        width: 40px;
+        height: 24px;
+    }
+
+    .vehiculo-row>div:nth-child(n+5) {
+        display: none;
+    }
+}
+
+.vehiculo-modal-btn-link {
+    display: inline-block;
+    padding: 0.7em 2em;
+    background: #4caf50;
+    /* Verde, cámbialo si quieres otro color */
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px rgba(35, 44, 103, 0.08);
+    transition: background 0.2s;
+}
+
+.vehiculo-modal-btn-link:hover {
+    background: #388e3c;
 }

@@ -28,19 +28,19 @@
                         <a href="../index.html" aria-current="page" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="vehiculos.html" class="nav-link active">Vehículos</a>
+                        <a href="../htmls/vehiculos.html" class="nav-link active">Vehículos</a>
                     </li>
                     <li class="nav-item">
                         <a href="#Contacto" class="nav-link">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a href="reservacion.html" class="nav-link">Reservas</a>
+                        <a href="../htmls/reservacion.html" class="nav-link">Reservas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="historia.html" class="nav-link">Historia</a>
+                        <a href="../htmls/historia.html" class="nav-link">Historia</a>
                     </li>
                     <li class="nav-item">
-                        <a href="acerca.html" class="nav-link">Acerca</a>
+                        <a href="../htmls/acerca.html" class="nav-link">Acerca</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +58,8 @@
     <div class="vehiculo-ad-container">
         <div class="vehiculo-ad">
             <h1 class="vehiculo-ad-title">¡Nuevo auto disponible para tu próxima aventura!</h1>
-            <p class="vehiculo-ad-desc"><Strong>Toyota Prado</Strong> confort, espacio y tecnología en nuestro nuevo modelo.</p>
+            <p class="vehiculo-ad-desc"><Strong>Toyota Prado</Strong> confort, espacio y tecnología en nuestro nuevo
+                modelo.</p>
             <div class="vehiculo-ad-media-wrapper">
                 <iframe width="600" height="400" src="https://www.youtube.com/embed/KErbPaC4uRw" title="YouTube video"
                     frameborder="0"
@@ -81,7 +82,8 @@
                         <legend class="filtros-legend">Tipo de vehículo</legend>
                         <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="SUV"> SUV</label>
                         <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Van"> Van</label>
-                        <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico"> Manual</label>
+                        <label class="filtro-checkbox"><input type="checkbox" name="tipo" value="Eléctrico">
+                            Manual</label>
                     </fieldset>
                     <div class="filtro-pasajeros" style="margin-top: 0;">
                         <label for="pasajeros">Pasajeros</label>
@@ -515,38 +517,38 @@
     </footer>
 
     <!-- Modal de detalle de vehículo -->
-    <div id="vehiculo-modal" class="vehiculo-modal">
+    <div class="vehiculo-modal" id="vehiculo-modal">
         <div class="vehiculo-modal-content">
-            <button class="vehiculo-modal-close" id="vehiculo-modal-close" aria-label="Cerrar">&times;</button>
             <img src="../assets/img/img-car-1.jpg" alt="Toyota Agya" class="vehiculo-modal-img" id="modal-img">
-            <h2 class="vehiculo-modal-nombre" id="modal-nombre">Vehículo mini</h2>
-            <p class="vehiculo-modal-modelo" id="modal-modelo">Toyota Agya o similar</p>
-            <h4 class="vehiculo-modal-subtitulo">ESPECIFICACIONES</h4>
-            <ul class="vehiculo-modal-detalles">
-                <li><span class="detalle-icon">⚙️</span> <span id="modal-transmision">Automático</span></li>
-                <li><span class="detalle-icon">👤</span> <span id="modal-pasajeros">4</span></li>
-                <li><span class="detalle-icon">🧳</span> <span id="modal-maletas">2</span></li>
-                <li><span class="detalle-icon">🚪</span> <span id="modal-puertas">4</span></li>
-            </ul>
-            <h4 class="vehiculo-modal-subtitulo">TAMBIÉN INCLUYE</h4>
-            <ul class="vehiculo-modal-incluye">
-                <li><span class="detalle-icon">✔️</span> Bolsas de aire</li>
-                <li><span class="detalle-icon">✔️</span> Radio estéreo AM/FM</li>
-                <li><span class="detalle-icon">✔️</span> Aire acondicionado</li>
-            </ul>
-            <div class="vehiculo-modal-footer">
-                <button class="vehiculo-modal-btn" id="btn-reservar-modal">Reservar</button>
+            <div class="vehiculo-modal-info">
+                <button class="vehiculo-modal-close" id="vehiculo-modal-close" aria-label="Cerrar">&times;</button>
+                <h2 class="vehiculo-modal-nombre" id="modal-nombre">Vehículo mini</h2>
+                <p class="vehiculo-modal-modelo" id="modal-modelo">Toyota Agya o similar</p>
+                <h4 class="vehiculo-modal-subtitulo">DESCRIPCIÓN</h4>
+                <p class="vehiculo-modal-descripcion" id="modal-descripcion">
+                    Este vehículo tiene transmisión automático, capacidad para 4 pasajeros, espacio para 2 maletas y 4
+                    puertas.
+                </p>
+                <h4 class="vehiculo-modal-subtitulo">TAMBIÉN INCLUYE</h4>
+                <ul class="vehiculo-modal-incluye"></ul>
+                <div class="vehiculo-modal-footer">
+                    <a href="../index.html#reservaciones" class="vehiculo-modal-btn-link">Reservar</a>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="../scripts/scripts-base/vehiculos.js"></script>
     <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('active');
+        }
+
         // Filtro por cantidad de pasajeros y tipo
         const filtrosForm = document.getElementById('filtros-form');
         const checkboxes = filtrosForm.querySelectorAll('input[name="tipo"]');
         const selectPasajeros = document.getElementById('pasajeros');
-        const limpiarBtn = document.getElementById('limpiar-filtros');
         const vehiculos = document.querySelectorAll('.vehiculo-card');
 
         function filtrarVehiculos() {
@@ -564,12 +566,6 @@
         checkboxes.forEach(cb => cb.addEventListener('change', filtrarVehiculos));
         selectPasajeros.addEventListener('change', filtrarVehiculos);
 
-        limpiarBtn.addEventListener('click', function () {
-            checkboxes.forEach(cb => cb.checked = false);
-            selectPasajeros.value = '';
-            filtrarVehiculos();
-        });
-
         // Modal dinámico para ver detalle
         document.querySelectorAll('.vehiculo-link').forEach(btn => {
             btn.addEventListener('click', function (e) {
@@ -578,10 +574,8 @@
                 document.getElementById('modal-img').src = card.dataset.img;
                 document.getElementById('modal-nombre').textContent = card.dataset.nombre;
                 document.getElementById('modal-modelo').textContent = card.dataset.modelo;
-                document.getElementById('modal-transmision').textContent = card.dataset.transmision;
-                document.getElementById('modal-pasajeros').textContent = card.dataset.pasajeros;
-                document.getElementById('modal-maletas').textContent = card.dataset.maletas;
-                document.getElementById('modal-puertas').textContent = card.dataset.puertas;
+                document.getElementById('modal-descripcion').textContent =
+                    `Este vehículo tiene transmisión ${card.dataset.transmision}, capacidad para ${card.dataset.pasajeros} pasajeros, espacio para ${card.dataset.maletas} maletas y ${card.dataset.puertas} puertas.`;
 
                 // Incluye dinámico
                 const incluyeArr = card.dataset.incluye.split(',');

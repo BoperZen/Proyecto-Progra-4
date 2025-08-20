@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why Not Rent a Car</title>
   <link rel="icon" href="assets/img/suv.png" type="image/x-icon" sizes="64x64">
-  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 
   <!-- Vue.js CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -335,7 +336,7 @@
 
       <!-- SECCIÓN 6: RESERVACIONES -->
       <section id="reservaciones" class="ubicaciones-section">
-        <div class="ubicaciones-content">
+        <div class="ubicaciones-content" id="reservaciones-content">
           <h2 class="ubicaciones-title">Reservaciones</h2>
           <p class="ubicaciones-description">
             Complete el formulario a continuación para realizar su reservación. <br>Nuestro equipo le contactará para
@@ -346,19 +347,23 @@
           <div class="reservaciones-form-container">
             <form class="reservaciones-form" id="reservaciones-form">
 
+              <!-- Información general -->
+              <h3 style="margin-bottom: 1em;">Información general</h3>
+
+              <!-- Tipo de vehículo -->
+              <div class="form-group">
+                <label for="tipo-vehiculo">Tipo de vehículo</label>
+                <select id="tipo-vehiculo" name="tipo-vehiculo" required>
+                  <option value="" disabled selected>Seleccione tipo</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Van">Van</option>
+                </select>
+              </div>
+
               <!-- Ubicación de recogida -->
               <div class="form-group">
                 <label for="ubicacion-recogida">¿Dónde es su siguiente viaje?</label>
                 <input type="text" id="ubicacion-recogida" name="ubicacion-recogida" placeholder="Recoger" required>
-              </div>
-
-              <!-- Checkbox regreso -->
-              <div class="form-group checkbox-group">
-                <label class="checkbox-label">
-                  <input type="checkbox" id="regreso-misma-ubicacion" name="regreso-misma-ubicacion" checked>
-                  <span class="checkmark"></span>
-                  ¿Regresa a la misma ubicación?
-                </label>
               </div>
 
               <!-- Residencia -->
@@ -430,6 +435,77 @@
                     <option value="18:00">06:00 PM</option>
                   </select>
                 </div>
+              </div>
+
+              <!-- Separador visual -->
+              <div style="border-top: 1px solid #ccc; margin: 2em 0 1em 0;"></div>
+              <h3 style="margin-bottom: 1em;">Información personal</h3>
+
+              <!-- Nombre -->
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+              </div>
+
+              <!-- Fecha de nacimiento -->
+              <div class="form-group">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+              </div>
+
+              <!-- Rango de ingreso -->
+              <div class="form-group">
+                <label for="rango-ingreso">Rango de ingreso mensual</label>
+                <select id="rango-ingreso" name="rango-ingreso" required>
+                  <option value="" disabled selected>Seleccione su rango</option>
+                  <option value="menos-500">Menos de $500</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-2000">$1,000 - $2,000</option>
+                  <option value="2000-5000">$2,000 - $5,000</option>
+                  <option value="mas-5000">Más de $5,000</option>
+                </select>
+              </div>
+
+              <!-- Género -->
+              <div class="form-group radio-group">
+                <label class="radio-group-title">Género</label>
+                <div class="radio-options">
+                  <label class="radio-label">
+                    <input type="radio" name="genero" value="femenino" required>
+                    <span class="radio-mark"></span>
+                    Femenino
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="genero" value="masculino">
+                    <span class="radio-mark"></span>
+                    Masculino
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="genero" value="otro">
+                    <span class="radio-mark"></span>
+                    Otro
+                  </label>
+                </div>
+              </div>
+
+              <!-- Grado académico -->
+              <div class="form-group">
+                <label for="grado-academico">Grado académico</label>
+                <select id="grado-academico" name="grado-academico" required>
+                  <option value="" disabled selected>Seleccione su grado</option>
+                  <option value="primaria">Primaria</option>
+                  <option value="secundaria">Secundaria</option>
+                  <option value="tecnico">Técnico</option>
+                  <option value="universitario">Universitario</option>
+                  <option value="posgrado">Posgrado</option>
+                  <option value="otro">Otro</option>
+                </select>
               </div>
 
               <!-- Botón buscar -->
@@ -624,6 +700,7 @@
   </script>
 
   <!-- SCRIPTS MODULARIZADOS -->
+  <script src="scripts/guardar-formulario.js"></script>
   <!-- Utilidades base -->
   <script src="scripts/scripts-base/utilities.js"></script>
   <!-- Servicios y almacenamiento -->
@@ -652,6 +729,23 @@
     // Cargar Google Maps API con la configuración segura
     document.addEventListener('DOMContentLoaded', function () {
       loadGoogleMapsScript();
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.location.hash === '#reservaciones') {
+        const targetSection = document.getElementById('reservaciones');
+        if (targetSection) {
+          setTimeout(function () {
+            const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - 150;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }, 200); // Espera a que todo cargue
+        }
+      }
     });
   </script>
 </body>

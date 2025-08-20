@@ -74,12 +74,6 @@
 
     <!-- BLOQUE DE RESERVACIÓN -->
     <section id="bloque-reservacion" class="reserva-section-reserva">
-        <div class="reserva-section-title">
-            <span class="reserva-section-icon">
-                <i class="fas fa-search"></i>
-            </span>
-            <span>Consultar o cancelar una reserva</span>
-        </div>
         <form class="reserva-form-block" autocomplete="off">
             <div class="reserva-form-row-block">
                 <div class="reserva-form-group-block">
@@ -97,7 +91,7 @@
                 </div>
             </div>
         </form>
-        <div class="reserva-resultado-block" id="reservacion-resultado"></div>
+        <div class="reserva-resultado-block" id="reservacion-resultado-block" style="display:none; margin-top:2em;"></div>
     </section>
 
     <!-- PIE DE PÁGINA -->
@@ -154,22 +148,12 @@
         </div>
     </footer>
 
+    <script src="../scripts/buscar-reserva.js"></script>
     <script>
-        document.querySelector('.reserva-form-block').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const codigo = document.getElementById('codigo').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const resultado = document.getElementById('reservacion-resultado');
-            if (codigo && email) {
-                resultado.textContent = "Reserva encontrada: " + codigo + " (" + email + ")";
-                resultado.style.background = "#d4f7d4";
-                resultado.style.color = "#153a75";
-            } else {
-                resultado.textContent = "Por favor, completa ambos campos para buscar tu reserva.";
-                resultado.style.background = "#ffe6e6";
-                resultado.style.color = "#c0392b";
-            }
-        });
+    function toggleMobileMenu() {
+      const menu = document.getElementById('navbar-menu');
+      menu.classList.toggle('active');
+    }
     </script>
 </body>
 

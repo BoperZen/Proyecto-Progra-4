@@ -125,28 +125,57 @@
 }
 
 /* Responsive para Hero */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero-section {
-    height: 80vh;
-    min-height: 500px;
+    min-height: 350px;
+    height: auto;
+    padding-top: 70px;
+    margin-top: -70px;
   }
-  
+
   .hero-content {
-    width: 90%;
-    padding: 0 1rem;
+    width: 98%;
+    margin: 0 auto;
+    padding: 1.5rem 0.5rem;
     text-align: center;
   }
-  
-  .hero-actions {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btn-primary,
-  .btn-secondary {
+
+  .hero-title {
+    font-size: 4em;
     width: 100%;
-    max-width: 280px;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1em;
+    width: 80%;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-size: 1em;
+    width: 80%;
+    max-width: 100%;
+  }
+}
+
+/* Extra pequeño */
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1rem 0.2rem;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 3em;
+  }
+
+  .hero-subtitle,
+  .hero-description {
+    width: 80%;
+    font-size: 1em;
+    padding: 0 30px 0 110px;
+    text-align: justify;
   }
 }
 
@@ -252,16 +281,16 @@
     gap: var(--spacing-xl);
     padding: 0 var(--spacing-lg);
   }
-  
+
   .story-image {
     position: static;
     order: -1;
   }
-  
+
   .image-placeholder {
     height: 200px;
   }
-  
+
   .story-content h2 {
     font-size: 28px;
   }
@@ -379,16 +408,16 @@
     gap: var(--spacing-xl);
     padding: 0 var(--spacing-lg);
   }
-  
+
   .story-image {
     position: static;
     order: -1;
   }
-  
+
   .image-placeholder {
     height: 200px;
   }
-  
+
   .story-content h2 {
     font-size: 28px;
   }
@@ -836,12 +865,12 @@
     width: 85%;
     gap: 1rem;
   }
-  
+
   .benefit-image img {
     width: 70px;
     height: 70px;
   }
-  
+
   .benefit-text p {
     font-size: 0.95rem;
   }
@@ -854,16 +883,16 @@
     gap: 2rem;
     align-items: center;
   }
-  
+
   .benefit-item {
     max-width: 300px;
   }
-  
+
   .benefit-image img {
     width: 90px;
     height: 90px;
   }
-  
+
   .benefit-text p {
     font-size: 1rem;
   }
@@ -877,7 +906,7 @@
   border-radius: 0;
   box-shadow: none;
   background: transparent;
-  
+
 }
 
 .carousel-wrapper {
@@ -965,33 +994,53 @@
   transform: scale(1.1);
 }
 
-/* Responsive Design para Carousel */
-@media (max-width: 768px) {
-  .carousel-slide {
-    padding: 1.5rem 1rem;
-    gap: 1rem;
+/* Carousel Responsive */
+@media (max-width: 900px) {
+  .destinos-section .container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
-  
-  .slide-image {
-    width: 100px;
-    height: 100px;
+
+  .destinos-carousel-container {
+    width: 90vw !important;
+    max-width: 90vw !important;
+    margin-left: 0 !important;
+    /* Pegado a la izquierda */
+    margin-right: 5vw !important;
+    /* 5vw de margen a la derecha */
+    padding: 0 !important;
   }
-  
+
   .carousel-wrapper {
-    height: 250px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
-  
-  .slide-content p {
-    font-size: 1rem;
+
+  .carousel-slide,
+  .destinos-content,
+  .destinos-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
-  
-  .carousel-indicators {
-    bottom: 0.5rem;
+
+  .destinos-image {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto 1rem auto !important;
   }
-  
-  .indicator {
-    width: 12px;
-    height: 12px;
+}
+
+@media (max-width: 600px) {
+  .destinos-carousel-container {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+    padding: 0 !important;
   }
 }
 
@@ -1076,15 +1125,15 @@
     height: 350px;
     margin: 2rem 0;
   }
-  
+
   .reserva-content {
     padding: 0 1rem;
   }
-  
+
   .reserva-title {
     margin-bottom: 1.5rem;
   }
-  
+
   .reserva-btn {
     padding: 0.9rem 2rem;
     font-size: 1rem;
@@ -1169,11 +1218,11 @@
     width: calc(100vw - 10px);
     border-radius: 8px;
   }
-  
+
   .google-map {
     height: 300px;
   }
-  
+
   .distancia-info {
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
@@ -1185,15 +1234,51 @@
   .ubicaciones-content {
     padding: 0 1.5rem;
   }
-  
+
   .ubicaciones-title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .ubicaciones-description {
     font-size: 0.95rem;
     text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .ubicaciones-content {
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .ubicaciones-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .ubicaciones-description {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .reservaciones-form-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .form-group,
+  .form-row,
+  label,
+  input,
+  select {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  #reservaciones-form h3{
+    text-align: center;
   }
 }
 
@@ -1376,10 +1461,10 @@
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
-              linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
-              linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   display: flex;
@@ -1407,7 +1492,8 @@
 
 /* Carousel Navigation Buttons */
 .carousel-btn {
-  display: none; /* Ocultar botones laterales */
+  display: none;
+  /* Ocultar botones laterales */
 }
 
 .carousel-btn:hover {
@@ -1426,7 +1512,8 @@
   display: none;
 }
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
   line-height: 1;
 }
 
@@ -1465,7 +1552,8 @@
 }
 
 /* Loading and Error States */
-.loading-state, .error-state {
+.loading-state,
+.error-state {
   text-align: center;
   padding: var(--spacing-xxl);
 }
@@ -1481,11 +1569,17 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.loading-state p, .error-state p {
+.loading-state p,
+.error-state p {
   color: var(--color-text-secondary);
   font-size: 1.1rem;
 }
@@ -1495,23 +1589,23 @@
   .hero-section-simple .hero-title {
     font-size: 2.2rem;
   }
-  
+
   .hero-section-simple .hero-subtitle {
     font-size: 1rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .destinos-carousel-container {
     padding: 0 60px;
   }
-  
+
   .carousel-wrapper {
     margin: 0;
   }
-  
+
   .destinos-content {
     flex-direction: column;
     min-height: auto;
@@ -1519,42 +1613,42 @@
     text-align: center;
     max-width: 100%;
   }
-  
+
   .destinos-text {
     padding-right: 0;
     padding-bottom: var(--spacing-lg);
     order: 2;
     text-align: center;
   }
-  
+
   .destinos-image {
     order: 1;
     height: 250px;
     margin-bottom: var(--spacing-lg);
   }
-  
+
   .destinos-title {
     font-size: 1.8rem;
   }
-  
+
   .destinos-description {
     font-size: 1rem;
   }
-  
+
   .carousel-btn {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
-  
+
   .carousel-btn-prev {
     left: 10px;
   }
-  
+
   .carousel-btn-next {
     right: 10px;
   }
-  
+
   .carousel-indicators {
     margin-top: var(--spacing-xl);
   }
@@ -1619,20 +1713,20 @@
   .consejos-lista {
     padding: 0 var(--spacing-md);
   }
-  
+
   .consejo-simple {
     gap: 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .consejo-bullet {
     margin-top: 0.5rem;
   }
-  
+
   .consejo-contenido h3 {
     font-size: 1rem;
   }
-  
+
   .consejo-contenido p {
     font-size: 0.9rem;
   }
@@ -1878,12 +1972,12 @@ a[href^="#"] {
     padding: 1rem;
     margin: var(--spacing-lg) var(--spacing-md) 0;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 0.6rem;
   }
-  
+
   .radio-options {
     gap: 0.8rem;
   }

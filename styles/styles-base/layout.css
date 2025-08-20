@@ -251,6 +251,10 @@ footer p {
     max-width: 100%;
     margin-bottom: 20px;
   }
+  .footer-top {
+    align-items: center;
+    padding: 0 60px 0 60px;
+  }
 }
 
 /* Secciones generales */

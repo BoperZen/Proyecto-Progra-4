@@ -226,3 +226,99 @@ body {
     font-size: 1em;
     line-height: 1.6;
 }
+
+/* Media Queries */
+@media (max-width: 900px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    background: #f6f8fb;
+    margin-top: -20px;
+  }
+
+  .historia-main {
+    width: 100% !important;
+    margin: 0 auto 3em auto !important;
+    padding: 0.5em 0.5em 3em 0.5em !important;
+    box-sizing: border-box !important;
+    border-radius: 18px !important;
+    background: none !important;
+  }
+
+  .historia-bloque,
+  .fundador-section,
+  .timeline-section,
+  .blog-post {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .historia-header {
+    margin-top: 100px;
+    padding: 2em 0.5em 1.5em 0.5em !important;
+    text-align: center !important;
+  }
+
+  .historia-title {
+    font-size: 2em !important;
+    margin-bottom: 0.5em !important;
+    word-break: break-word;
+  }
+
+  .historia-desc {
+    font-size: 1em !important;
+    margin-bottom: 0.5em !important;
+    word-break: break-word;
+  }
+
+  .fundador-img-container {
+    width: 92vw !important;
+    max-width: 92vw !important;
+    margin: 0 auto 1em auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .fundador-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    display: block !important;
+  }
+
+  .fundador-info {
+    text-align: justify !important;
+    padding: 0.5em !important;
+  }
+
+  .timeline {
+    width: 100% !important;
+    gap: 1em !important;
+    box-sizing: border-box !important;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.5em !important;
+  }
+
+  .timeline-year {
+    font-size: 1.1em !important;
+    padding: 1em 0 !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+  }
+
+  .timeline-content {
+    padding: 1em 0.5em !important;
+    width: 100% !important;
+    text-align: justify !important;
+  }
+}
