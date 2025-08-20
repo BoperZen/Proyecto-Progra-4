@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar o cancelar una reserva</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/styles-base/reservacion.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-    <!-- NAVBAR (no modificar) -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-brand">
-                <a href="../index.html" class="brand-link">
+            <!-- Logo/Brand -->
+            <div class="navbar-brand" href="index.html">
+                <a href="#" class="brand-link">
                     <img src="../assets/img/logo-2.png" alt="Logo" class="brand-logo">
                 </a>
             </div>
+
+            <!-- Navigation Links -->
             <div class="navbar-menu" id="navbar-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="../index.html#inicio" class="nav-link">Home</a>
+                        <a href="../index.html" aria-current="page" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="vehiculos.html" class="nav-link">Vehículos</a>
+                        <a href="../htmls/vehiculos.html" class="nav-link">Vehículos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="reservacion.html" class="nav-link active">Reservas</a>
+                        <a href="contacto.html" class="nav-link">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a href="historia.html" class="nav-link">Historia</a>
+                        <a href="../htmls/reservacion.html" class="nav-link active">Reservas</a>
                     </li>
                     <li class="nav-item">
-                        <a href="acerca.html" class="nav-link">Acerca</a>
+                        <a href="../htmls/historia.html" class="nav-link">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../htmls/acerca.html" class="nav-link">Acerca</a>
                     </li>
                 </ul>
             </div>
+
+            <!-- Mobile Menu Toggle -->
             <button class="navbar-toggle" onclick="toggleMobileMenu()" aria-label="Abrir menú">
                 <span class="toggle-line"></span>
                 <span class="toggle-line"></span>
@@ -50,7 +59,8 @@
             <div class="reserva-hero-text">
                 <h1 class="reserva-hero-title">La mejor opción para alquiler de autos en Costa Rica</h1>
                 <p class="reserva-hero-desc">
-                    Why Not Rent te ofrece una amplia flota vehicular, tarifas de alquiler bajas y una experiencia agradable y sin complicaciones.<br>
+                    Why Not Rent te ofrece una amplia flota vehicular, tarifas de alquiler bajas y una experiencia
+                    agradable y sin complicaciones.<br>
                     ¡Aventúrate a los destinos más populares de Costa Rica y el mundo!
                 </p>
             </div>
@@ -73,11 +83,13 @@
             <div class="reserva-form-row-block">
                 <div class="reserva-form-group-block">
                     <label for="codigo" class="reserva-label-block">Código de Reserva</label>
-                    <input type="text" id="codigo" name="codigo" class="reserva-input-block" placeholder="Ej: ABC12345" required>
+                    <input type="text" id="codigo" name="codigo" class="reserva-input-block" placeholder="Ej: ABC12345"
+                        required>
                 </div>
                 <div class="reserva-form-group-block">
                     <label for="email" class="reserva-label-block">Correo electrónico</label>
-                    <input type="email" id="email" name="email" class="reserva-input-block" placeholder="tu@email.com" required>
+                    <input type="email" id="email" name="email" class="reserva-input-block" placeholder="tu@email.com"
+                        required>
                 </div>
                 <div class="reserva-form-group-block reserva-btn-group-block">
                     <button type="submit" class="reserva-btn-block">Buscar Reserva</button>
@@ -88,21 +100,22 @@
     </section>
 
     <script>
-    document.querySelector('.reserva-form-block').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const codigo = document.getElementById('codigo').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const resultado = document.getElementById('reservacion-resultado');
-        if (codigo && email) {
-            resultado.textContent = "Reserva encontrada: " + codigo + " (" + email + ")";
-            resultado.style.background = "#d4f7d4";
-            resultado.style.color = "#153a75";
-        } else {
-            resultado.textContent = "Por favor, completa ambos campos para buscar tu reserva.";
-            resultado.style.background = "#ffe6e6";
-            resultado.style.color = "#c0392b";
-        }
-    });
+        document.querySelector('.reserva-form-block').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const codigo = document.getElementById('codigo').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const resultado = document.getElementById('reservacion-resultado');
+            if (codigo && email) {
+                resultado.textContent = "Reserva encontrada: " + codigo + " (" + email + ")";
+                resultado.style.background = "#d4f7d4";
+                resultado.style.color = "#153a75";
+            } else {
+                resultado.textContent = "Por favor, completa ambos campos para buscar tu reserva.";
+                resultado.style.background = "#ffe6e6";
+                resultado.style.color = "#c0392b";
+            }
+        });
     </script>
 </body>
+
 </html>

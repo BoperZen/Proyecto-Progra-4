@@ -154,11 +154,10 @@
    PÁGINA ACERCA DE
    ======================================== */
 #acerca-main {
-  margin: 50px;
+  margin: 0 50px 50px;
 }
 
 .about-story {
-  padding: var(--spacing-xxl) 0;
   background: var(--color-bg-primary);
 }
 
@@ -166,14 +165,14 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: var(--spacing-xxl);
-  align-items: start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .story-content {
   max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .story-content h2 {
@@ -228,6 +227,23 @@
 .team-image:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
+}
+
+/* Estilo para imagen independiente fuera del story-container */
+.story-image:not(.story-container .story-image) {
+  max-width: 650px;
+  margin: var(--spacing-xl) auto;
+  display: block;
+  position: static;
+}
+
+.story-image:not(.story-container .story-image) .team-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-base);
 }
 
 /* Responsive para página Acerca de */
@@ -1518,10 +1534,8 @@ a[href^="#"] {
   max-width: 600px;
   margin: 0 auto;
   margin-top: var(--spacing-xl);
-  background: #f8f8f8;
-  border-radius: 6px;
+  background: #ffffff;
   padding: 1.5rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .reservaciones-form {
