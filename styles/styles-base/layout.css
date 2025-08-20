@@ -361,10 +361,10 @@ header .subtitle {
 }
 
 #footer .credits a {
-  color: #ffee02;
+  color: #0206ff;
   transition: 0.3s;
 }
 
 #footer .credits a:hover {
-  color: #cddb00;
+  color: #ffee02;
 }
